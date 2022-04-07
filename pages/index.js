@@ -11,7 +11,7 @@ export default function Home() {
         <title>JamesFest2022</title>
         <meta
           name="description"
-          content="JamesFest: Celebrating the weeding of Ian and Anna"
+          content="JamesFest: Celebrating the wedding of Ian and Anna"
         />
         <link rel="icon" href="/JamesFest3.ico" />
       </Head>
