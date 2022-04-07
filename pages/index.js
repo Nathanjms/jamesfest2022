@@ -9,7 +9,6 @@ export default function Home() {
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      console.log("1 per second");
       setTimeLeft(calculateTimeLeft(weddingDate));
     }, 1000);
 
