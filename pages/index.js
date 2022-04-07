@@ -1,20 +1,10 @@
 import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
-import { useState, useEffect } from "react";
+import { TimerDisplay } from "../components/TimerDisplay";
 
+const weddingDate = new Date(1657926000000);
 export default function Home() {
-  const weddingDate = new Date(1657926000000);
-  const [timeLeft, setTimeLeft] = useState(null);
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setTimeLeft(calculateTimeLeft(weddingDate));
-    }, 1000);
-
-    return () => clearTimeout(timer);
-  });
-
   return (
     <div className={styles.container}>
       <Head>
@@ -37,44 +27,10 @@ export default function Home() {
             blurDataURL="/Small_JamesFest1.png"
           />
           <div>
-            <TimerDisplay timeLeft={timeLeft} />
+            <TimerDisplay date={weddingDate} />
           </div>
         </div>
       </main>
     </div>
   );
 }
-
-const TimerDisplay = ({ timeLeft }) => {
-  if (!timeLeft) {
-    return <h1>Loading...</h1>;
-  }
-  if (timeLeft?.ended) {
-    return;
-  }
-  return (
-    <h3 className="animate__animated animate__flipInX">
-      {timeLeft.days} days, {timeLeft.hours} hours, {timeLeft.minutes} minutes,{" "}
-      {timeLeft.seconds} seconds
-    </h3>
-  );
-};
-
-const calculateTimeLeft = (date) => {
-  let difference = date - new Date();
-
-  if (difference < 0) {
-    return {
-      ended: true,
-    };
-  }
-
-  let timeLeft = {
-    days: Math.floor(difference / (1000 * 60 * 60 * 24)),
-    hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
-    minutes: Math.floor((difference / 1000 / 60) % 60),
-    seconds: Math.floor((difference / 1000) % 60),
-  };
-
-  return timeLeft;
-};
