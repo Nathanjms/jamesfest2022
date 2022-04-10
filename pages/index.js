@@ -2,6 +2,7 @@ import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import { TimerDisplay } from "../components/TimerDisplay";
+import { CustomNavbar } from "../components/CustomNavbar";
 
 const weddingDate = new Date(1657926000000);
 export default function Home() {
@@ -15,6 +16,8 @@ export default function Home() {
         />
         <link rel="icon" href="/JamesFest-Logo.ico" />
       </Head>
+
+      <CustomNavbar />
 
       <main className={styles.main}>
         <div className="container text-center">
