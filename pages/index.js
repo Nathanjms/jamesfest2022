@@ -13,18 +13,16 @@ export default function Home() {
           name="description"
           content="JamesFest: Celebrating the wedding of Ian and Anna"
         />
-        <link rel="icon" href="/JamesFest3.ico" />
+        <link rel="icon" href="/JamesFest-Logo.ico" />
       </Head>
 
       <main className={styles.main}>
         <div className="container text-center">
           <Image
-            src="/JamesFest1.png"
+            src="/JamesFest.png"
             alt="JamesFest Logo"
             width={500}
             height={500}
-            placeholder="blur"
-            blurDataURL="/Small_JamesFest1.png"
           />
           <div>
             <TimerDisplay date={weddingDate} />
