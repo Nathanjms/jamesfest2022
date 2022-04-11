@@ -35,17 +35,19 @@ export const CustomNavbar = () => {
   return (
     <>
       <div id="myNav" className="overlay">
-        <a href="#" className="closebtn" onClick={() => closeNav()}>
+        <a href="#" className="closebtn" onClick={toggleOverlay}>
           &times;
         </a>
-
-        <div className="overlay-content text-white">
+        <div className="pt-5 text-center">
           <Image
             src="/JamesFestText.png"
             alt="JamesFest Logo"
             width={200}
             height={50}
           />
+        </div>
+
+        <div className="overlay-content text-white">
           {/* <h3>JamesFest</h3> */}
           <a href="#">About</a>
           <a href="#">Services</a>
