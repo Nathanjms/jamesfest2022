@@ -8,6 +8,11 @@ export const CustomNavbar = () => {
   const toggleOverlay = () => {
     let overlay = document.querySelector("#myNav");
     let mobileNavBtn = document.querySelector("#mobileNavBtn");
+    // Disable button during transition
+    mobileNavBtn.disabled = true;
+    setTimeout(() => {
+      mobileNavBtn.disabled = false;
+    }, 400);
     if (overlayOpen) {
       closeNav(overlay);
     } else {
