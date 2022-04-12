@@ -2,6 +2,17 @@ import Image from "next/image";
 import { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 
+const navItems = [
+  {
+    name: "Home",
+    link: "#home",
+  },
+  {
+    name: "About",
+    link: "#about",
+  },
+];
+
 export const CustomNavbar = () => {
   const [overlayOpen, setOverlayOpen] = useState(false);
 
@@ -51,11 +62,13 @@ export const CustomNavbar = () => {
         </div>
 
         <div className="overlay-content text-white">
-          {/* <h3>JamesFest</h3> */}
-          <a href="#about">About</a>
-          <a href="#services">Services</a>
-          <a href="#clients">Clients</a>
-          <a href="#contacts">Contact</a>
+          {navItems.map((item, index) => {
+            return (
+              <a key={index} href={item.link} onClick={toggleOverlay}>
+                {item.name}
+              </a>
+            );
+          })}
         </div>
         <button
           className="btn btn-primary"
