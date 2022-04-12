@@ -38,3 +38,15 @@ a {
   background-color: var(--primaryLight);
   border-color: var(--primaryLight);
 }
+
+.btn {
+  border-radius: 30%;
+}
+
+#about {
+  background-color: var(--light2);
+}
+
+.jamesfest-img {
+  max-width: 75vw;
+}

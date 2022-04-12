@@ -11,7 +11,7 @@ export const TimerDisplay = ({ date }) => {
     return () => clearTimeout(timer);
   });
   if (!timeLeft) {
-    return <h1>Loading...</h1>;
+    return <h3>Loading...</h3>;
   }
   if (timeLeft?.ended) {
     return;
