@@ -1,5 +1,6 @@
 :root {
   --primary: #5b8a45;
+  --primaryLight: #72AB57;
   --primary2: #BB79E2;
   --light1: #faf9f7;
 }
@@ -20,4 +21,18 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+.btn-primary {
+  background-color: var(--primary);
+  border-color: var(--primary);
+}
+
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary.active,
+.btn-primary:focus,
+.btn-primary.disabled {
+  background-color: var(--primaryLight);
+  border-color: var(--primaryLight);
 }

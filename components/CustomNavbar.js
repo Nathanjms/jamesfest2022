@@ -55,7 +55,7 @@ export const CustomNavbar = () => {
           <a href="#">Contact</a>
         </div>
         <button
-          className="btn btn-danger"
+          className="btn btn-primary"
           id="mobileNavBtn"
           onClick={toggleOverlay}
         >
