@@ -32,6 +32,7 @@ a {
 .btn-primary:active,
 .btn-primary.active,
 .btn-primary:focus,
+.btn-primary:disabled,
 .btn-primary.disabled {
   background-color: var(--primaryLight);
   border-color: var(--primaryLight);

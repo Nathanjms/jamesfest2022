@@ -31,7 +31,7 @@
   color: #f1f1f1;
 }
 
-.overlay .closebtn {
+.overlay .closeBtn {
   position: absolute;
   top: 20px;
   right: 45px;
@@ -41,7 +41,7 @@
   .overlay a {
     font-size: 1rem;
   }
-  .overlay .closebtn {
+  .overlay .closeBtn {
     font-size: 40px;
     top: 15px;
     right: 35px;
