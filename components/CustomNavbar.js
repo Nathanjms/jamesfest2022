@@ -35,9 +35,12 @@ export const CustomNavbar = () => {
   return (
     <>
       <div id="navOverlay" className="overlay">
-        <a href="#" className="closeBtn" id="overlayCloseBtn" tabIndex={0} onClick={toggleOverlay}>
-          &times;
-        </a>
+        <button
+          className="btn-close closeBtn btn-close-white"
+          id="overlayCloseBtn"
+          aria-label="Close"
+          onClick={toggleOverlay}
+        />
         <div className="pt-5 text-center">
           <Image
             src="/JamesFestText.png"
