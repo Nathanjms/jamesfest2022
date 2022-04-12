@@ -6,6 +6,10 @@
   --light2: #c6cac2;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 html,
 body {
   padding: 0;
@@ -43,8 +47,17 @@ a {
   border-radius: 30%;
 }
 
+.timerText {
+  font-size: 1.5rem;
+}
+
 #about {
   background-color: var(--light2);
+  padding-block: 2em;
+}
+
+#more {
+  padding-block: 2em;
 }
 
 .jamesfest-img {

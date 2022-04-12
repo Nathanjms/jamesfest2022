@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { useState } from "react";
+import { Container, Nav, Navbar } from "react-bootstrap";
 import { FaBars, FaTimes } from "react-icons/fa";
 
 const navItems = [
@@ -10,6 +11,10 @@ const navItems = [
   {
     name: "About",
     link: "#about",
+  },
+  {
+    name: "More",
+    link: "#more",
   },
 ];
 
@@ -79,17 +84,24 @@ export const CustomNavbar = () => {
         </button>
       </div>
 
-      <ul className="navbar-list">
-        {navItems.map((item, index) => {
-          return (
-            <li className="navbar-item" key={index}>
-              <a key={index} href={item.link}>
-                {item.name}
-              </a>
-            </li>
-          );
-        })}
-      </ul>
+      <Navbar expand="md" bg="light" variant="light" fixed="top">
+        <Container>
+          <Navbar.Brand href="/">
+            JamesFest
+          </Navbar.Brand>
+          <Navbar.Collapse className="justify-content-end">
+            <Nav>
+              {navItems.map((item, index) => {
+                return (
+                  <Nav.Link key={index} href={item.link}>
+                    {item.name}
+                  </Nav.Link>
+                );
+              })}
+            </Nav>
+          </Navbar.Collapse>
+        </Container>
+      </Navbar>
     </>
   );
 };
