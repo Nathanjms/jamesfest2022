@@ -5,7 +5,7 @@ import { FaBars, FaTimes } from "react-icons/fa";
 const navItems = [
   {
     name: "Home",
-    link: "#home",
+    link: "#intro",
   },
   {
     name: "About",
