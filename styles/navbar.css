@@ -48,20 +48,50 @@
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   #mobileNavBtn {
     position: fixed;
     bottom: 0;
     right: 0;
     margin: 0 0.5rem 0.5rem 0;
   }
+  .navbar-list {
+    display: none;
+  }
 }
 @media screen and (min-width: 768px) {
   #mobileNavBtn {
     display: none;
   }
+  .navbar-list {
+    list-style-type: none;
+    margin-bottom: 2rem;
+    padding: 0;
+    overflow: hidden;
+    background-color: var(--light2);
+    top: 0;
+    position: fixed;
+    width: 100%;
+    z-index: 99;
+  }
 }
 
 body.overlay-open {
   overflow: hidden;
+}
+
+.navbar-item {
+  float: right;
+}
+
+.navbar-item a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.navbar-item a:hover {
+  background-color: #111;
 }

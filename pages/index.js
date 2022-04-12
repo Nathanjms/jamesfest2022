@@ -7,7 +7,7 @@ import { CustomNavbar } from "../components/CustomNavbar";
 const weddingDate = new Date(1657926000000);
 export default function Home() {
   return (
-    <div className={styles.container}>
+    <div>
       <Head>
         <title>JamesFest2022</title>
         <meta

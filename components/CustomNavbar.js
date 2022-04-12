@@ -78,6 +78,18 @@ export const CustomNavbar = () => {
           {overlayOpen ? <FaTimes /> : <FaBars />}
         </button>
       </div>
+
+      <ul className="navbar-list">
+        {navItems.map((item, index) => {
+          return (
+            <li className="navbar-item" key={index}>
+              <a key={index} href={item.link}>
+                {item.name}
+              </a>
+            </li>
+          );
+        })}
+      </ul>
     </>
   );
 };
