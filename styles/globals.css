@@ -82,6 +82,7 @@ a {
   border: 3px solid var(--light1);
   border-radius: 10px;
   min-width: 60%;
+  max-width: 95%;
   padding: 20px;
   display: inline-block;
 }
