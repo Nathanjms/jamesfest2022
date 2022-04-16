@@ -7,7 +7,7 @@ import { CustomNavbar } from "../components/CustomNavbar";
 const weddingDate = new Date(1657926000000);
 export default function Home() {
   return (
-    <div>
+    <>
       <Head>
         <title>JamesFest2022</title>
         <meta
@@ -86,6 +86,21 @@ export default function Home() {
           </div>
         </section>
       </main>
-    </div>
+
+      <footer>
+        <div className="text-center">
+          <small>
+            Website Designed by{" "}
+            <a
+              href="https://nathanjms.co.uk"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              NathanJms
+            </a>
+          </small>
+        </div>
+      </footer>
+    </>
   );
 }
