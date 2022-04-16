@@ -49,8 +49,10 @@ export default function Home() {
           </div>
         </section>
         <section id="timer" className="text-center section">
-          <div className="timer-container">
-            <TimerDisplay date={weddingDate} />
+          <div className="container text-center">
+            <div className="timer-container">
+              <TimerDisplay date={weddingDate} />
+            </div>
           </div>
         </section>
         <section id="about" className="section">
