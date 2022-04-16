@@ -20,25 +20,19 @@ export default function Home() {
       <CustomNavbar />
 
       <main>
-        <section id="intro" className="pt-5">
+        <section id="intro" className="section intro mt-3">
           <div className="container text-center">
             <div className="row">
-              <div
-                className="col-sm-6"
-                style={{ maxWidth: "80vw", margin: "auto" }}
-              >
+              <div className="col-md-6 jamesfest-img">
                 <Image
                   src="/JamesFest.png"
                   alt="JamesFest Logo"
                   width={500}
                   height={500}
-                  objectFit="contain"
+                  objectFit="fill"
                 />
-                <div>
-                  <TimerDisplay date={weddingDate} />
-                </div>
               </div>
-              <div className="col-sm-6 d-flex align-items-center">
+              <div className="col-md-6 d-flex align-items-center">
                 <p>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                   do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -53,7 +47,14 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section id="about" className="mt-2">
+        <section id="timer" className="text-center section">
+          <div className="bg-image"></div>
+
+          <div className="bg-text">
+            <TimerDisplay date={weddingDate} />
+          </div>
+        </section>
+        <section id="about" className="section">
           <div className="container text-center">
             <h3>About</h3>
             <p>
@@ -85,7 +86,7 @@ export default function Home() {
             </p>
           </div>
         </section>
-        <section id="more" className="mt-2">
+        <section id="more" className="mt-2 section">
           <div className="container text-center">
             <h3>More</h3>
             <p>

@@ -50,45 +50,77 @@ export const CustomNavbar = () => {
 
   return (
     <>
-      <div id="navOverlay" className="overlay">
-        <button
-          className="btn-close closeBtn btn-close-white"
-          id="overlayCloseBtn"
-          aria-label="Close"
-          onClick={toggleOverlay}
-        />
-        <div className="pt-5 text-center">
-          <Image
-            src="/JamesFestText.png"
-            alt="JamesFest Logo"
-            width={200}
-            height={50}
-          />
-        </div>
+      <MobileOverlay
+        navItems={navItems}
+        toggleOverlay={toggleOverlay}
+        overlayOpen={overlayOpen}
+      />
+      <DesktopNavbar navItems={navItems} toggleOverlay={toggleOverlay} />
+    </>
+  );
+};
 
-        <div className="overlay-content text-white">
-          {navItems.map((item, index) => {
-            return (
-              <a key={index} href={item.link} onClick={toggleOverlay}>
-                {item.name}
-              </a>
-            );
-          })}
-        </div>
-        <button
-          className="btn btn-primary"
-          id="mobileNavBtn"
-          onClick={toggleOverlay}
-        >
-          {overlayOpen ? <FaTimes /> : <FaBars />}
-        </button>
+const MobileOverlay = ({ navItems, toggleOverlay, overlayOpen }) => {
+  return (
+    <div id="navOverlay" className="overlay">
+      <button
+        className="btn-close closeBtn btn-close-white"
+        id="overlayCloseBtn"
+        aria-label="Close"
+        onClick={toggleOverlay}
+      />
+      <div className="pt-5 text-center">
+        <Image
+          src="/JamesFestText.png"
+          alt="JamesFest Logo"
+          width={200}
+          height={50}
+          objectFit="fill"
+        />
       </div>
 
-      <Navbar expand="md" bg="light" variant="light" fixed="top">
+      <div className="overlay-content text-white">
+        {navItems.map((item, index) => {
+          return (
+            <a key={index} href={item.link} onClick={toggleOverlay}>
+              {item.name}
+            </a>
+          );
+        })}
+      </div>
+      <button
+        className="btn btn-primary"
+        id="mobileNavBtn"
+        onClick={toggleOverlay}
+      >
+        {overlayOpen ? <FaTimes /> : <FaBars />}
+      </button>
+    </div>
+  );
+};
+
+const DesktopNavbar = ({ navItems, toggleOverlay }) => {
+  return (
+    <div>
+      <Navbar bg="light" variant="light" expand="md" fixed="top" id="navbar">
         <Container>
-          <Navbar.Brand href="/">
-            JamesFest
+          <Navbar.Brand className="w-100" href="/">
+            <div className="navImageLogo">
+              <Image
+                src="/JamesFestText.png"
+                height={100}
+                width={400}
+                alt="JamesFest"
+                objectFit="contain"
+              />
+            </div>
           </Navbar.Brand>
+          <button
+            className="btn btn-light d-block d-sm-none"
+            onClick={toggleOverlay}
+          >
+            <FaBars />
+          </button>
           <Navbar.Collapse className="justify-content-end">
             <Nav>
               {navItems.map((item, index) => {
@@ -102,6 +134,6 @@ export const CustomNavbar = () => {
           </Navbar.Collapse>
         </Container>
       </Navbar>
-    </>
+    </div>
   );
 };

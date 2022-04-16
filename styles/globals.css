@@ -48,18 +48,49 @@ a {
 }
 
 .timerText {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 }
 
 #about {
   background-color: var(--light2);
-  padding-block: 2em;
-}
-
-#more {
-  padding-block: 2em;
 }
 
 .jamesfest-img {
-  max-width: 75vw;
+  max-width: 400px;
+  margin: auto;
+}
+
+.section {
+  padding-block: 2em;
+}
+
+.navImageLogo {
+  max-width: 30%;
+}
+
+#navbar {
+  flex-wrap: nowrap;
+}
+
+#timer {
+  background-image: url("/backgroundWeddingImg.jpg");
+  /* Set a specific height */
+  min-height: 100px;
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#timer .timerText {
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0, 0.6); /* Black w/opacity/see-through */
+    color: white;
+    font-weight: bold;
+    border: 3px solid #f1f1f1;
+    border-radius: 10px;
+    width: 80%;
+    padding: 20px;
+    text-align: center;
 }
