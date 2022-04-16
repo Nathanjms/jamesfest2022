@@ -2,8 +2,8 @@ import Head from "next/head";
 import { CustomNavbar } from "../CustomNavbar";
 
 export default function Header({ children, title }) {
-  let metaTitle = title || "";
-  metaTitle += " | JamesFest2022";
+  let metaTitle = title ? `${title} | ` : "";
+  metaTitle += "JamesFest2022";
   return (
     <>
       <Head>
