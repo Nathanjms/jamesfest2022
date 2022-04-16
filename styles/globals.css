@@ -19,8 +19,8 @@ body {
   background-color: var(--light1);
 }
 
-body {
-  min-height: 100vh;
+main {
+  min-height: 90vh;
 }
 
 * {
