@@ -6,7 +6,7 @@ import { TimerDisplay } from "../components/TimerDisplay";
 const weddingDate = new Date(1657926000000);
 export default function Home() {
   return (
-    <DefaultLayout title="Home">
+    <DefaultLayout>
       <main>
         <section id="intro" className="section intro mt-5">
           <div className="container text-center">
