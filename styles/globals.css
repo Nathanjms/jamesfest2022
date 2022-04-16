@@ -66,12 +66,10 @@ a {
 
 #timer {
   background-image: url("/backgroundWeddingImg.jpg");
-  /* Set a specific height */
   min-height: 100px;
   max-height: 200px;
-  /* Create the parallax scrolling effect */
   background-attachment: fixed;
-  background-position: bottom;
+  background-position: 0 80%;
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -79,9 +77,9 @@ a {
 #timer .timer-container {
   background-color: rgb(0, 0, 0); /* Fallback color */
   background-color: rgba(0, 0, 0, 0.5); /* Black w/opacity/see-through */
-  color: white;
+  color: var(--light1);
   font-weight: bold;
-  border: 3px solid #f1f1f1;
+  border: 3px solid var(--light1);
   border-radius: 10px;
   min-width: 60%;
   padding: 20px;
