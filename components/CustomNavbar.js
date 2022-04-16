@@ -33,9 +33,10 @@ const navItems = [
 export const CustomNavbar = () => {
   const [overlayOpen, setOverlayOpen] = useState(false);
 
-  const toggleOverlay = () => {
+  const toggleOverlay = (e) => {
     let overlay = document.querySelector("#navOverlay");
-    let mobileNavBtn = document.querySelector("#mobileNavBtn");
+    let mobileNavBtn = e.currentTarget;
+
     // Disable button during transition
     mobileNavBtn.disabled = true;
     setTimeout(() => {
@@ -74,31 +75,33 @@ export const CustomNavbar = () => {
 
 const MobileOverlay = ({ navItems, toggleOverlay, overlayOpen }) => {
   return (
-    <div id="navOverlay" className="overlay">
-      <button
-        className="btn-close closeBtn btn-close-white"
-        id="overlayCloseBtn"
-        aria-label="Close"
-        onClick={toggleOverlay}
-      />
-      <div className="pt-5 text-center">
-        <Image
-          src="/JamesFestText.png"
-          alt="JamesFest Logo"
-          width={200}
-          height={50}
-          objectFit="fill"
+    <>
+      <div id="navOverlay" className="overlay">
+        <button
+          className="btn-close closeBtn btn-close-white"
+          id="overlayCloseBtn"
+          aria-label="Close"
+          onClick={toggleOverlay}
         />
-      </div>
+        <div className="pt-5 text-center">
+          <Image
+            src="/JamesFestText.png"
+            alt="JamesFest Logo"
+            width={200}
+            height={50}
+            objectFit="fill"
+          />
+        </div>
 
-      <div className="overlay-content text-white">
-        {navItems.map((item, index) => {
-          return (
-            <a key={index} href={item.link} onClick={toggleOverlay}>
-              {item.name}
-            </a>
-          );
-        })}
+        <div className="overlay-content text-white">
+          {navItems.map((item, index) => {
+            return (
+              <a key={index} href={item.link} onClick={toggleOverlay}>
+                {item.name}
+              </a>
+            );
+          })}
+        </div>
       </div>
       <button
         className="btn btn-primary"
@@ -107,7 +110,7 @@ const MobileOverlay = ({ navItems, toggleOverlay, overlayOpen }) => {
       >
         {overlayOpen ? <FaTimes /> : <FaBars />}
       </button>
-    </div>
+    </>
   );
 };
 
