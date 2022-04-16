@@ -11,16 +11,16 @@ export const TimerDisplay = ({ date }) => {
     return () => clearTimeout(timer);
   });
   if (!timeLeft) {
-    return <h1>Loading...</h1>;
+    return <span className="timerText">Loading...</span>;
   }
   if (timeLeft?.ended) {
     return;
   }
   return (
-    <h3 className="animate__animated animate__flipInX">
+    <span className="animate__animated animate__flipInX timerText">
       {timeLeft.days} days, {timeLeft.hours} hours, {timeLeft.minutes} minutes,{" "}
       {timeLeft.seconds} seconds
-    </h3>
+    </span>
   );
 };
 

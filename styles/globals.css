@@ -1,9 +1,22 @@
+:root {
+  --primary: #5b8a45;
+  --primaryLight: #72ab57;
+  --primary2: #bb79e2;
+  --light1: #faf9f7;
+  --light2: #c6cac2;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 html,
 body {
   padding: 0;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  background-color: var(--light1);
 }
 
 a {
@@ -13,4 +26,62 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+.btn-primary {
+  background-color: var(--primary);
+  border-color: var(--primary);
+}
+
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary.active,
+.btn-primary:focus,
+.btn-primary:disabled,
+.btn-primary.disabled {
+  background-color: var(--primaryLight);
+  border-color: var(--primaryLight);
+}
+
+.btn {
+  border-radius: 30%;
+}
+
+.timerText {
+  font-size: 1.2rem;
+}
+
+#about {
+  background-color: var(--light2);
+}
+
+.jamesfest-img {
+  max-width: 400px;
+  margin: auto;
+}
+
+.section {
+  padding-block: 2em;
+}
+
+#timer {
+  background-image: url("/backgroundWeddingImg.jpg");
+  min-height: 100px;
+  max-height: 200px;
+  background-attachment: fixed;
+  background-position: 0 80%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#timer .timer-container {
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.5); /* Black w/opacity/see-through */
+  color: var(--light1);
+  font-weight: bold;
+  border: 3px solid var(--light1);
+  border-radius: 10px;
+  min-width: 60%;
+  padding: 20px;
+  display: inline-block;
 }
