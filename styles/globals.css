@@ -69,7 +69,7 @@ a {
   min-height: 100px;
   max-height: 200px;
   background-attachment: fixed;
-  background-position: 0 80%;
+  background-position: 50% 80%;
   background-repeat: no-repeat;
   background-size: cover;
 }
