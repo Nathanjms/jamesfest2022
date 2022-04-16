@@ -5,16 +5,28 @@ import { FaBars, FaTimes } from "react-icons/fa";
 
 const navItems = [
   {
-    name: "Home",
-    link: "#intro",
+    name: "Directions",
+    link: "#",
   },
   {
-    name: "About",
-    link: "#about",
+    name: "Accommodation",
+    link: "#",
   },
   {
-    name: "More",
-    link: "#more",
+    name: "Music",
+    link: "#",
+  },
+  {
+    name: "Catering",
+    link: "#",
+  },
+  {
+    name: "The Day",
+    link: "#",
+  },
+  {
+    name: "Venue",
+    link: "#",
   },
 ];
 
@@ -104,24 +116,25 @@ const DesktopNavbar = ({ navItems, toggleOverlay }) => {
     <div>
       <Navbar bg="light" variant="light" expand="md" fixed="top" id="navbar">
         <Container>
-          <Navbar.Brand className="w-100" href="/">
+          <Navbar.Brand className="w-100 d-inline-block align-top" href="/">
             <div className="navImageLogo">
               <Image
                 src="/JamesFestText.png"
                 height={100}
-                width={400}
+                width={350}
                 alt="JamesFest"
                 objectFit="contain"
               />
             </div>
           </Navbar.Brand>
           <button
-            className="btn btn-light d-block d-sm-none"
+            className="btn btn-light navbar-toggler"
+            style={{ border: 0 }}
             onClick={toggleOverlay}
           >
             <FaBars />
           </button>
-          <Navbar.Collapse className="justify-content-end">
+          <Navbar.Collapse>
             <Nav>
               {navItems.map((item, index) => {
                 return (
