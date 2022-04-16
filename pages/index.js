@@ -90,7 +90,7 @@ export default function Home() {
       <footer>
         <div className="text-center">
           <small>
-            Website Designed by{" "}
+            Website Created by{" "}
             <a
               href="https://nathanjms.co.uk"
               target="_blank"
