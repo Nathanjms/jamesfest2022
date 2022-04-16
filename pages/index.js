@@ -1,24 +1,12 @@
 import Head from "next/head";
 import Image from "next/image";
-import styles from "../styles/Home.module.css";
+import DefaultLayout from "../components/layouts/DefaultLayout";
 import { TimerDisplay } from "../components/TimerDisplay";
-import { CustomNavbar } from "../components/CustomNavbar";
 
 const weddingDate = new Date(1657926000000);
 export default function Home() {
   return (
-    <>
-      <Head>
-        <title>JamesFest2022</title>
-        <meta
-          name="description"
-          content="JamesFest: Celebrating the wedding of Ian and Anna"
-        />
-        <link rel="icon" href="/JamesFest-Logo.ico" />
-      </Head>
-
-      <CustomNavbar />
-
+    <DefaultLayout>
       <main>
         <section id="intro" className="section intro mt-5">
           <div className="container text-center">
@@ -49,8 +37,10 @@ export default function Home() {
           </div>
         </section>
         <section id="timer" className="text-center section">
-          <div className="timer-container">
-            <TimerDisplay date={weddingDate} />
+          <div className="container text-center">
+            <div className="timer-container">
+              <TimerDisplay date={weddingDate} />
+            </div>
           </div>
         </section>
         <section id="about" className="section">
@@ -86,21 +76,6 @@ export default function Home() {
           </div>
         </section>
       </main>
-
-      <footer>
-        <div className="text-center">
-          <small>
-            Website Created by{" "}
-            <a
-              href="https://nathanjms.co.uk"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              NathanJms
-            </a>
-          </small>
-        </div>
-      </footer>
-    </>
+    </DefaultLayout>
   );
 }
