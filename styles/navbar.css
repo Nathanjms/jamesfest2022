@@ -8,11 +8,12 @@
   background-color: rgb(0, 0, 0);
   background-color: rgba(0, 0, 0, 0.9);
   transition: 0.5s;
+  overflow-y: auto;
 }
 
 .overlay-content {
   position: relative;
-  top: 25%;
+  top: 10%;
   width: 100%;
   text-align: center;
 }
@@ -37,14 +38,9 @@
   right: 45px;
 }
 
-@media screen and (max-height: 450px) {
+@media screen and (max-height: 600px) {
   .overlay a {
-    font-size: 1rem;
-  }
-  .overlay .closeBtn {
-    font-size: 40px;
-    top: 15px;
-    right: 35px;
+    font-size: 1.5rem;
   }
 }
 
@@ -55,24 +51,10 @@
     right: 0;
     margin: 0 0.75em 0.75em 0;
   }
-  .navbar-list {
-    display: none;
-  }
 }
 @media screen and (min-width: 768px) {
   #mobileNavBtn {
     display: none;
-  }
-  .navbar-list {
-    list-style-type: none;
-    margin-bottom: 2rem;
-    padding: 0;
-    overflow: hidden;
-    background-color: var(--light2);
-    top: 0;
-    position: fixed;
-    width: 100%;
-    z-index: 99;
   }
 }
 
@@ -80,18 +62,14 @@ body.overlay-open {
   overflow: hidden;
 }
 
-.navbar-item {
-  float: right;
+.navbar-nav a {
+  width: max-content;
 }
 
-.navbar-item a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
+.navImageLogo {
+  max-width: 140px;
 }
 
-.navbar-item a:hover {
-  background-color: #111;
+#navbar {
+  flex-wrap: nowrap;
 }

@@ -64,18 +64,11 @@ a {
   padding-block: 2em;
 }
 
-.navImageLogo {
-  max-width: 30%;
-}
-
-#navbar {
-  flex-wrap: nowrap;
-}
-
 #timer {
   background-image: url("/backgroundWeddingImg.jpg");
   /* Set a specific height */
   min-height: 100px;
+  max-height: 200px;
   /* Create the parallax scrolling effect */
   background-attachment: fixed;
   background-position: bottom;
@@ -83,14 +76,14 @@ a {
   background-size: cover;
 }
 
-#timer .timerText {
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0, 0.6); /* Black w/opacity/see-through */
-    color: white;
-    font-weight: bold;
-    border: 3px solid #f1f1f1;
-    border-radius: 10px;
-    width: 80%;
-    padding: 20px;
-    text-align: center;
+#timer .timer-container {
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.5); /* Black w/opacity/see-through */
+  color: white;
+  font-weight: bold;
+  border: 3px solid #f1f1f1;
+  border-radius: 10px;
+  min-width: 60%;
+  padding: 20px;
+  display: inline-block;
 }
