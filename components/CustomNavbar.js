@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { useState } from "react";
 import { Container, Nav, Navbar } from "react-bootstrap";
 import { FaBars, FaTimes } from "react-icons/fa";
@@ -18,7 +19,7 @@ const navItems = [
   },
   {
     name: "Catering",
-    link: "#",
+    link: "/catering",
   },
   {
     name: "The Day",
@@ -96,9 +97,9 @@ const MobileOverlay = ({ navItems, toggleOverlay, overlayOpen }) => {
         <div className="overlay-content text-white">
           {navItems.map((item, index) => {
             return (
-              <a key={index} href={item.link} onClick={toggleOverlay}>
+              <Link key={index} href={item.link} onClick={toggleOverlay}>
                 {item.name}
-              </a>
+              </Link>
             );
           })}
         </div>
@@ -141,9 +142,9 @@ const DesktopNavbar = ({ navItems, toggleOverlay }) => {
             <Nav>
               {navItems.map((item, index) => {
                 return (
-                  <Nav.Link key={index} href={item.link}>
-                    {item.name}
-                  </Nav.Link>
+                  <Link passHref={true} key={index} href={item.link}>
+                    <Nav.Link>{item.name}</Nav.Link>
+                  </Link>
                 );
               })}
             </Nav>
