@@ -3,6 +3,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { Container, Nav, Navbar } from "react-bootstrap";
 import { FaBars, FaTimes } from "react-icons/fa";
+import { useRouter } from "next/router";
 
 const navItems = [
   {
@@ -33,6 +34,7 @@ const navItems = [
 
 export const CustomNavbar = ({ showNavLinks = true }) => {
   const [overlayOpen, setOverlayOpen] = useState(false);
+  const router = useRouter();
 
   const navLinks = showNavLinks ? navItems : [];
   const toggleOverlay = (e) => {
@@ -70,7 +72,11 @@ export const CustomNavbar = ({ showNavLinks = true }) => {
         toggleOverlay={toggleOverlay}
         overlayOpen={overlayOpen}
       />
-      <DesktopNavbar navItems={navLinks} toggleOverlay={toggleOverlay} />
+      <DesktopNavbar
+        navItems={navLinks}
+        toggleOverlay={toggleOverlay}
+        pathName={router.pathname}
+      />
     </>
   );
 };
@@ -120,7 +126,7 @@ const MobileOverlay = ({ navItems, toggleOverlay, overlayOpen }) => {
   );
 };
 
-const DesktopNavbar = ({ navItems, toggleOverlay }) => {
+const DesktopNavbar = ({ navItems, toggleOverlay, pathName }) => {
   return (
     <div>
       <Navbar bg="light" variant="light" expand="md" fixed="top" id="navbar">
@@ -150,7 +156,11 @@ const DesktopNavbar = ({ navItems, toggleOverlay }) => {
               {navItems.map((item, index) => {
                 return (
                   <Link href={item.link} passHref={true} key={index}>
-                    <Nav.Link>{item.name}</Nav.Link>
+                    <Nav.Link
+                      className={pathName === item.link ? "active" : ""}
+                    >
+                      {item.name}
+                    </Nav.Link>
                   </Link>
                 );
               })}
