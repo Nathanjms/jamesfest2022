@@ -19,8 +19,8 @@ body {
   background-color: var(--light1);
 }
 
-body {
-  min-height: 100vh;
+main {
+  min-height: 90vh;
 }
 
 * {
@@ -43,7 +43,7 @@ body {
 }
 
 .btn {
-  border-radius: 30%;
+  border-radius: 15px;
 }
 
 .timerText {
@@ -85,4 +85,10 @@ body {
   max-width: 95%;
   padding: 20px;
   display: inline-block;
+}
+
+.logInCard {
+  max-width: 400px;
+  margin: auto;
+  border-radius: 10px;
 }

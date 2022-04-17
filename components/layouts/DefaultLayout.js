@@ -1,12 +1,11 @@
 import Header from "./header";
 import Footer from "./footer";
 
-export default function DefaultLayout({ children, props, title }) {
-  console.dir(children, props, title);
+export default function DefaultLayout({ children, props, title = '' }) {
   return (
     <>
       <Header title={title} />
-      <main>{children}</main>
+      <main className="mt-5">{children}</main>
       <Footer />
     </>
   );
