@@ -3,7 +3,7 @@ import DefaultLayout from "./layouts/DefaultLayout";
 
 export default function Unauthenticated() {
   return (
-    <DefaultLayout>
+    <DefaultLayout title="Unauthenticated">
       <div className="section">
         <h1>Unauthenticated!</h1>
         <p>

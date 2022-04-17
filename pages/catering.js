@@ -12,7 +12,7 @@ export default function Catering({ user }) {
     return <Unauthenticated />;
   }
   return (
-    <DefaultLayout>
+    <DefaultLayout title="Catering">
       <div id="#catering" className="section">
         <h1>Catering</h1>
         
