@@ -97,9 +97,9 @@ const MobileOverlay = ({ navItems, toggleOverlay, overlayOpen }) => {
         <div className="overlay-content text-white">
           {navItems.map((item, index) => {
             return (
-              <Link key={index} href={item.link} onClick={toggleOverlay}>
+              <Nav.Link key={index} href={item.link} onClick={toggleOverlay}>
                 {item.name}
-              </Link>
+              </Nav.Link>
             );
           })}
         </div>
@@ -142,9 +142,9 @@ const DesktopNavbar = ({ navItems, toggleOverlay }) => {
             <Nav>
               {navItems.map((item, index) => {
                 return (
-                  <Link passHref={true} key={index} href={item.link}>
-                    <Nav.Link>{item.name}</Nav.Link>
-                  </Link>
+                  <Nav.Link href={item.link} key={index}>
+                    {item.name}
+                  </Nav.Link>
                 );
               })}
             </Nav>
