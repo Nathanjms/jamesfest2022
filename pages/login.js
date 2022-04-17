@@ -2,6 +2,7 @@ import DefaultLayout from "../components/layouts/DefaultLayout";
 
 import React, { useRef, useState } from "react";
 import { useRouter } from "next/router";
+import Link from "next/link";
 
 const SignInPage = () => {
   const router = useRouter();
@@ -29,34 +30,40 @@ const SignInPage = () => {
   };
 
   return (
-    <DefaultLayout>
-      <div className="section">
-        <div className="container justify-content-center">
-          <div className="row">
-            <div className="col-12">
-              <div className="card logInCard">
-                <div className="card-body">
-                  {error && <div className="alert alert-danger">{error}</div>}
-                  <h2 className="text-center mb-4">Enter passcode</h2>
-                  <form onSubmit={handleSubmit}>
-                    <div id="password">
-                      <label className="form-label">Passcode</label>
-                      <input
-                        type="password"
-                        className="mb-3 form-control"
-                        required={true}
-                        ref={passwordInput}
-                      />
-                    </div>
-                    <div>
-                      <button type="submit" className="w-100 btn btn-primary">
-                        Submit
-                      </button>
-                    </div>
-                  </form>
-                </div>
+    <DefaultLayout showNavLinks={false}>
+      <div className="section container">
+        <div className="row">
+          <div className="col-8 m-auto">
+            <div className="card logInCard">
+              <div className="card-body">
+                {error && <div className="alert alert-danger">{error}</div>}
+                <h2 className="text-center mb-4">Enter passcode</h2>
+                <form onSubmit={handleSubmit}>
+                  <div id="password">
+                    <label className="form-label">Passcode</label>
+                    <input
+                      type="password"
+                      className="mb-3 form-control"
+                      required={true}
+                      ref={passwordInput}
+                    />
+                  </div>
+                  <div>
+                    <button type="submit" className="w-100 btn btn-primary">
+                      Submit
+                    </button>
+                  </div>
+                </form>
               </div>
             </div>
+          </div>
+        </div>
+        <div className="row pt-2">
+          <div className="col-md-7 col-12 m-auto text-center">
+            <p>
+              To access this page, please enter the passcode. Alternatively,
+              click <Link href="/">here</Link> to return to the home page.
+            </p>
           </div>
         </div>
       </div>

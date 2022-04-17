@@ -12,7 +12,7 @@ export default function Venue({ user }) {
     return <Unauthenticated />;
   }
   return (
-    <DefaultLayout>
+    <DefaultLayout title="Venue">
       <div id="#venue" className="section">
         <h1>Venue</h1>
         <h2>Super secret data</h2>

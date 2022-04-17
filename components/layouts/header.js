@@ -1,7 +1,7 @@
 import Head from "next/head";
 import { CustomNavbar } from "../CustomNavbar";
 
-export default function Header({ children, title }) {
+export default function Header({ children, title, showNavLinks }) {
   let metaTitle = title ? `${title} | ` : "";
   metaTitle += "JamesFest2022";
   return (
@@ -14,7 +14,7 @@ export default function Header({ children, title }) {
         />
         <link rel="icon" href="/JamesFest-Logo.ico" />
       </Head>
-      <CustomNavbar />
+      <CustomNavbar showNavLinks={showNavLinks} />
     </>
   );
 }

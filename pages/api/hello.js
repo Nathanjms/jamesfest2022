@@ -1,7 +1,6 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 
 export default function handler(req, res) {
-  console.log(process.env.ACCESS_KEY);
   if (req.body.accessPassword === process.env.ACCESS_KEY) {
     res.status(200).json({ name: "Valid" });
     return;

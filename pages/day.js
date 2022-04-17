@@ -12,10 +12,9 @@ export default function Day({ user }) {
     return <Unauthenticated />;
   }
   return (
-    <DefaultLayout>
+    <DefaultLayout title="On the Day">
       <div id="#day" className="section">
         <h1>Day</h1>
-        
       </div>
     </DefaultLayout>
   );

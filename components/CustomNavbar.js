@@ -31,9 +31,10 @@ const navItems = [
   },
 ];
 
-export const CustomNavbar = () => {
+export const CustomNavbar = ({ showNavLinks = true }) => {
   const [overlayOpen, setOverlayOpen] = useState(false);
 
+  const navLinks = showNavLinks ? navItems : [];
   const toggleOverlay = (e) => {
     let overlay = document.querySelector("#navOverlay");
     let mobileNavBtn = e.currentTarget;
@@ -65,11 +66,11 @@ export const CustomNavbar = () => {
   return (
     <>
       <MobileOverlay
-        navItems={navItems}
+        navItems={navLinks}
         toggleOverlay={toggleOverlay}
         overlayOpen={overlayOpen}
       />
-      <DesktopNavbar navItems={navItems} toggleOverlay={toggleOverlay} />
+      <DesktopNavbar navItems={navLinks} toggleOverlay={toggleOverlay} />
     </>
   );
 };
@@ -85,13 +86,17 @@ const MobileOverlay = ({ navItems, toggleOverlay, overlayOpen }) => {
           onClick={toggleOverlay}
         />
         <div className="pt-5 text-center">
-          <Image
-            src="/JamesFestText.png"
-            alt="JamesFest Logo"
-            width={200}
-            height={50}
-            objectFit="fill"
-          />
+          <Link href="/" passHref={true}>
+            <a>
+              <Image
+                src="/JamesFestText.png"
+                alt="JamesFest Logo"
+                width={200}
+                height={50}
+                objectFit="fill"
+              />
+            </a>
+          </Link>
         </div>
 
         <div className="overlay-content text-white">
@@ -120,17 +125,19 @@ const DesktopNavbar = ({ navItems, toggleOverlay }) => {
     <div>
       <Navbar bg="light" variant="light" expand="md" fixed="top" id="navbar">
         <Container>
-          <Navbar.Brand className="w-100 d-inline-block align-top" href="/">
-            <div className="navImageLogo">
-              <Image
-                src="/JamesFestText.png"
-                height={100}
-                width={350}
-                alt="JamesFest"
-                objectFit="contain"
-              />
-            </div>
-          </Navbar.Brand>
+          <Link href="/" passHref={true}>
+            <Navbar.Brand className="w-100 d-inline-block align-top">
+              <div className="navImageLogo">
+                <Image
+                  src="/JamesFestText.png"
+                  height={100}
+                  width={350}
+                  alt="JamesFest"
+                  objectFit="contain"
+                />
+              </div>
+            </Navbar.Brand>
+          </Link>
           <button
             className="btn btn-light navbar-toggler"
             style={{ border: 0 }}
