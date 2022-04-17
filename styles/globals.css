@@ -86,3 +86,9 @@ main {
   padding: 20px;
   display: inline-block;
 }
+
+.logInCard {
+  max-width: 400px;
+  margin: auto;
+  border-radius: 10px;
+}
