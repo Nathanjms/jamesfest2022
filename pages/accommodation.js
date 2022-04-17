@@ -3,7 +3,7 @@ import { getUserFromServerSession } from "../lib/withSession";
 
 export const getServerSideProps = getUserFromServerSession({
   redirectToLogin: true,
-  redirectUrl: "Accommodation",
+  redirectUrl: "accommodation",
 });
 
 export default function Accommodation({ user }) {
