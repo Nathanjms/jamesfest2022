@@ -3,11 +3,13 @@ import DefaultLayout from "../components/layouts/DefaultLayout";
 import React, { useRef, useState } from "react";
 import { useRouter } from "next/router";
 import Link from "next/link";
+import { FaEye } from "react-icons/fa";
 
 const SignInPage = () => {
   const router = useRouter();
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
+  const [visiblePasswordField, setVisiblePasswordField] = useState(false);
   const passwordInput = useRef();
   let redirectUrl = router.asPath.slice(7); // Get redirectUrl from the value after the '#' in the url
 
@@ -45,12 +47,24 @@ const SignInPage = () => {
                 <form onSubmit={handleSubmit}>
                   <div id="password">
                     <label className="form-label">Passcode</label>
-                    <input
-                      type="password"
-                      className="mb-3 form-control"
-                      required={true}
-                      ref={passwordInput}
-                    />
+                    <div className="input-group mb-3">
+                      <input
+                        type={visiblePasswordField ? "text" : "password"}
+                        className="form-control"
+                        required={true}
+                        aria-label="Passcode"
+                        ref={passwordInput}
+                      />
+                      <button
+                        className="btn btn-outline-secondary"
+                        type="button"
+                        onClick={() =>
+                          setVisiblePasswordField(!visiblePasswordField)
+                        }
+                      >
+                        <FaEye />
+                      </button>
+                    </div>
                   </div>
                   <div>
                     <button
