@@ -7,6 +7,7 @@ import Link from "next/link";
 const SignInPage = () => {
   const router = useRouter();
   const [error, setError] = useState("");
+  const [loading, setLoading] = useState(false);
   const passwordInput = useRef();
   let redirectUrl = router.asPath.slice(7); // Get redirectUrl from the value after the '#' in the url
 
@@ -14,6 +15,8 @@ const SignInPage = () => {
     e.preventDefault();
     const password = passwordInput.current.value;
 
+    setError("");
+    setLoading(true);
     try {
       const response = await fetch("/api/login", {
         method: "POST",
@@ -27,6 +30,7 @@ const SignInPage = () => {
     } catch (error) {
       setError("E01: Unexpected error has occurred.");
     }
+    setLoading(false);
   };
 
   return (
@@ -49,8 +53,12 @@ const SignInPage = () => {
                     />
                   </div>
                   <div>
-                    <button type="submit" className="w-100 btn btn-primary">
-                      Submit
+                    <button
+                      type="submit"
+                      disabled={loading}
+                      className="w-100 btn btn-primary"
+                    >
+                      {loading ? "Loading..." : "Submit"}
                     </button>
                   </div>
                 </form>
