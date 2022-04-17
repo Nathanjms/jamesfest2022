@@ -2,7 +2,7 @@ import { getUserFromServerSession } from "../lib/withSession";
 
 export const getServerSideProps = getUserFromServerSession({
   redirectToLogin: true,
-  redirectUrl: '/admin',
+  redirectUrl: 'admin',
 });
 
 export default function Admin({ user }) {

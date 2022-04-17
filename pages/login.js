@@ -20,7 +20,7 @@ const SignInPage = () => {
         body: JSON.stringify({ accessPassword: password }),
       });
       if (response.ok) {
-        return router.push(redirectUrl || "/");
+        return router.push(`/${redirectUrl}` || "/");
       }
       setError("Invalid Passcode, please try again.");
     } catch (error) {
