@@ -34,10 +34,10 @@ const SignInPage = () => {
   };
 
   return (
-    <DefaultLayout showNavLinks={false}>
+    <DefaultLayout homeLinkOnly={true}>
       <div className="section container">
         <div className="row">
-          <div className="col-md-8 col-12 m-auto">
+          <div className="col-lg-7 col-md-8 col-12 m-auto">
             <div className="card logInCard">
               <div className="card-body">
                 {error && <div className="alert alert-danger">{error}</div>}
@@ -67,7 +67,7 @@ const SignInPage = () => {
           </div>
         </div>
         <div className="row pt-2">
-          <div className="col-md-8 col-12 m-auto text-center">
+          <div className="col-lg-7 col-md-8 col-12 m-auto text-center">
             <p>
               To access this page, please enter the passcode. Alternatively,
               click <Link href="/">here</Link> to return to the home page.

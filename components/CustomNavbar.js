@@ -32,11 +32,11 @@ const navItems = [
   },
 ];
 
-export const CustomNavbar = ({ showNavLinks = true }) => {
+export const CustomNavbar = ({ homeLinkOnly = false }) => {
   const [overlayOpen, setOverlayOpen] = useState(false);
   const router = useRouter();
 
-  const navLinks = showNavLinks ? navItems : [];
+  const navLinks = homeLinkOnly ? [{ name: "Home", link: "/" }] : navItems;
   const toggleOverlay = (e) => {
     let overlay = document.querySelector("#navOverlay");
     let mobileNavBtn = e.currentTarget;
