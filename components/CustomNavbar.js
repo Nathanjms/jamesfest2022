@@ -93,7 +93,7 @@ const MobileOverlay = ({ navItems, toggleOverlay, overlayOpen }) => {
         />
         <div className="pt-5 text-center">
           <Link href="/" passHref={true}>
-            <a>
+            <a onClick={toggleOverlay}>
               <Image
                 src="/JamesFestText.png"
                 alt="JamesFest Logo"
@@ -108,8 +108,8 @@ const MobileOverlay = ({ navItems, toggleOverlay, overlayOpen }) => {
         <div className="overlay-content text-white">
           {navItems.map((item, index) => {
             return (
-              <Link key={index} href={item.link} onClick={toggleOverlay}>
-                {item.name}
+              <Link key={index} href={item.link} passHref={true}>
+                <a onClick={toggleOverlay}>{item.name}</a>
               </Link>
             );
           })}
