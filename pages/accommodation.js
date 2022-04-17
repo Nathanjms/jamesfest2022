@@ -1,4 +1,6 @@
+import Link from "next/link";
 import DefaultLayout from "../components/layouts/DefaultLayout";
+import Unauthenticated from "../components/Unauthenticated";
 import { getUserFromServerSession } from "../lib/withSession";
 
 export const getServerSideProps = getUserFromServerSession({
@@ -7,6 +9,9 @@ export const getServerSideProps = getUserFromServerSession({
 });
 
 export default function Accommodation({ user }) {
+  if (!user) {
+    return <Unauthenticated />;
+  }
   return (
     <DefaultLayout>
       <div id="#accommodation" className="section">
