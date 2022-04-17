@@ -3,15 +3,14 @@ import { getUserFromServerSession } from "../lib/withSession";
 
 export const getServerSideProps = getUserFromServerSession({
   redirectToLogin: true,
-  redirectUrl: "catering",
+  redirectUrl: "Accommodation",
 });
 
-export default function Catering({ user }) {
+export default function Accommodation({ user }) {
   return (
     <DefaultLayout>
-      <div id="#catering" className="section">
-        <h1>Catering</h1>
-        
+      <div id="#accommodation" className="section">
+        <h1>Accommodation</h1>
       </div>
     </DefaultLayout>
   );

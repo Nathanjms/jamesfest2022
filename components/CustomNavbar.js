@@ -7,15 +7,15 @@ import { FaBars, FaTimes } from "react-icons/fa";
 const navItems = [
   {
     name: "Directions",
-    link: "#",
+    link: "/directions",
   },
   {
     name: "Accommodation",
-    link: "#",
+    link: "/accommodation",
   },
   {
     name: "Music",
-    link: "#",
+    link: "/music",
   },
   {
     name: "Catering",
@@ -23,11 +23,11 @@ const navItems = [
   },
   {
     name: "The Day",
-    link: "#",
+    link: "/day",
   },
   {
     name: "Venue",
-    link: "#",
+    link: "/venue",
   },
 ];
 
