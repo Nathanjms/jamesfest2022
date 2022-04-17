@@ -5,7 +5,7 @@ export default function DefaultLayout({
   children,
   props,
   title = "",
-  showNavLinks = true,
+  homeLinkOnly = false,
 }) {
   return (
     <>
