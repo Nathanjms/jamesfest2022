@@ -1,27 +1,30 @@
 import DefaultLayout from "../components/layouts/DefaultLayout";
 
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import { useRouter } from "next/router";
 
 const SignInPage = () => {
   const router = useRouter();
-  const emailInput = useRef();
+  const [error, setError] = useState("");
   const passwordInput = useRef();
+  let redirectUrl = router.asPath.slice(7); // Get redirectUrl from the value after the '#' in the url
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
     const password = passwordInput.current.value;
 
-    const response = await fetch("/api/login", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ accessPassword: password }),
-    });
-
-    if (response.ok) {
-      console.log("push");
-      return router.push("/admin");
+    try {
+      const response = await fetch("/api/login", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ accessPassword: password }),
+      });
+      if (response.ok) {
+        return router.push(redirectUrl || "/");
+      }
+      setError("Invalid Passcode, please try again.");
+    } catch (error) {
+      setError("E01: Unexpected error has occurred.");
     }
   };
 
@@ -33,10 +36,11 @@ const SignInPage = () => {
             <div className="col-12">
               <div className="card logInCard">
                 <div className="card-body">
+                  {error && <div className="alert alert-danger">{error}</div>}
                   <h2 className="text-center mb-4">Enter passcode</h2>
                   <form onSubmit={handleSubmit}>
                     <div id="password">
-                      <label className="form-label">Password</label>
+                      <label className="form-label">Passcode</label>
                       <input
                         type="password"
                         className="mb-3 form-control"
