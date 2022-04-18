@@ -20,16 +20,23 @@ export default function Home() {
               />
             </div>
             <div className="col-md-7 d-flex flex-column justify-content-center">
-              <h1 className="h3">Welcome to JamesFest 2022</h1>
+              <h1 className="h3 mb-3">Welcome to JamesFest 2022</h1>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-                sunt in culpa qui officia deserunt mollit anim id est laborum.
+                Welcome aboard everyone, it’s great to have you with us on our
+                very special journey. We thought this would be a great way to
+                share information and to get you lovely folks involved in our
+                happy day!
               </p>
+              <p>
+                We are planning a day that we feel represents us as a couple and
+                to celebrate the joining of our two wonderful families in the
+                company of our lovely friends! We can’t wait to see you all. If
+                you have any questions or further suggestions please get in
+                touch using our wedding email address,{" "}
+                <a href="mailto:Jamesfest@mail.com">Jamesfest@mail.com</a>.
+              </p>
+              <p className="mb-1">Sending Love</p>
+              <p>Anna & Ian Xx</p>
             </div>
           </div>
         </div>
