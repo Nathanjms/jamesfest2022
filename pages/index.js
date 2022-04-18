@@ -9,7 +9,7 @@ import { MdOutlinePark, MdSportsCricket } from "react-icons/md";
 const weddingDate = new Date(1657926000000);
 export default function Home() {
   return (
-    <DefaultLayout>
+    <DefaultLayout footerAlt={true}>
       <section id="intro" className="section intro">
         <div className="container text-center">
           <div className="row">
