@@ -66,8 +66,7 @@ main {
 
 #timer {
   background-image: url("/backgroundWeddingImg.jpg");
-  min-height: 100px;
-  max-height: 200px;
+  min-height: 200px;
   background-attachment: fixed;
   background-position: 50% 80%;
   background-repeat: no-repeat;
