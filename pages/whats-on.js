@@ -1,7 +1,6 @@
-import Image from "next/image";
 import { FaIceCream, FaMusic } from "react-icons/fa";
 import { GiTeapot } from "react-icons/gi";
-import { MdSportsCricket } from "react-icons/md";
+import { MdOutlinePark, MdSportsCricket } from "react-icons/md";
 import DefaultLayout from "../components/layouts/DefaultLayout";
 
 export default function WhatsOn() {
@@ -12,19 +11,22 @@ export default function WhatsOn() {
           <h2 className="h3 mb-3">
             Here&apos;s what we&apos;ve got planned (at the moment)
           </h2>
-          <div className="row">
-            <div className="col-12">
-              Firstly the venue, we think you’ll love it. We chose the river
-              school as we liked the beautiful trees, natural grounds and
-              wonderful countryside views. Back in the 1930’s it was a
-              horticultural college which explains why so many lovely and
-              unusual trees can be found here... In fact, we have chosen a
-              &quot;special&quot; tree, under which, we intend to hold our
-              wedding ceremony, with you all very close by, lounging on hay
-              bales.
-            </div>
-          </div>
           <div className="row justify-content-center">
+            <div className="col-md-12 whatsOnCardContainer">
+              <div className="card h-100 whatsOnCard">
+                <h3 className="h1">
+                  <MdOutlinePark />
+                </h3>
+                Firstly the venue, we think you’ll love it. We chose the river
+                school as we liked the beautiful trees, natural grounds and
+                wonderful countryside views. Back in the 1930’s it was a
+                horticultural college which explains why so many lovely and
+                unusual trees can be found here... In fact, we have chosen a
+                &quot;special&quot; tree, under which, we intend to hold our
+                wedding ceremony, with you all very close by, lounging on hay
+                bales.
+              </div>
+            </div>
             <div className="col-md-6 whatsOnCardContainer">
               <div className="card h-100 whatsOnCard">
                 <h3 className="h1">
@@ -67,7 +69,7 @@ export default function WhatsOn() {
               </div>
             </div>
           </div>
-          <div className="row justify-content-center pt-2">
+          <div className="row justify-content-center pt-3">
             <div className="col-12 whatsOnCardContainer">
               With all this in mind, please keep your fingers and everything
               else crossed for good weather.
