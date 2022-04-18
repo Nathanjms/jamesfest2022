@@ -30,8 +30,10 @@ export default function Home() {
               <p>
                 We are planning a day that we feel represents us as a couple and
                 to celebrate the joining of our two wonderful families in the
-                company of our lovely friends! We can’t wait to see you all. If
-                you have any questions or further suggestions please get in
+                company of our lovely friends! We can’t wait to see you all.
+              </p>
+              <p>
+                If you have any questions or further suggestions please get in
                 touch using our wedding email address,{" "}
                 <a href="mailto:Jamesfest@mail.com">Jamesfest@mail.com</a>.
               </p>
