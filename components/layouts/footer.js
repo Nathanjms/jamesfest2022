@@ -1,7 +1,7 @@
-export default function Footer({ children }) {
+export default function Footer({ children, footerAlt }) {
   return (
     <footer>
-      <div className="text-center">
+      <div className={"text-center" + (footerAlt ? " alt" : "")}>
         <small>
           Website Created by{" "}
           <a
