@@ -51,7 +51,7 @@ main {
 }
 
 .backgroundAlt {
-  background-color: var(--light2)
+  background-color: var(--light2);
 }
 
 .jamesfest-img {
@@ -89,4 +89,26 @@ main {
   max-width: 500px;
   margin: auto;
   border-radius: 10px;
+}
+
+.whatsOnCardContainer {
+  margin-block: 1.25rem;
+}
+
+.whatsOnCard {
+  padding: 0.5rem 0.25rem 0.5rem 0.25rem;
+  border-radius: 10px;
+  box-shadow: 0 0.15rem 1.75rem -1rem rgba(31, 45, 65, 0.25);
+  -webkit-box-shadow: 0 0.15rem 1.75rem -0.1rem rgba(31, 45, 65, 0.25);
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
+  -webkit-transition: box-shadow 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
+  margin-block: 2rem;
+  justify-content: space-evenly;
+}
+
+.whatsOnCard:hover {
+  -webkit-transform: translateY(-0.3333333333rem);
+  transform: translateY(-0.3333333333rem);
+  -webkit-box-shadow: 0 20px 25px -12px rgba(31, 45, 65, 0.25);
+  box-shadow: 0 20px 25px -12px rgba(31, 45, 65, 0.25);
 }
