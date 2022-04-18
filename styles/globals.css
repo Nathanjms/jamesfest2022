@@ -50,9 +50,8 @@ main {
   font-size: 1.2rem;
 }
 
-#about {
-  background-color: var(--light2);
-  min-height: 40vh;
+.backgroundAlt {
+  background-color: var(--light2)
 }
 
 .jamesfest-img {
