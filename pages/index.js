@@ -81,7 +81,6 @@ export default function Home() {
         </div>
       </section>
       <section className="section">
-        {includeLayout ? "test" : "tedst2"}
         <div className="container text-center">
           <h2 className="h3 mb-3">
             Here&apos;s what we&apos;ve got planned (at the moment)
