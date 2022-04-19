@@ -27,7 +27,7 @@ const navItems = [
     link: "/games",
   },
   {
-    name: "Gift Lift",
+    name: "Gift List",
     link: "/gift-list",
   },
   {
