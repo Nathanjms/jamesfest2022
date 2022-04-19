@@ -15,6 +15,7 @@ export default function Music({ user }) {
     <DefaultLayout title="Music">
       <div id="#music" className="section">
         <h1>Music</h1>
+        <h2>Coming Soon...</h2>
       </div>
     </DefaultLayout>
   );
