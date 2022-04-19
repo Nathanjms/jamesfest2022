@@ -50,7 +50,7 @@ export default function Venue({ user }) {
                   rel="noopener noreferrer"
                 >
                   <Image
-                    src="/Maps.jpg"
+                    src="/Maps.webp"
                     alt="Google Maps Screenshot"
                     height="400"
                     width="450"

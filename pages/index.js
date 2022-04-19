@@ -13,7 +13,7 @@ export default function Home() {
           <div className="row">
             <div className="col-md-5 jamesfest-img">
               <Image
-                src="/JamesFest.png"
+                src="/JamesFest.webp"
                 alt="JamesFest Logo"
                 width={500}
                 height={500}

@@ -65,7 +65,7 @@ main {
 }
 
 #timer {
-  background-image: url("/BackgroundVenuePhoto.jpg");
+  background-image: url("/BackgroundVenuePhoto.webp");
   min-height: 200px;
   background-attachment: fixed;
   background-position: 50% 55%;
@@ -74,7 +74,7 @@ main {
 }
 
 #venueBackground {
-  background-image: url("/venue.jpg");
+  background-image: url("/venue.webp");
   min-height: 50vh;
   background-attachment: fixed;
   background-position: 50% 55%;

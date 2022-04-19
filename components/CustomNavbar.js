@@ -99,7 +99,7 @@ const MobileOverlay = ({ navItems, toggleOverlay, overlayOpen }) => {
           <Link href="/" passHref={true}>
             <a onClick={toggleOverlay}>
               <Image
-                src="/JamesFestText.png"
+                src="/JamesFestT.webp"
                 alt="JamesFest Logo"
                 width={200}
                 height={50}
@@ -139,7 +139,7 @@ const DesktopNavbar = ({ navItems, toggleOverlay, pathName }) => {
             <Navbar.Brand className="w-100 d-inline-block align-top">
               <div className="navImageLogo">
                 <Image
-                  src="/JamesFestText.png"
+                  src="/JamesFestText.webp"
                   height={100}
                   width={350}
                   alt="JamesFest"
