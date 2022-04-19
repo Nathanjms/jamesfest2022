@@ -7,10 +7,6 @@ import { useRouter } from "next/router";
 
 const navItems = [
   {
-    name: "What's On",
-    link: "/whats-on",
-  },
-  {
     name: "Venue",
     link: "/venue",
   },
@@ -147,7 +143,7 @@ const DesktopNavbar = ({ navItems, toggleOverlay, pathName }) => {
                   height={100}
                   width={350}
                   alt="JamesFest"
-                  objectFit="contain"
+                  // objectFit="contain"
                 />
               </div>
             </Navbar.Brand>

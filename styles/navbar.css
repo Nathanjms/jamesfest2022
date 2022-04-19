@@ -68,6 +68,7 @@ body.overlay-open {
 }
 
 .navImageLogo {
+  min-width: 80px;
   max-width: 140px;
 }
 
