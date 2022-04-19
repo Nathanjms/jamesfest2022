@@ -46,7 +46,7 @@ export default function Home() {
       </section>
       <section id="timer" className="text-center section">
         <div className="container text-center">
-          <div className="timer-container">
+          <div className="textOverlay-container">
             <TimerDisplay date={weddingDate} />
           </div>
         </div>
