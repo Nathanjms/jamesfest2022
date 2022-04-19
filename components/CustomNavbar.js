@@ -99,7 +99,7 @@ const MobileOverlay = ({ navItems, toggleOverlay, overlayOpen }) => {
           <Link href="/" passHref={true}>
             <a onClick={toggleOverlay}>
               <Image
-                src="/JamesFestT.webp"
+                src="/JamesFestText.webp"
                 alt="JamesFest Logo"
                 width={200}
                 height={50}
