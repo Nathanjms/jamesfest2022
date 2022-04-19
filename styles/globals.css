@@ -122,7 +122,6 @@ main {
     -webkit-transform 0.2s ease-in-out;
   -webkit-transition: box-shadow 0.2s ease-in-out,
     -webkit-transform 0.2s ease-in-out;
-  margin-block: 2rem;
   justify-content: space-evenly;
 }
 
