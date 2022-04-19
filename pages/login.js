@@ -36,7 +36,7 @@ const SignInPage = () => {
   };
 
   return (
-    <DefaultLayout homeLinkOnly={true}>
+    <DefaultLayout homeLinkOnly={true} title="Login">
       <div className="section container">
         <div className="row">
           <div className="col-lg-7 col-md-8 col-12 m-auto">
