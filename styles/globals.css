@@ -96,11 +96,8 @@ main {
 }
 
 .venue-container {
-  background-color: rgb(0, 0, 0); /* Fallback color */
-  background-color: rgba(0, 0, 0, 0.7); /* Black w/opacity/see-through */
+  background-color: rgba(0, 0, 0, 0.5); /* Black w/opacity/see-through */
   width: 100%;
-  padding: 20px;
-  display: inline-block;
 }
 
 .logInCard {

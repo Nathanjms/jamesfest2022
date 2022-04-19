@@ -17,7 +17,7 @@ export default function Venue({ user }) {
       <section id="venue" className="section">
         <div id="venueBackground" className="d-flex align-items-center">
           <div className="container">
-            <div className="textOverlay-container m-auto">
+            <div className="textOverlay-container venue-container m-auto">
               <h1 className="pb-3">Venue</h1>
               <div className="row pb-3">
                 <div className="col-md-9 m-auto">
