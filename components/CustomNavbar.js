@@ -7,8 +7,8 @@ import { useRouter } from "next/router";
 
 const navItems = [
   {
-    name: "Directions",
-    link: "/directions",
+    name: "Venue",
+    link: "/venue",
   },
   {
     name: "Accommodation",
@@ -19,16 +19,20 @@ const navItems = [
     link: "/music",
   },
   {
-    name: "Catering",
-    link: "/catering",
+    name: "Food & Drink",
+    link: "/food-and-drink",
+  },
+  {
+    name: "Games",
+    link: "/games",
+  },
+  {
+    name: "Gift Lift",
+    link: "/gift-list",
   },
   {
     name: "The Day",
     link: "/day",
-  },
-  {
-    name: "Venue",
-    link: "/venue",
   },
 ];
 
@@ -139,7 +143,7 @@ const DesktopNavbar = ({ navItems, toggleOverlay, pathName }) => {
                   height={100}
                   width={350}
                   alt="JamesFest"
-                  objectFit="contain"
+                  // objectFit="contain"
                 />
               </div>
             </Navbar.Brand>

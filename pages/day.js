@@ -7,7 +7,7 @@ export const getServerSideProps = getUserFromServerSession({
   redirectUrl: "day",
 });
 
-export default function Day({ user }) {
+export default function OnTheDay({ user }) {
   if (!user) {
     return <Unauthenticated />;
   }
@@ -15,6 +15,7 @@ export default function Day({ user }) {
     <DefaultLayout title="On the Day">
       <div id="#day" className="section">
         <h1>Day</h1>
+        <h2>Coming Soon...</h2>
       </div>
     </DefaultLayout>
   );

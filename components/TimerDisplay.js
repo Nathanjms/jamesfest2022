@@ -14,16 +14,18 @@ export const TimerDisplay = ({ date }) => {
     return <span className="timerText">Loading...</span>;
   }
   if (timeLeft?.ended) {
-    return;
+    return <span className="timerText">Happy Together</span>;
   }
   return (
-    <span className="animate__animated animate__flipInX timerText">
-      {timeLeft.days} days, {timeLeft.hours} hours, {timeLeft.minutes} minutes,{" "}
-      {timeLeft.seconds} seconds
-    </span>
+    <div className="animate__animated animate__flipInX timerText">
+      <p>The Countdown has begun...</p>
+      <span>
+        {timeLeft.days} days, {timeLeft.hours} hours, {timeLeft.minutes}{" "}
+        minutes, {timeLeft.seconds} seconds
+      </span>
+    </div>
   );
 };
-
 
 const calculateTimeLeft = (date) => {
   let difference = date - new Date();
@@ -43,4 +45,3 @@ const calculateTimeLeft = (date) => {
 
   return timeLeft;
 };
-
