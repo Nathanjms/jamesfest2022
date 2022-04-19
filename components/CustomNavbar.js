@@ -11,6 +11,10 @@ const navItems = [
     link: "/whats-on",
   },
   {
+    name: "Venue",
+    link: "/venue",
+  },
+  {
     name: "Accommodation",
     link: "/accommodation",
   },
@@ -19,16 +23,20 @@ const navItems = [
     link: "/music",
   },
   {
-    name: "Catering",
-    link: "/catering",
+    name: "Food & Drink",
+    link: "/food-and-drink",
+  },
+  {
+    name: "Games",
+    link: "/games",
+  },
+  {
+    name: "Gift Lift",
+    link: "/gift-list",
   },
   {
     name: "The Day",
     link: "/day",
-  },
-  {
-    name: "Venue",
-    link: "/venue",
   },
 ];
 

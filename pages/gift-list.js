@@ -7,15 +7,15 @@ export const getServerSideProps = getUserFromServerSession({
   redirectUrl: "catering",
 });
 
-export default function Catering({ user }) {
+export default function GiftList({ user }) {
   if (!user) {
     return <Unauthenticated />;
   }
   return (
-    <DefaultLayout title="Catering">
-      <div id="#catering" className="section">
-        <h1>Catering</h1>
-        
+    <DefaultLayout title="Gift List">
+      <div id="#gift-list" className="section">
+        <h1>Gift List</h1>
+        <h2>Coming Soon...</h2>
       </div>
     </DefaultLayout>
   );
