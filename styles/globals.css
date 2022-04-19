@@ -65,10 +65,10 @@ main {
 }
 
 #timer {
-  background-image: url("/backgroundWeddingImg.jpg");
+  background-image: url("/BackgroundVenuePhoto.jpg");
   min-height: 200px;
   background-attachment: fixed;
-  background-position: 50% 80%;
+  background-position: 50% 60%;
   background-repeat: no-repeat;
   background-size: cover;
 }
