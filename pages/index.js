@@ -2,7 +2,7 @@ import Head from "next/head";
 import Image from "next/image";
 import DefaultLayout from "../components/layouts/DefaultLayout";
 import { TimerDisplay } from "../components/TimerDisplay";
-import { WhatsOnCard, whatsOnContent } from "./whats-on";
+import WhatsOn from "../components/WhatsOn";
 
 const weddingDate = new Date(1657926000000);
 export default function Home() {
@@ -46,7 +46,7 @@ export default function Home() {
       </section>
       <section id="timer" className="text-center section">
         <div className="container text-center">
-          <div className="timer-container">
+          <div className="textOverlay-container">
             <TimerDisplay date={weddingDate} />
           </div>
         </div>
@@ -80,18 +80,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="section">
-        <div className="container text-center">
-          <h2 className="h3 mb-3">
-            Here&apos;s what we&apos;ve got planned (at the moment)
-          </h2>
-          <div className="row justify-content-center">
-            {whatsOnContent.map((content, index) => {
-              return <WhatsOnCard content={content} key={index} />;
-            })}
-          </div>
-        </div>
-      </section>
+      <WhatsOn />
     </DefaultLayout>
   );
 }

@@ -5,7 +5,6 @@
   z-index: 1031; /* Above top Navbar */
   bottom: 0;
   left: 0;
-  background-color: rgb(0, 0, 0);
   background-color: rgba(0, 0, 0, 0.9);
   transition: 0.5s;
   overflow-y: auto;
@@ -13,7 +12,6 @@
 
 .overlay-content {
   position: relative;
-  top: 10%;
   width: 100%;
   text-align: center;
 }
@@ -68,6 +66,7 @@ body.overlay-open {
 }
 
 .navImageLogo {
+  min-width: 80px;
   max-width: 140px;
 }
 

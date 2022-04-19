@@ -65,23 +65,40 @@ main {
 }
 
 #timer {
-  background-image: url("/backgroundWeddingImg.jpg");
+  background-image: url("/BackgroundVenuePhoto.jpg");
   min-height: 200px;
   background-attachment: fixed;
-  background-position: 50% 80%;
+  background-position: 50% 55%;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-#timer .timer-container {
+#venueBackground {
+  background-image: url("/venue.jpg");
+  min-height: 50vh;
+  background-attachment: fixed;
+  background-position: 50% 55%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.textOverlay-container {
   background-color: rgb(0, 0, 0); /* Fallback color */
-  background-color: rgba(0, 0, 0, 0.5); /* Black w/opacity/see-through */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/opacity/see-through */
   color: var(--light1);
   font-weight: bold;
   border: 3px solid var(--light1);
   border-radius: 10px;
   min-width: 60%;
   max-width: 95%;
+  padding: 20px;
+  display: inline-block;
+}
+
+.venue-container {
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.7); /* Black w/opacity/see-through */
+  width: 100%;
   padding: 20px;
   display: inline-block;
 }
@@ -101,8 +118,10 @@ main {
   border-radius: 10px;
   box-shadow: 0 0.15rem 1.75rem -1rem rgba(31, 45, 65, 0.25);
   -webkit-box-shadow: 0 0.15rem 1.75rem -0.1rem rgba(31, 45, 65, 0.25);
-  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
-  -webkit-transition: box-shadow 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out,
+    -webkit-transform 0.2s ease-in-out;
+  -webkit-transition: box-shadow 0.2s ease-in-out,
+    -webkit-transform 0.2s ease-in-out;
   margin-block: 2rem;
   justify-content: space-evenly;
 }
