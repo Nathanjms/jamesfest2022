@@ -4,7 +4,7 @@ import { MdOutlinePark } from "react-icons/md";
 
 export default function WhatsOn() {
   return (
-    <section className="section pb-0">
+    <section className="section pb-4">
       <div className="container text-center">
         <h2 className="h3 mb-3">
           Here&apos;s what we&apos;ve got planned (at the moment)
