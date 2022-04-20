@@ -23,15 +23,16 @@ export default function Home() {
             <div className="col-md-7 d-flex flex-column justify-content-center">
               <h1 className="h3 mb-3">Welcome to JamesFest 2022</h1>
               <p>
-                Welcome aboard everyone, it’s great to have you with us on our
-                very special journey. We thought this would be a great way to
-                share information and to get you lovely folks involved in our
+                Welcome aboard everyone, it&apos;s great to have you with us on
+                our very special journey. We thought this would be a great way
+                to share information and to get you lovely folks involved in our
                 happy day!
               </p>
               <p>
                 We are planning a day that we feel represents us as a couple and
-                to celebrate the joining of our two wonderful families in the
-                company of our lovely friends! We can’t wait to see you all.
+                celebrates the joining of our two wonderful families, in the
+                company of our lovely friends! We can&apos;t wait to see you
+                all.
               </p>
               <p>
                 If you have any questions or further suggestions please get in
@@ -39,7 +40,7 @@ export default function Home() {
                 <a href="mailto:Jamesfest@mail.com">Jamesfest@mail.com</a>.
               </p>
               <p className="mb-1">Sending Love,</p>
-              <p>Anna & Ian Xx</p>
+              <p>Anna &amp; Ian Xx</p>
             </div>
           </div>
         </div>
@@ -60,20 +61,21 @@ export default function Home() {
                 We hope the website will provide you with all the info you need
                 about the day. The{" "}
                 <b>plan is to update the site with new information</b> as we
-                figure things out ourselves. Between now and the big day, we’ll
-                be able to <b>give you more and more detail</b>. We’re sure
-                you’d like to know about food choices, music and game
-                scheduling, directions to the venue, accommodation, gift list,
-                and much more besides.{" "}
+                figure things out ourselves. As we get closer to the big day,
+                we&apos;ll be able to <b>give you more and more detail</b>.
+                We&apos;re sure you&apos;d like to know about food, music and
+                games, directions to the venue, accommodation, gift list, and
+                much more besides.{" "}
                 <b>
                   So please, please, keep checking in and hopefully all your
-                  questions will be answered!
+                  questions will be answered! So please, please, keep checking
+                  in and hopefully all your questions will be answered!
                 </b>
               </p>
               <p>
                 Please note that you will require a passcode to access some
                 parts of the website. Your passcode was sent to you with your
-                invitation. I have full faith in the web designer who tells me
+                invitation. We have full faith in the web designer who tells me
                 that you should only need to enter it one time.
               </p>
             </div>

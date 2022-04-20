@@ -14,7 +14,7 @@ export default function Venue({ user }) {
   }
   return (
     <DefaultLayout title="Venue">
-      <section id="venue" className="section">
+      <section id="venue" className="section pb-0">
         <div id="venueBackground" className="d-flex align-items-center">
           <div className="container">
             <div className="textOverlay-container venue-container m-auto">
