@@ -68,8 +68,7 @@ export default function Home() {
                 much more besides.{" "}
                 <b>
                   So please, please, keep checking in and hopefully all your
-                  questions will be answered! So please, please, keep checking
-                  in and hopefully all your questions will be answered!
+                  questions will be answered!
                 </b>
               </p>
               <p>
