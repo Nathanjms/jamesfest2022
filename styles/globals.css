@@ -76,7 +76,7 @@ main {
 
 #venueBackground {
   background-image: url("/venue.webp");
-  min-height: 50vh;
+  min-height: 40vh;
   background-attachment: fixed;
   background-position: 50% 55%;
   background-repeat: no-repeat;
@@ -99,7 +99,7 @@ main {
   border-radius: 10px;
   min-width: 60%;
   max-width: 95%;
-  padding: 20px;
+  padding: 1rem;
   display: inline-block;
 }
 
