@@ -72,4 +72,5 @@ body.overlay-open {
 
 #navbar {
   flex-wrap: nowrap;
+  height: 75px;
 }
