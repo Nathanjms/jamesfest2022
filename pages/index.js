@@ -45,9 +45,12 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section id="timer" className="text-center section">
-        <div className="container text-center">
-          <div className="textOverlay-container">
+      <section
+        id="timer"
+        className="text-center py-3 d-flex align-items-center"
+      >
+        <div className="container">
+          <div className="textOverlay-container my-3">
             <TimerDisplay date={weddingDate} />
           </div>
         </div>

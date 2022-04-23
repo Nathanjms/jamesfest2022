@@ -14,13 +14,16 @@ export default function Venue({ user }) {
   }
   return (
     <DefaultLayout title="Venue">
-      <section id="venue" className="section pb-0">
+      <section id="venue">
         <div id="venueBackground" className="d-flex align-items-center">
           <div className="container">
-            <div className="textOverlay-container venue-container m-auto">
-              <h1 className="pb-3">Venue</h1>
-              <div className="row pb-3">
-                <div className="col-md-9 m-auto">
+            <div className="row justify-content-center">
+              <div
+                className="col-md-10 text-center"
+                style={{ maxWidth: "600px" }}
+              >
+                <div className="textOverlay-container venue-container my-3">
+                  <h1 className="pb-3">Venue</h1>
                   <h2 className="h5">Oakfield Gardens</h2>
                   <p>
                     The River School

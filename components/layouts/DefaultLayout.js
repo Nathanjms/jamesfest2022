@@ -7,13 +7,13 @@ export default function DefaultLayout({
   props,
   title = "",
   homeLinkOnly = false,
-  footerAlt = false
+  footerAlt = false,
 }) {
   return (
     <>
       <Header title={title} />
       <CustomNavbar homeLinkOnly={homeLinkOnly} />
-      <main className="mt-5">{children}</main>
+      <main>{children}</main>
       <Footer footerAlt={footerAlt} />
     </>
   );
