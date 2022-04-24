@@ -21,7 +21,7 @@ body {
 
 main {
   min-height: 90vh;
-  margin-top: 75px;
+  margin-top: 65px;
 }
 
 * {
@@ -135,4 +135,8 @@ main {
   transform: translateY(-0.3333333333rem);
   -webkit-box-shadow: 0 20px 25px -12px rgba(31, 45, 65, 0.25);
   box-shadow: 0 20px 25px -12px rgba(31, 45, 65, 0.25);
+}
+
+#bottomBanner {
+  z-index: 1032; /* Above bottom nav button and overlay */
 }

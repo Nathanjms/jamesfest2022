@@ -1,5 +1,5 @@
-import Head from "next/head";
 import Image from "next/image";
+import { BottomBanner } from "../components/BottomBanner";
 import DefaultLayout from "../components/layouts/DefaultLayout";
 import { TimerDisplay } from "../components/TimerDisplay";
 import WhatsOn from "../components/WhatsOn";
@@ -85,6 +85,7 @@ export default function Home() {
         </div>
       </section>
       <WhatsOn />
+      <BottomBanner />
     </DefaultLayout>
   );
 }
