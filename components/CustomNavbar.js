@@ -5,34 +5,41 @@ import { Container, Nav, Navbar } from "react-bootstrap";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { useRouter } from "next/router";
 
-const navItems = [
+export const navItems = [
   {
     name: "Venue",
     link: "/venue",
+    lastUpdated: 1650804521371, // Sun Apr 24 2022 13:48:41 GMT+0100 (British Summer Time) 
   },
   {
     name: "Accommodation",
     link: "/accommodation",
+    lastUpdated: 1650804521371, // Sun Apr 24 2022 13:48:41 GMT+0100 (British Summer Time) 
   },
   {
     name: "Music",
     link: "/music",
+    lastUpdated: 1650804521371, // Sun Apr 24 2022 13:48:41 GMT+0100 (British Summer Time) 
   },
   {
     name: "Food & Drink",
     link: "/food-and-drink",
+    lastUpdated: 1650804521371, // Sun Apr 24 2022 13:48:41 GMT+0100 (British Summer Time) 
   },
   {
     name: "Games",
     link: "/games",
+    lastUpdated: 1650804521371, // Sun Apr 24 2022 13:48:41 GMT+0100 (British Summer Time) 
   },
   {
     name: "Gift List",
     link: "/gift-list",
+    lastUpdated: 1650804521371, // Sun Apr 24 2022 13:48:41 GMT+0100 (British Summer Time) 
   },
   {
     name: "The Day",
     link: "/day",
+    lastUpdated: 1650804521371, // Sun Apr 24 2022 13:48:41 GMT+0100 (British Summer Time) 
   },
 ];
 
