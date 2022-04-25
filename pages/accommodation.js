@@ -20,7 +20,7 @@ export default function Accommodation({ user }) {
             <h1 className="textOverlay-container">Accommodation</h1>
           </div>
         </div>
-        <div className="py-5">
+        <div className="py-5 backgroundAlt">
           <div className="container text-center">
             <div className="row">
               <div className="col-md-6">
