@@ -25,7 +25,7 @@ export default function Accommodation({ user }) {
             <div className="row">
               <div className="col-md-6">
                 <div className="h-100">
-                  <p>Hi Everyone</p>
+                  <p>Hi Everyone,</p>
                   <p>
                     Well this hasn&apos;t been as straightforward as we&apos;d
                     hoped. The wedding venue has recommended a number of hotels
