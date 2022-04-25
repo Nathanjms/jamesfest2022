@@ -140,3 +140,17 @@ main {
 #bottomBanner {
   z-index: 1032; /* Above bottom nav button and overlay */
 }
+
+.section-background {
+  min-height: 40vh;
+  background-position: 50% 55%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  text-align: center;
+  align-items: center;
+}
+
+.section-background.accommodation {
+  background-image: url("/hotel.webp");
+}
