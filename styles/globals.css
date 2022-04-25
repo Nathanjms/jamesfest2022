@@ -10,6 +10,15 @@ html {
   scroll-behavior: smooth;
 }
 
+::selection {
+  background: var(--primary); /* WebKit/Blink Browsers */
+  color: white;
+}
+::-moz-selection {
+  background: var(--primary); /* Gecko Browsers */
+  color: white;
+}
+
 html,
 body {
   padding: 0;
@@ -139,4 +148,35 @@ main {
 
 #bottomBanner {
   z-index: 1032; /* Above bottom nav button and overlay */
+}
+
+.section-background {
+  min-height: 40vh;
+  background-position: 50% 55%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  text-align: center;
+  align-items: center;
+}
+
+.section-background.accommodation {
+  background-image: url("/hotel.webp");
+  background-position: 50% 75%;
+}
+
+.td-none {
+  text-decoration: none;
+}
+.accomCard {
+  width: 80%;
+  text-decoration: none;
+}
+
+.accomCard.airbnb {
+  color: #ff5a5f;
+}
+
+.accomCard.hotel {
+  color: black;
 }
