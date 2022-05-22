@@ -4,7 +4,7 @@ import { getUserFromServerSession } from "../lib/withSession";
 
 export const getServerSideProps = getUserFromServerSession({
   redirectToLogin: true,
-  redirectUrl: "catering",
+  redirectUrl: "gift-list",
 });
 
 export default function GiftList({ user }) {
