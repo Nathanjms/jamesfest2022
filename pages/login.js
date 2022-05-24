@@ -88,6 +88,54 @@ const SignInPage = () => {
             </p>
           </div>
         </div>
+        <div className="row">
+          <div className="col-lg-7 col-md-8 col-12 m-auto">
+            <div className="card logInCard">
+              <div className="card-body">
+                {error && <div className="alert alert-danger">{error}</div>}
+                <h2 className="text-center mb-4">Forgotten Passcode?</h2>
+                <form
+                  action="https://formsubmit.co/nathanjms@outlook.com"
+                  method="POST"
+                  className="text-start"
+                >
+                  <div className="mb-3">
+                      <input
+                        type="hidden"
+                        name="Type"
+                        value="Forgotten Passcode"
+                      />
+                    <div className="mb-1">
+                      <label className="form-label">Name</label>
+                      <input
+                        type="text"
+                        name="Name"
+                        className="form-control"
+                        required={true}
+                        aria-label="Name"
+                      />
+                    </div>
+                    <div>
+                      <label className="form-label">Email</label>
+                      <input
+                        type="email"
+                        name="Email"
+                        className="form-control"
+                        required={true}
+                        aria-label="Email Address"
+                      />
+                    </div>
+                  </div>
+                  <div>
+                    <button type="submit" className="w-100 btn btn-primary">
+                      Submit
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </DefaultLayout>
   );
