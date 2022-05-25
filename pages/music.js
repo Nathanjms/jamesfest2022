@@ -19,18 +19,16 @@ export default function Music({ user }) {
           <h1 className="pb-5 color-primary">Music</h1>
           <div className="row musicCard">
             <h2 className="h3 mb-5">Ellie Jones &amp; The Giants</h2>
-            <div className="col-md-6">
-              <div className="d-flex flex-column justify-content-center animate__animated animate__fadeInLeft">
-                <Image
-                  src="/EJandG.jpg"
-                  alt="Ellie Jones and The Giants performing on stage"
-                  width={400}
-                  height={400}
-                  className="rounded-img mb-2"
-                />
-              </div>
+            <div className="col-md-6 d-flex flex-column justify-content-center animate__animated animate__fadeIn">
+              <Image
+                src="/EJandG.jpg"
+                alt="Ellie Jones and The Giants performing on stage"
+                width={400}
+                height={400}
+                className="rounded-img mb-2"
+              />
             </div>
-            <div className="col-md-6 d-flex flex-column justify-content-center animate__animated animate__fadeInRight">
+            <div className="col-md-6 d-flex flex-column justify-content-center animate__animated animate__fadeIn">
               <p>
                 Ellie Jones and The Giants are a combination of eclectic
                 musicians who come together to play the songs you love spanning
@@ -51,7 +49,7 @@ export default function Music({ user }) {
           </div>
           <div className="row musicCard">
             <h2 className="h3 mb-5">Barry Lee Martin</h2>
-            <div className="col-lg-6 order-lg-2 d-flex flex-column justify-content-center animate__animated animate__fadeInRight mb-3">
+            <div className="col-lg-6 order-lg-2 d-flex flex-column justify-content-center mb-3 animate__animated animate__fadeIn">
               <Image
                 src="/BarryLeeMartin.jpg"
                 alt="Barry Lee Martin Singing on Stage"
@@ -60,7 +58,7 @@ export default function Music({ user }) {
                 className="mb-1"
               />
             </div>
-            <div className="col-lg-6 order-lg-1 d-flex flex-column justify-content-center animate__animated animate__fadeInLeft">
+            <div className="col-lg-6 order-lg-1 d-flex flex-column justify-content-center animate__animated animate__fadeIn">
               <p>
                 Barry has been singing most of his life, firstly in local
                 community choirs from the age of twelve, then with local amateur
@@ -83,7 +81,7 @@ export default function Music({ user }) {
               </p>
             </div>
           </div>
-          <div className="row musicCard animate__animated animate__fadeInRight">
+          <div className="row musicCard animate__animated animate__fadeIn">
             <h2 className="h3">...And More!</h2>
           </div>
         </div>
