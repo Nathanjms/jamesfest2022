@@ -17,18 +17,20 @@ export default function Music({ user }) {
       <div id="#music" className="section">
         <div className="container text-center">
           <h1 className="pb-5 color-primary">Music</h1>
-          <div className="row musicCard animate__animated animate__fadeInLeft">
+          <div className="row musicCard">
             <h2 className="h3 mb-5">Ellie Jones &amp; The Giants</h2>
-            <div className="col-md-6 mb-3 jamesfest-img">
-              <Image
-                src="/EJandG.jpg"
-                alt="Ellie Jones and The Giants performing on stage"
-                width={400}
-                height={400}
-                className="rounded-img mb-2"
-              />
+            <div className="col-md-6">
+              <div className="d-flex flex-column justify-content-center animate__animated animate__fadeInLeft">
+                <Image
+                  src="/EJandG.jpg"
+                  alt="Ellie Jones and The Giants performing on stage"
+                  width={400}
+                  height={400}
+                  className="rounded-img mb-2"
+                />
+              </div>
             </div>
-            <div className="col-md-6 d-flex flex-column justify-content-center">
+            <div className="col-md-6 d-flex flex-column justify-content-center animate__animated animate__fadeInRight">
               <p>
                 Ellie Jones and The Giants are a combination of eclectic
                 musicians who come together to play the songs you love spanning
@@ -47,25 +49,18 @@ export default function Music({ user }) {
               </p>
             </div>
           </div>
-          <div className="row musicCard animate__animated animate__fadeInRight">
+          <div className="row musicCard">
             <h2 className="h3 mb-5">Barry Lee Martin</h2>
-            <div className="col-lg-6 order-lg-2 mb-3 jamesfest-img">
-              <div
-                style={{ position: "relative", height: "255px", width: "100%" }}
-              >
-                <Image
-                  src="/BarryLeeMartin.jpg"
-                  alt="Barry Lee Martin Singing on Stage"
-                  width={475}
-                  height={255}
-                  className="mb-1"
-                  layout="fill"
-                  objectFit="cover"
-                  objectPosition="center"
-                />
-              </div>
+            <div className="col-lg-6 order-lg-2 d-flex flex-column justify-content-center animate__animated animate__fadeInRight mb-3">
+              <Image
+                src="/BarryLeeMartin.jpg"
+                alt="Barry Lee Martin Singing on Stage"
+                width={475}
+                height={255}
+                className="mb-1"
+              />
             </div>
-            <div className="col-lg-6 order-lg-1 d-flex flex-column justify-content-center">
+            <div className="col-lg-6 order-lg-1 d-flex flex-column justify-content-center animate__animated animate__fadeInLeft">
               <p>
                 Barry has been singing most of his life, firstly in local
                 community choirs from the age of twelve, then with local amateur
