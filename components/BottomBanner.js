@@ -80,7 +80,7 @@ export const BottomBanner = () => {
               onClick={showModal}
               size="sm"
               className="mx-auto w-100"
-              style={{ maxWidth: "300px" }}
+              style={{ maxWidth: "500px" }}
             >
               View Updates
             </Button>
