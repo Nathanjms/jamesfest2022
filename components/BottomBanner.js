@@ -2,6 +2,8 @@ import { useState, useEffect } from "react";
 import { Container, Nav, Navbar, Button } from "react-bootstrap";
 import Swal from "sweetalert2";
 import { navItems } from "./CustomNavbar";
+import ReactDOMServer from "react-dom/server";
+import Link from "next/link";
 
 export const BottomBanner = () => {
   const [whatsNew, setWhatsNew] = useState([]);
@@ -23,18 +25,26 @@ export const BottomBanner = () => {
   }
 
   const showModal = () => {
-    let htmlContent = `
-      <p>Below are the sections that have been updated since your last site visit.</p>
-      <ul class="text-start">
-        ${whatsNew
-          .map((value) => {
-            return `<li>${value.name}</li>`;
-          })
-          .join("")}
-      </ul>`;
+    let htmlContent = (
+      <>
+        <p>
+          Below are the sections that have been updated since your last site
+          visit.
+        </p>
+        <ul className="text-start">
+          {whatsNew.map((value) => {
+            return (
+              <li key={value.name}>
+                <Link href={value.link}>{value.name}</Link>
+              </li>
+            );
+          })}
+        </ul>
+      </>
+    );
     Swal.fire({
       title: "Updated Sections",
-      html: htmlContent,
+      html: ReactDOMServer.renderToString(htmlContent),
       confirmButtonColor: "#5b8a45",
       showClass: {
         popup: "animate__animated animate__fadeInDown",
@@ -67,7 +77,7 @@ export const BottomBanner = () => {
               <div className="py-2 text-white">
                 <span>There have been updates since your last visit!</span>
               </div>
-              <div className="pt-2">
+              <div>
                 <button
                   className="btn-close closeBtn btn-close-white"
                   id="overlayCloseBtn"
