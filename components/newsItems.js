@@ -15,7 +15,7 @@ export const newsItems = [
     date: "25th May 2022",
     content: (
       <>
-        <p>The Music section has been updated with the latest acts that will be playing at JamesFest, <Link href="/music">click Here to see the updates!</Link> </p>
+        <p>The Music section has been updated with the latest acts that will be playing at JamesFest, <Link href="/music">click here to see the updates!</Link> </p>
       </>
     ),
   },
