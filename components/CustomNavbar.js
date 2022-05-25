@@ -7,6 +7,11 @@ import { useRouter } from "next/router";
 
 export const navItems = [
   {
+    name: "News",
+    link: "/news",
+    lastUpdated: 1653508200000, // Wed May 25 2022 20:50:00 GMT+0100 (British Summer Time)
+  },
+  {
     name: "Venue",
     link: "/venue",
     lastUpdated: 1650910962908, // Mon Apr 25 2022 19:23:10 GMT+0100 (British Summer Time)
@@ -19,12 +24,7 @@ export const navItems = [
   {
     name: "Music",
     link: "/music",
-    lastUpdated: 1650804521371, // Sun Apr 24 2022 13:48:41 GMT+0100 (British Summer Time) 
-  },
-  {
-    name: "Food & Drink",
-    link: "/food-and-drink",
-    lastUpdated: 1650804521371, // Sun Apr 24 2022 13:48:41 GMT+0100 (British Summer Time) 
+    lastUpdated: 1653508200000, // Wed May 25 2022 20:50:00 GMT+0100 (British Summer Time)
   },
   {
     name: "Games",

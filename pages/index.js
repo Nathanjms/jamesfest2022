@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { BottomBanner } from "../components/BottomBanner";
 import DefaultLayout from "../components/layouts/DefaultLayout";
 import { TimerDisplay } from "../components/TimerDisplay";
@@ -71,8 +72,9 @@ export default function Home() {
                 much more besides.{" "}
                 <b>
                   So please, please, keep checking in and hopefully all your
-                  questions will be answered!
-                </b>
+                  questions will be answered! Updates will appear on
+                </b>{" "}
+                <Link href="/news">the News page!</Link>
               </p>
               <p>
                 Please note that you will require a passcode to access some

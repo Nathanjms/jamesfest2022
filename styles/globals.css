@@ -6,6 +6,10 @@
   --light2: #c6cac2;
 }
 
+.color-primary {
+  color: var(--primary);
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -179,4 +183,11 @@ main {
 
 .accomCard.hotel {
   color: black;
+}
+
+.musicCard {
+  padding: 2rem;
+  background-color: white;
+  border-radius: 10px;
+  margin-bottom: 2rem;
 }
