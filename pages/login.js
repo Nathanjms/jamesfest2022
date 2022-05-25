@@ -95,7 +95,7 @@ const SignInPage = () => {
                 with the passcode!
               </p>
               <form
-                action={`https://formsubmit.co/${process.env.CONTACT_EMAIL}`}
+                action={`https://formsubmit.co/${process.env.NEXT_PUBLIC_CONTACT_EMAIL}`}
                 method="POST"
                 className="text-start"
               >
