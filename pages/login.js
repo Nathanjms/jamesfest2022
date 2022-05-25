@@ -95,7 +95,7 @@ const SignInPage = () => {
                 {error && <div className="alert alert-danger">{error}</div>}
                 <h2 className="text-center mb-4">Forgotten Passcode?</h2>
                 <form
-                  action="https://formsubmit.co/nathanjms@outlook.com"
+                  action={`https://formsubmit.co/${process.env.CONTACT_EMAIL}`}
                   method="POST"
                   className="text-start"
                 >
