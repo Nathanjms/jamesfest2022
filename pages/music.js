@@ -47,7 +47,7 @@ export default function Music({ user }) {
               </p>
             </div>
           </div>
-          <div className="row musicCard">
+          <div className="row musicCard mx-auto shadow">
             <h2 className="h3 mb-5">Barry Lee Martin</h2>
             <div className="col-lg-6 order-lg-2 d-flex flex-column justify-content-center mb-3 animate__animated animate__fadeIn">
               <Image
