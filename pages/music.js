@@ -17,7 +17,7 @@ export default function Music({ user }) {
       <div id="#music" className="section">
         <div className="container text-center">
           <h1 className="pb-5 color-primary">Music</h1>
-          <div className="row musicCard">
+          <div className="row musicCard mx-auto shadow">
             <h2 className="h3 mb-5">Ellie Jones &amp; The Giants</h2>
             <div className="col-md-6 d-flex flex-column justify-content-center animate__animated animate__fadeIn">
               <Image
