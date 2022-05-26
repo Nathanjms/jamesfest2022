@@ -17,7 +17,7 @@ export default function Music({ user }) {
       <div id="#music" className="section">
         <div className="container text-center">
           <h1 className="pb-5 color-primary">Music</h1>
-          <div className="row musicCard mx-auto shadow">
+          <div className="row customCard mx-auto shadow">
             <h2 className="h3 mb-5">Ellie Jones &amp; The Giants</h2>
             <div className="col-md-6 d-flex flex-column justify-content-center animate__animated animate__fadeIn">
               <Image
@@ -47,7 +47,7 @@ export default function Music({ user }) {
               </p>
             </div>
           </div>
-          <div className="row musicCard mx-auto shadow">
+          <div className="row customCard mx-auto shadow">
             <h2 className="h3 mb-5">Barry Lee Martin</h2>
             <div className="col-lg-6 order-lg-2 d-flex flex-column justify-content-center mb-3 animate__animated animate__fadeIn">
               <Image
@@ -81,7 +81,7 @@ export default function Music({ user }) {
               </p>
             </div>
           </div>
-          <div className="row musicCard mx-auto shadow animate__animated animate__fadeIn">
+          <div className="row customCard mx-auto shadow animate__animated animate__fadeIn">
             <h2 className="h3">...And More!</h2>
           </div>
         </div>
