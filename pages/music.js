@@ -81,7 +81,7 @@ export default function Music({ user }) {
               </p>
             </div>
           </div>
-          <div className="row musicCard animate__animated animate__fadeIn">
+          <div className="row musicCard mx-auto shadow animate__animated animate__fadeIn">
             <h2 className="h3">...And More!</h2>
           </div>
         </div>
