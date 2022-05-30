@@ -19,16 +19,18 @@ export default function Music({ user }) {
           <h1 className="pb-5 color-primary">Music</h1>
           <div className="row customCard mx-auto shadow">
             <h2 className="h3 mb-5">Ellie Jones &amp; The Giants</h2>
-            <div className="col-md-6 d-flex flex-column justify-content-center animate__animated animate__fadeIn">
-              <Image
-                src="/EJandG.jpg"
-                alt="Ellie Jones and The Giants performing on stage"
-                width={400}
-                height={400}
-                className="rounded-img mb-2"
-              />
+            <div className="col-lg-6  d-flex align-items-center justify-content-center animate__animated animate__fadeIn">
+              <div className="w-100 mb-3" style={{ maxWidth: "400px" }}>
+                <Image
+                  src="/EJandG.jpg"
+                  alt="Ellie Jones and The Giants performing on stage"
+                  width={400}
+                  height={400}
+                  layout="responsive"
+                />
+              </div>
             </div>
-            <div className="col-md-6 d-flex flex-column justify-content-center animate__animated animate__fadeIn">
+            <div className="col-lg-6 d-flex flex-column justify-content-center animate__animated animate__fadeIn">
               <p>
                 Ellie Jones and The Giants are a combination of eclectic
                 musicians who come together to play the songs you love spanning
@@ -49,14 +51,16 @@ export default function Music({ user }) {
           </div>
           <div className="row customCard mx-auto shadow">
             <h2 className="h3 mb-5">Barry Lee Martin</h2>
-            <div className="col-lg-6 order-lg-2 d-flex flex-column justify-content-center mb-3 animate__animated animate__fadeIn">
-              <Image
-                src="/BarryLeeMartin.jpg"
-                alt="Barry Lee Martin Singing on Stage"
-                width={475}
-                height={255}
-                className="mb-1"
-              />
+            <div className="order-lg-2 col-lg-6 mb-3 d-flex align-items-center justify-content-center animate__animated animate__fadeIn">
+              <div className="w-100 mb-3" style={{ maxWidth: "475px" }}>
+                <Image
+                  src="/BarryLeeMartin.jpg"
+                  alt="Barry Lee Martin Singing on Stage"
+                  width={475}
+                  height={255}
+                  layout="responsive"
+                />
+              </div>
             </div>
             <div className="col-lg-6 order-lg-1 d-flex flex-column justify-content-center animate__animated animate__fadeIn">
               <p>
