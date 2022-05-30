@@ -33,7 +33,7 @@ body {
 }
 
 main {
-  min-height: 90vh;
+  min-height: calc(100vh - 90px);
   margin-top: 65px;
 }
 
