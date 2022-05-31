@@ -22,7 +22,7 @@ export default function Music({ user }) {
     );
   };
   return (
-    <DefaultLayout title="Music">
+    <DefaultLayout title="News">
       <div id="#music" className="section">
         <div className="container">
           <h1 className="pb-5 color-primary">News</h1>
