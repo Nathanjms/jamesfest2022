@@ -85,8 +85,87 @@ export default function Music({ user }) {
               </p>
             </div>
           </div>
-          <div className="row customCard mx-auto shadow animate__animated animate__fadeIn">
-            <h2 className="h3">...And More!</h2>
+          <div className="row customCard mx-auto shadow">
+            <h2 className="col-12 h3 mb-3">
+              <Image
+                src="/moselele-logo.webp"
+                alt="Moselele Logo"
+                height={117}
+                width={245.25}
+              />
+            </h2>
+            <div className="col-lg-12 order-lg-1 d-flex flex-column justify-content-center animate__animated animate__fadeIn">
+              <p>
+                Moselele is a ukulele group for people who live in (or can be
+                bothered!) to travel to Moseley in Birmingham.
+              </p>
+              <p>
+                We meet on the 1st and 3rd Thursday of every month - you can
+                find all the dates on our calendar. We meet at 8:00pm in the
+                shed in the beer garden of The Prince of Wales on Alcester Road,
+                we go on until well past 11 and it&apos;s usually down to when
+                the pub decide to throw us out. If you&apos;re looking for a
+                ukulele group where you get to play all of the ukulele classics
+                like Rawhide or Bring Me Sunshine then we are not the group for
+                you. We&apos;ve got a vast collection of songs that we&apos;ve
+                largely worked out ourselves and we try to keep them as
+                contemporary as possible. What&apos;s the point of playing songs
+                you wouldn&apos;t listen to? So if you want to drink beer and
+                loudly sing songs by Modest Mouse, Chic and The Flaming Lips
+                then we are exactly the sort of group you&apos;ve been looking
+                for.
+              </p>
+            </div>
+          </div>
+          <div className="row customCard mx-auto shadow">
+            <h2 className="h3 mb-3">
+              <Image
+                src="/robotRadio-logo.webp"
+                alt="Robot Radio Logo"
+                height={117}
+                width={245.25}
+              />
+            </h2>
+            <div className="col-lg-6 mb-3 d-flex align-items-center justify-content-center animate__animated animate__fadeIn">
+              <div className="w-100 mb-3" style={{ maxWidth: "475px" }}>
+                <Image
+                  src="/robotRadio.webp"
+                  alt="Robot Radio performing on stage"
+                  width={404}
+                  height={276}
+                  layout="responsive"
+                />
+              </div>
+            </div>
+            <div className="col-lg-6 order-lg-1 d-flex flex-column animate__animated animate__fadeIn">
+              <h3 className="h5 mb-4 fw-bold">Robot Radio: Top Ten Facts</h3>
+              <div className="">
+                <ol className="text-start">
+                  <li>
+                    Described as Harmonious pop rockers with a punk attitude
+                  </li>
+                  <li>There&apos;s 4 in the band</li>
+                  <li>A guitarist, drummer, bassist and a Ukulele player</li>
+                  <li>Yes, a Ukulele Player</li>
+                  <li>They all sing</li>
+                  <li>Sometimes its in harmony</li>
+                  <li>They all went to school together</li>
+                  <li>That was a while ago</li>
+                  <li>They formed in Lockdown</li>
+                  <li>
+                    Their first single{" "}
+                    <a
+                      href="https://robotradio.hearnow.com/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      DURTII Robot was released
+                    </a>{" "}
+                    on all digital platforms on 13 May &apos;22
+                  </li>
+                </ol>
+              </div>
+            </div>
           </div>
         </div>
       </div>
