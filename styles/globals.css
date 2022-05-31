@@ -1,6 +1,7 @@
 :root {
   --primary: #5b8a45;
   --primaryLight: #72ab57;
+  --primaryDark: #458A52;
   --primary2: #bb79e2;
   --light1: #faf9f7;
   --light2: #c6cac2;
@@ -8,6 +9,14 @@
 
 .color-primary {
   color: var(--primary);
+}
+
+a {
+  color: var(--primaryDark);
+}
+
+a:hover, a:focus a.active, a:active {
+  color: var(--primaryLight);
 }
 
 html {
@@ -33,7 +42,7 @@ body {
 }
 
 main {
-  min-height: 90vh;
+  min-height: calc(100vh - 90px);
   margin-top: 65px;
 }
 
@@ -185,7 +194,7 @@ main {
   color: black;
 }
 
-.musicCard {
+.customCard {
   padding: 2rem;
   background-color: white;
   border-radius: 10px;
