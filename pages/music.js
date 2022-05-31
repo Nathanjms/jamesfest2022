@@ -126,17 +126,6 @@ export default function Music({ user }) {
                 width={245.25}
               />
             </h2>
-            <div className="col-lg-6 mb-3 d-flex align-items-center justify-content-center animate__animated animate__fadeIn">
-              <div className="w-100 mb-3" style={{ maxWidth: "475px" }}>
-                <Image
-                  src="/robotRadio.webp"
-                  alt="Robot Radio performing on stage"
-                  width={404}
-                  height={276}
-                  layout="responsive"
-                />
-              </div>
-            </div>
             <div className="col-lg-6 order-lg-1 d-flex flex-column animate__animated animate__fadeIn">
               <h3 className="h5 mb-4 fw-bold">Robot Radio: Top Ten Facts</h3>
               <div className="">
@@ -164,6 +153,17 @@ export default function Music({ user }) {
                     on all digital platforms on 13 May &apos;22
                   </li>
                 </ol>
+              </div>
+            </div>
+            <div className="col-lg-6 mb-3 d-flex align-items-center justify-content-center animate__animated animate__fadeIn">
+              <div className="w-100 mt-3" style={{ maxWidth: "475px" }}>
+                <Image
+                  src="/robotRadio.webp"
+                  alt="Robot Radio performing on stage"
+                  width={404}
+                  height={276}
+                  layout="responsive"
+                />
               </div>
             </div>
           </div>
