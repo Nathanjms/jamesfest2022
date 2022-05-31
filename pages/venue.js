@@ -13,7 +13,7 @@ export default function Venue({ user }) {
     return <Unauthenticated />;
   }
   return (
-    <DefaultLayout title="Venue">
+    <DefaultLayout title="Venue" backgroundClass="backgroundAlt">
       <section id="venue">
         <div id="venueBackground" className="d-flex align-items-center">
           <div className="container">

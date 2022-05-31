@@ -13,7 +13,7 @@ export default function Accommodation({ user }) {
     return <Unauthenticated />;
   }
   return (
-    <DefaultLayout title="Accommodation">
+    <DefaultLayout title="Accommodation" backgroundClass="backgroundAlt">
       <section id="#accommodation">
         <div className="section-background accommodation">
           <div className="container">
