@@ -16,7 +16,7 @@ export default function Music({ user }) {
     return (
       <div className="row customCard mx-auto shadow">
         <h2 className="h3">{title}</h2>
-        <h3 className="h5 mb-5 text-muted">{date}</h3>
+        <h3 className="h5 mb-4 text-muted">{date}</h3>
         <div className="col-md-12">{content}</div>
       </div>
     );
