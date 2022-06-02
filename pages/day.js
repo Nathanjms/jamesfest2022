@@ -23,7 +23,7 @@ const TimelineCard = ({ timelineItem }) => {
       </div>
       <div className="col py-2">
         <div className="card shadow animate__animated animate__fadeInRight">
-          <div className="card-body text-sm-left">
+          <div className="card-body">
             <h3 className="h5 d-sm-none">{timelineItem.icon}</h3>
             <div className="text-muted">{timelineItem.time}</div>
             <div className="card-text">
