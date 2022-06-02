@@ -1,7 +1,7 @@
 :root {
   --primary: #5b8a45;
   --primaryLight: #72ab57;
-  --primaryDark: #458A52;
+  --primaryDark: #458a52;
   --primary2: #bb79e2;
   --light1: #faf9f7;
   --light2: #c6cac2;
@@ -15,7 +15,9 @@ a {
   color: var(--primaryDark);
 }
 
-a:hover, a:focus a.active, a:active {
+a:hover,
+a:focus a.active,
+a:active {
   color: var(--primaryLight);
 }
 
@@ -204,4 +206,10 @@ main {
 .section-background.day {
   background-image: url("/day.webp");
   background-position: 50% 75%;
+}
+
+.timeline-icon {
+  font-size: 3rem;
+  position: relative;
+  top: 5px;
 }
