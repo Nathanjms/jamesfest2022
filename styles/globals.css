@@ -200,3 +200,8 @@ main {
   border-radius: 10px;
   margin-bottom: 2rem;
 }
+
+.section-background.day {
+  background-image: url("/day.webp");
+  background-position: 50% 75%;
+}
