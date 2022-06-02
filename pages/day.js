@@ -21,10 +21,10 @@ const TimelineCard = ({ timelineItem }) => {
         {timelineItem.icon}
         <div className="vr h-50 mx-4 mt-2"></div>
       </div>
-      <div className="col py-2">
+      <div className="col-sm-8 py-2">
         <div className="card shadow animate__animated animate__fadeInRight">
           <div className="card-body">
-            <h3 className="h5 d-sm-none">{timelineItem.icon}</h3>
+            <h3 className="h5 header d-sm-none">{timelineItem.icon}</h3>
             <div className="text-muted">{timelineItem.time}</div>
             <div className="card-text">
               <p>{timelineItem.description}</p>

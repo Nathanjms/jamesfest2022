@@ -213,3 +213,7 @@ main {
   position: relative;
   top: 5px;
 }
+
+.header .timeline-icon {
+  font-size: 1.75rem;
+}
