@@ -208,12 +208,12 @@ main {
   background-position: 50% 75%;
 }
 
-.timeline-icon {
-  font-size: 3rem;
+.timeline-icon svg {
+  font-size: 2rem;
   position: relative;
-  top: 5px;
+  top: 3px;
 }
 
-.header .timeline-icon {
+.header-timeline-icon svg {
   font-size: 1.75rem;
 }

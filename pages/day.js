@@ -18,13 +18,13 @@ const TimelineCard = ({ timelineItem }) => {
     <div className="row justify-content-center">
       <div className="col-auto text-center flex-column d-none d-sm-flex">
         <div className="vr h-50 mx-4 mt-2"></div>
-        {timelineItem.icon}
+        <span className="timeline-icon">{timelineItem.icon}</span>
         <div className="vr h-50 mx-4 mt-2"></div>
       </div>
       <div className="col-sm-8 py-2">
-        <div className="card shadow animate__animated animate__fadeInRight">
+        <div className="card shadow">
           <div className="card-body">
-            <h3 className="h5 header d-sm-none">{timelineItem.icon}</h3>
+            <h3 className="h5 header-timeline-icon d-sm-none">{timelineItem.icon}</h3>
             <div className="text-muted">{timelineItem.time}</div>
             <div className="card-text">
               <p>{timelineItem.description}</p>
@@ -111,56 +111,56 @@ const timelineItems = [
   {
     time: "12 Noon",
     description: <>Arrival at Oakland Gardens (The River School Droitwich)</>,
-    icon: <MdOutlinePark className="timeline-icon" />,
+    icon: <MdOutlinePark />,
   },
   {
     time: "12.30pm",
     description: <>Ceremony</>,
-    icon: <FaRing className="timeline-icon" />,
+    icon: <FaRing />,
   },
   {
     time: "1pm",
     description: <>Reception Drinks</>,
-    icon: <BiDrink className="timeline-icon" />,
+    icon: <BiDrink />,
   },
   {
     time: "2pm",
     description: <>Wedding Breakfast</>,
-    icon: <MdOutlineBreakfastDining className="timeline-icon" />,
+    icon: <MdOutlineBreakfastDining />,
   },
   {
     time: "3.30pm",
     description: <>Music &amp; Games</>,
-    icon: <FaMusic className="timeline-icon" />,
+    icon: <FaMusic />,
   },
   {
     time: "7pm",
     description: <>Communal Singalong</>,
-    icon: <GiMicrophone className="timeline-icon" />,
+    icon: <GiMicrophone />,
   },
   {
     time: "7.30pm",
     description: <>Street Food</>,
-    icon: <GiFoodTruck className="timeline-icon" />,
+    icon: <GiFoodTruck />,
   },
   {
     time: "8.30pm",
     description: <>Party time in the Tipi (with Ellie Jones and the Giants)</>,
-    icon: <GiPartyFlags className="timeline-icon" />,
+    icon: <GiPartyFlags />,
   },
   {
     time: "11.30pm",
     description: <>Music Ends</>,
-    icon: <BiVolumeMute className="timeline-icon" />,
+    icon: <BiVolumeMute />,
   },
   {
     time: "11.45pm",
     description: <>Chariots &amp; Taxis</>,
-    icon: <FaTaxi className="timeline-icon" />,
+    icon: <FaTaxi />,
   },
   {
     time: "Midnight",
     description: <>Venue Closes</>,
-    icon: <BsFillMoonStarsFill className="timeline-icon" />,
+    icon: <BsFillMoonStarsFill />,
   },
 ];
