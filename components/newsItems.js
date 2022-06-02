@@ -58,4 +58,17 @@ export const newsItems = [
       </>
     ),
   },
+  {
+    title: "The Day - Updated",
+    date: "2nd June 2022",
+    content: (
+      <>
+        <p>
+          &apos;The Day&apos; has been updated, containing the latest information on
+          the plan for the day, as well as some useful information!{" "}
+          <Link href="/day">Click here</Link> to see the updates now!
+        </p>
+      </>
+    ),
+  },
 ];

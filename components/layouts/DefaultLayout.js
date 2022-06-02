@@ -4,16 +4,16 @@ import { CustomNavbar } from "../CustomNavbar";
 
 export default function DefaultLayout({
   children,
-  props,
   title = "",
   homeLinkOnly = false,
   footerAlt = false,
+  backgroundClass = "",
 }) {
   return (
     <>
       <Header title={title} />
       <CustomNavbar homeLinkOnly={homeLinkOnly} />
-      <main>{children}</main>
+      <main className={backgroundClass ? backgroundClass : ""}>{children}</main>
       <Footer footerAlt={footerAlt} />
     </>
   );

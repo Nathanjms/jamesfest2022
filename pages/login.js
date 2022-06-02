@@ -80,6 +80,10 @@ const PasscodeForm = () => {
 };
 
 const ForgotPasscodeForm = () => {
+  let appUrl =
+    process.env.NODE_ENV === "production"
+      ? "https://www.jamesfest2022.co.uk"
+      : "http://localhost:3000";
   return (
     <div className="row">
       <div className="col-lg-7 col-md-8 col-12 m-auto">
@@ -97,6 +101,16 @@ const ForgotPasscodeForm = () => {
             >
               <div className="mb-3">
                 <input type="hidden" name="Type" value="Forgotten Passcode" />
+                <input
+                  type="hidden"
+                  name="_next"
+                  value={`${appUrl}/thank-you`}
+                />
+                <input
+                  type="hidden"
+                  name="_subject"
+                  value="JamesFest2022: New Passcode Request"
+                />
                 <div className="mb-1">
                   <label className="form-label">Name</label>
                   <input
