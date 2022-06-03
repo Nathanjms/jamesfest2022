@@ -1,5 +1,5 @@
 import DefaultLayout from "../components/layouts/DefaultLayout";
-import { newsItems } from "../components/newsItems";
+import { newsItems } from "../components/data/newsItems";
 import Unauthenticated from "../components/Unauthenticated";
 import { getUserFromServerSession } from "../lib/withSession";
 

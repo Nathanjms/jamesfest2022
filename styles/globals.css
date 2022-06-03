@@ -75,6 +75,10 @@ main {
   font-size: 1.2rem;
 }
 
+.backgroundPrimary {
+  background-color: var(--light1);
+}
+
 .backgroundAlt {
   background-color: var(--light2);
 }
@@ -216,4 +220,8 @@ main {
 
 .header-timeline-icon svg {
   font-size: 1.75rem;
+}
+
+.rounded-10px {
+  border-radius: 10px;
 }

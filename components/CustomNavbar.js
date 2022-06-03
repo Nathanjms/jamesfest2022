@@ -27,8 +27,8 @@ export const navItems = [
     lastUpdated: 1654029000000, // Tue May 31 2022 21:30:00 GMT+0100 (British Summer Time)
   },
   {
-    name: "Games",
-    link: "/games",
+    name: "Food",
+    link: "/food",
     lastUpdated: 1650804521371, // Sun Apr 24 2022 13:48:41 GMT+0100 (British Summer Time) 
   },
   {
