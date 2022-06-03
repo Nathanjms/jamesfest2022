@@ -21,7 +21,7 @@ export const navItems = [
   },
   {
     name: "Food",
-    link: "/food",
+    link: "/food-and-drink",
     lastUpdated: 1650804521371, // Sun Apr 24 2022 13:48:41 GMT+0100 (British Summer Time)
   },
   {
