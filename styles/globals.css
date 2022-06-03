@@ -225,3 +225,8 @@ main {
 .rounded-10px {
   border-radius: 10px;
 }
+
+.section-background.gift-list {
+  background-image: url("/gift-list.webp");
+  background-position: 70% 75%;
+}

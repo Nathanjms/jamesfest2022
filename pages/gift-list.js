@@ -12,11 +12,14 @@ export default function GiftList({ user }) {
     return <Unauthenticated />;
   }
   return (
-    <DefaultLayout title="Gift List">
-      <div id="#gift-list" className="section">
-        <h1>Gift List</h1>
-        <h2>Coming Soon...</h2>
-      </div>
+    <DefaultLayout title="On the Day">
+      <section id="#gift-list">
+        <div className="section-background gift-list">
+          <div className="container">
+            <h1 className="textOverlay-container">Gift List</h1>
+          </div>
+        </div>
+      </section>
     </DefaultLayout>
   );
 }
