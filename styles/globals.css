@@ -75,6 +75,10 @@ main {
   font-size: 1.2rem;
 }
 
+.backgroundPrimary {
+  background-color: var(--light1);
+}
+
 .backgroundAlt {
   background-color: var(--light2);
 }
@@ -208,8 +212,21 @@ main {
   background-position: 50% 75%;
 }
 
-.timeline-icon {
-  font-size: 3rem;
+.timeline-icon svg {
+  font-size: 2rem;
   position: relative;
-  top: 5px;
+  top: 3px;
+}
+
+.header-timeline-icon svg {
+  font-size: 1.75rem;
+}
+
+.rounded-10px {
+  border-radius: 10px;
+}
+
+.section-background.gift-list {
+  background-image: url("/gift-list.webp");
+  background-position: 70% 75%;
 }
