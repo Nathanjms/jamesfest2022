@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
 import { Container, Nav, Navbar, Button } from "react-bootstrap";
 import Swal from "sweetalert2";
-import { navItems } from "./CustomNavbar";
 import ReactDOMServer from "react-dom/server";
 import Link from "next/link";
+import { navItems } from "./data/navItems";
 
 export const BottomBanner = () => {
   const [whatsNew, setWhatsNew] = useState([]);

@@ -1,7 +1,7 @@
 import { MdOutlineBreakfastDining, MdOutlinePark } from "react-icons/md";
-import { BsFillMoonStarsFill } from "react-icons/bs";
-import { BiDrink, BiVolumeMute } from "react-icons/bi";
-import { FaMusic, FaTaxi } from "react-icons/fa";
+import { BiDrink, BiMusic, BiVolumeMute } from "react-icons/bi";
+import { RiMoonClearLine } from "react-icons/ri";
+import { GiChariot } from "react-icons/gi";
 import {
   GiFoodTruck,
   GiMicrophone,
@@ -33,7 +33,7 @@ const timelineItems = [
   {
     time: "3.30pm",
     description: <>Music &amp; Games</>,
-    icon: <FaMusic />,
+    icon: <BiMusic />,
   },
   {
     time: "7pm",
@@ -58,12 +58,12 @@ const timelineItems = [
   {
     time: "11.45pm",
     description: <>Chariots &amp; Taxis</>,
-    icon: <FaTaxi />,
+    icon: <GiChariot />,
   },
   {
     time: "12 Midnight",
     description: <>Venue Closes</>,
-    icon: <BsFillMoonStarsFill />,
+    icon: <RiMoonClearLine />,
   },
 ];
 

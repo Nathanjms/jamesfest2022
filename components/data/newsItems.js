@@ -28,7 +28,7 @@ export const newsItems = [
     ),
   },
   {
-    title: "Music Section - Updates",
+    title: "Music Section - Updated",
     date: "31st May 2022",
     content: (
       <>
@@ -64,9 +64,22 @@ export const newsItems = [
     content: (
       <>
         <p>
-          &apos;The Day&apos; has been updated, containing the latest information on
-          the plan for the day, as well as some useful information!{" "}
-          <Link href="/day">Click here</Link> to see the updates now!
+          &apos;The Day&apos; has been updated, containing the latest
+          information on the plan for the day, as well as some useful
+          information! <Link href="/day">Click here</Link> to see the updates
+          now!
+        </p>
+      </>
+    ),
+  },
+  {
+    title: "Gift List",
+    date: "3rd June 2022",
+    content: (
+      <>
+        <p>
+          Our Gift List has been added to the website, please{" "}
+          <Link href="/gift-list">click here</Link> to visit!
         </p>
       </>
     ),
