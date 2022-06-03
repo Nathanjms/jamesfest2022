@@ -37,7 +37,7 @@ export default function GiftList({ user }) {
                     Amazon.
                   </p>
                   <p> With Love &amp; Thanks,</p>
-                  <p> Anna &amp; Ian XXX</p>
+                  <p className="mb-0"> Anna &amp; Ian XXX</p>
                 </div>
               </div>
               <div className="col-md-6 d-flex flex-column justify-content-center">
