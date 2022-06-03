@@ -79,7 +79,7 @@ export const newsItems = [
       <>
         <p>
           Our Gift List has been added to the website, please{" "}
-          <Link href="/day">click here</Link> to visit!
+          <Link href="/gift-list">click here</Link> to visit!
         </p>
       </>
     ),
