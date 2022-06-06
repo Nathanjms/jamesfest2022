@@ -18,7 +18,7 @@ const TimelineCard = ({ timelineItem, index }) => {
   };
   return (
     <div className="row justify-content-center">
-      <div className={"col-sm-5 col-lg-4 col-xl-3 order-" + orderClass(!moveItemRight)}></div>
+      <div className={"col-sm-5 col-lg-4 col-xl-3 d-none d-sm-flex order-" + orderClass(!moveItemRight)}></div>
       <div className="col-auto text-center flex-column d-none d-sm-flex order-2">
         <div className="vr h-50 mx-4"></div>
         <span className="timeline-icon">{timelineItem.icon}</span>
