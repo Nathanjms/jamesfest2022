@@ -45,7 +45,10 @@ export const BottomBanner = () => {
     Swal.fire({
       title: "Updated Sections",
       html: ReactDOMServer.renderToString(htmlContent),
-      confirmButtonColor: "#5b8a45",
+      buttonsStyling: false,
+      customClass: {
+        confirmButton: "btn btn-primary",
+      },
       showClass: {
         popup: "animate__animated animate__fadeInDown",
       },
