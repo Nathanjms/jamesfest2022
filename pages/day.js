@@ -8,15 +8,23 @@ export const getServerSideProps = getUserFromServerSession({
   redirectUrl: "day",
 });
 
-const TimelineCard = ({ timelineItem }) => {
+const TimelineCard = ({ timelineItem, index }) => {
+  const moveItemRight = index % 2; // Whether to move the item right
+  const orderClass = (onRight) => {
+    if (onRight) {
+      return 3;
+    }
+    return 1;
+  };
   return (
     <div className="row justify-content-center">
-      <div className="col-auto text-center flex-column d-none d-sm-flex">
-        <div className="vr h-50 mx-4 mt-2"></div>
+      <div className={"col-sm-5 col-lg-4 col-xl-3 order-" + orderClass(!moveItemRight)}></div>
+      <div className="col-auto text-center flex-column d-none d-sm-flex order-2">
+        <div className="vr h-50 mx-4"></div>
         <span className="timeline-icon">{timelineItem.icon}</span>
         <div className="vr h-50 mx-4 mt-2"></div>
       </div>
-      <div className="col-sm-8 py-2">
+      <div className={"col-sm-5 col-lg-4 col-xl-3 py-2 order-" + orderClass(moveItemRight)}>
         <div className="card shadow rounded-10px">
           <div className="card-body">
             <h3 className="h5 header-timeline-icon d-sm-none">
@@ -97,7 +105,11 @@ export default function OnTheDay({ user }) {
                   <div className="mb-3 mx-auto">
                     <h2 className="h3 mb-3">Plan for the Day</h2>
                     {timelineItems.map((timelineItem, index) => (
-                      <TimelineCard key={index} timelineItem={timelineItem} />
+                      <TimelineCard
+                        key={index}
+                        timelineItem={timelineItem}
+                        index={index}
+                      />
                     ))}
                   </div>
                 </div>
