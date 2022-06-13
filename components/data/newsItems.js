@@ -105,7 +105,7 @@ export const newsItems = [
         <p>
           The Food section has been added. Take a look to get an idea of what
           food we have for you, and <b>to contact us about any allergies</b>.{" "}
-          <Link href="/food-and-drink">Click here</Link> to see the food section now!
+          <Link href="/food">Click here</Link> to see the food section now!
         </p>
       </>
     ),
