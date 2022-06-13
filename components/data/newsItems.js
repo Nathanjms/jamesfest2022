@@ -84,4 +84,30 @@ export const newsItems = [
       </>
     ),
   },
+  {
+    title: "Music Section - New Act!",
+    date: "13th June 2022",
+    content: (
+      <>
+        <p>
+          The Music section has been updated with another act who will be
+          playing at JamesFest! <Link href="/music">Click here</Link> to see the
+          updates!
+        </p>
+      </>
+    ),
+  },
+  {
+    title: "Food Section",
+    date: "13th June 2022",
+    content: (
+      <>
+        <p>
+          The Food section has been added. Take a look to get an idea of what
+          food we have for you, and <b>to contact us about any allergies</b>.{" "}
+          <Link href="/food-and-drink">Click here</Link> to see the food section now!
+        </p>
+      </>
+    ),
+  },
 ];
