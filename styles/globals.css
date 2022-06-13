@@ -235,3 +235,8 @@ main {
   background-image: url("/musicPage.webp");
   background-position: 70% 60%;
 }
+
+.section-background.food {
+  background-image: url("/marshfieldFarm.webp");
+  background-position: 70% 40%;
+}
