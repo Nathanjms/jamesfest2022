@@ -173,6 +173,45 @@ export default function Music({ user }) {
                 </div>
               </div>
             </div>
+            <div className="row customCard mx-auto shadow">
+              <h2 className="h3 mb-5">Joe Cook</h2>
+              <div className="col-lg-6  d-flex align-items-center justify-content-center animate__animated animate__fadeIn">
+                <div className="w-100 mb-3" style={{ maxWidth: "400px" }}>
+                  <Image
+                    src="/joeCook.jpg"
+                    alt="Joe Cook performing on stage"
+                    width={400}
+                    height={400}
+                    layout="responsive"
+                  />
+                </div>
+              </div>
+              <div className="col-lg-6 d-flex flex-column justify-content-center animate__animated animate__fadeIn">
+                <p>
+                  Joe Cook a.k.a Cookie is a spoken word artist, musician and
+                  activist from Birmingham UK. Originally a lyricist for
+                  Birmingham reggae punk band Lobster, Joe has exploded onto the
+                  spoken word scene. Joe&apos;s style has been described as
+                  &apos;The Streets meets Joe Strummer&apos;. Joe delivers
+                  social commentary in lyrical rhythmic style. His two biggest
+                  influences are Bill Hicks and Immortal Technique merging these
+                  styles to deliver comical hard hitting rhymes. Joe produced
+                  and hosted season three of Level UP! a sell-out spoken word
+                  event at The REP Birmingham
+                </p>
+                <p>
+                  Joe facilitates poetry/rap, music and drumming workshops
+                  across the midlands working in schools, youth clubs, community
+                  centres and hostels as well as volunteering at local youth
+                  centres. Most recently Joe has released a video for BBC Arts
+                  entitled &apos;How To Be A Poet With Dyslexia&apos; which
+                  received great feedback online and was also shared by the BBC
+                  on National Poetry Day 2016 &apos;Five Great
+                  Performances&apos; alongside John Cooper Clarke, Kate Tempest,
+                  George The Poet and Rachel McCrum.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
