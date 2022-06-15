@@ -25,7 +25,7 @@ export default function Food({ user }) {
           <div className="container text-center">
             <div className="row">
               <div className="col-lg-6 mb-2">
-                <div className="h-100">
+                <div className="h-100 d-flex flex-column justify-content-center">
                   <p>
                     Our <b>Wedding Breakfast</b> will be held in the tipi, in
                     the form of an afternoon tea.
