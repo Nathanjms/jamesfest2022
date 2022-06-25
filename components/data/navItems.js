@@ -2,7 +2,7 @@ export const navItems = [
   {
     name: "News",
     link: "/news",
-    lastUpdated: 1655148600000, // Mon Jun 13 2022 20:30:00 GMT+0100 (British Summer Time)
+    lastUpdated: 1656174600000, // Sat Jun 25 2022 17:23:11 GMT+0100 (British Summer Time)
   },
   {
     name: "Venue",
@@ -17,7 +17,7 @@ export const navItems = [
   {
     name: "Music",
     link: "/music",
-    lastUpdated: 1655148600000, // Mon Jun 13 2022 20:30:00 GMT+0100 (British Summer Time)
+    lastUpdated: 1656174600000, // Sat Jun 25 2022 17:23:11 GMT+0100 (British Summer Time)
   },
   {
     name: "Food",
