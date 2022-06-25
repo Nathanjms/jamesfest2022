@@ -7,7 +7,7 @@ export const navItems = [
   {
     name: "Venue",
     link: "/venue",
-    lastUpdated: 1650910962908, // Mon Apr 25 2022 19:23:10 GMT+0100 (British Summer Time)
+    lastUpdated: 1656178200000, // Sat Jun 25 2022 18:30:00 GMT+0100 (British Summer Time)
   },
   {
     name: "Accommodation",
