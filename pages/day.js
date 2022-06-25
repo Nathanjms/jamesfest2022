@@ -69,7 +69,7 @@ export default function OnTheDay({ user }) {
             <div className="row text-center">
               <div className="col-12 w-100 py-3">
                 <div className="mb-3 mx-auto">
-                  <h2 className="h3 mb-3">Plan for the Day</h2>
+                  <h2 className="h3 mb-3">What&apos;s On</h2>
                   {timelineItems.map((timelineItem, index) => (
                     <TimelineCard
                       key={index}
