@@ -26,7 +26,7 @@ const WhatsOnCard = ({ content }) => {
     >
       <div className="card h-100 whatsOnCard">
         <h3 className="h1">{content.icon}</h3>
-        <p className="ps-2 pe-2">{content.text}</p>
+        <p className="px-2">{content.text}</p>
       </div>
     </div>
   );
