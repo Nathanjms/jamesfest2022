@@ -42,19 +42,21 @@ export default function Venue({ user }) {
         <div className="section backgroundAlt">
           <div className="container">
             <div className="row">
-              <div className="col-12 pb-3">
-                <h3>Google Maps</h3>
-                <p>Click the map below to navigate to Google Maps</p>
-              </div>
-              <div className="col-12">
+              <div className="col-md-12">
+                <p>
+                  There is a car park at the venue and you can leave your car
+                  overnight if required. After arriving, simply follow the signs
+                  to the ceremony. The venue will be locked at 12 midnight.
+                </p>
+                <p>For directions, click the map below to go to Google Maps:</p>
                 <a
-                  href="https://www.google.com/maps/place/Claines,+Worcester+WR3+7ST/@52.225868,-2.2120985,17z/data=!3m1!4b1!4m5!3m4!1s0x4870f1a67a9d5cef:0x911a8e2b4e4c8097!8m2!3d52.2257742!4d-2.2085095"
+                  href="https://goo.gl/maps/cihWvG7oFdzG82Pk9"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   <Image
                     src="/Maps.webp"
-                    alt="Google Maps Screenshot"
+                    alt="Google Maps Screenshot of Oakfield Gardens"
                     height="400"
                     width="450"
                     className="border-5"

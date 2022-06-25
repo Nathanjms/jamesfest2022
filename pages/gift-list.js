@@ -15,7 +15,7 @@ export default function GiftList({ user }) {
   }
   return (
     <DefaultLayout title="Gift List" backgroundClass="backgroundAlt">
-      <section id="#gift-list">
+      <section id="gift-list">
         <div className="section-background gift-list">
           <div className="container">
             <h1 className="textOverlay-container">Gift List</h1>
@@ -52,7 +52,7 @@ export default function GiftList({ user }) {
                       <h3 className="h1">
                         <AiOutlineAmazon />
                       </h3>
-                      <p className="ps-2 pe-2">Go To Our Amazon List</p>
+                      <p className="px-2">Go To Our Amazon List</p>
                     </div>
                   </a>
                   <a
@@ -65,7 +65,7 @@ export default function GiftList({ user }) {
                       <h3 className="h1">
                         <JohnLewisLogo />
                       </h3>
-                      <p className="ps-2 pe-2">Go To Our John Lewis List</p>
+                      <p className="px-2">Go To Our John Lewis List</p>
                     </div>
                   </a>
                 </div>

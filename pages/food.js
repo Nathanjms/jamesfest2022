@@ -15,7 +15,7 @@ export default function Food({ user }) {
   }
   return (
     <DefaultLayout title="Food">
-      <section id="#accommodation">
+      <section id="accommodation">
         <div className="section-background food">
           <div className="container">
             <h1 className="textOverlay-container">Food</h1>

@@ -14,7 +14,7 @@ export default function Accommodation({ user }) {
   }
   return (
     <DefaultLayout title="Accommodation" backgroundClass="backgroundAlt">
-      <section id="#accommodation">
+      <section id="accommodation">
         <div className="section-background accommodation">
           <div className="container">
             <h1 className="textOverlay-container">Accommodation</h1>
@@ -71,7 +71,7 @@ export default function Accommodation({ user }) {
                       <h3 className="h1">
                         <FaAirbnb />
                       </h3>
-                      <p className="ps-2 pe-2">Go To AirBnb</p>
+                      <p className="px-2">Go To AirBnb</p>
                     </div>
                   </a>
                   <a
@@ -84,7 +84,7 @@ export default function Accommodation({ user }) {
                       <h3 className="h1">
                         <FaHotel />
                       </h3>
-                      <p className="ps-2 pe-2">
+                      <p className="px-2">
                         Go To Worcester Whitehouse Hotel
                       </p>
                     </div>
