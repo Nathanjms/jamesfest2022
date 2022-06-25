@@ -112,7 +112,7 @@ export const newsItems = [
   },
   {
     title: "Music Section - Community Singalong",
-    date: "13th June 2022",
+    date: "25th June 2022",
     content: (
       <>
         <p>
