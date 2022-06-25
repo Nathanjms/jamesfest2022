@@ -110,4 +110,17 @@ export const newsItems = [
       </>
     ),
   },
+  {
+    title: "Music Section - Community Singalong",
+    date: "13th June 2022",
+    content: (
+      <>
+        <p>
+          The Music section now has a download to the songbook for our Community
+          Singalong. <Link href="/music">Click here</Link> to find out what
+          songs we&apos;ll all be singing, and to brush up on some lyrics!
+        </p>
+      </>
+    ),
+  },
 ];
