@@ -76,7 +76,7 @@ export default function Music({ user }) {
         <div className="container text-center">
           <div className="row">
             <div className="col-12">
-              <h2 className="h3 pb-2">Acts in the Tipi</h2>
+              <h2 className="h3 pb-2">Acts Playing at JamesFest</h2>
             </div>
           </div>
           <div className="row customCard mx-auto shadow">
