@@ -18,13 +18,22 @@ const TimelineCard = ({ timelineItem, index }) => {
   };
   return (
     <div className="row justify-content-center">
-      <div className={"col-sm-5 col-lg-4 col-xl-3 d-none d-sm-flex order-" + orderClass(!moveItemRight)}></div>
+      <div
+        className={
+          "col-sm-5 col-lg-4 col-xl-3 d-none d-sm-flex order-" +
+          orderClass(!moveItemRight)
+        }
+      ></div>
       <div className="col-auto text-center flex-column d-none d-sm-flex order-2">
         <div className="vr h-50 mx-4"></div>
         <span className="timeline-icon">{timelineItem.icon}</span>
         <div className="vr h-50 mx-4 mt-2"></div>
       </div>
-      <div className={"col-sm-5 col-lg-4 col-xl-3 py-2 order-" + orderClass(moveItemRight)}>
+      <div
+        className={
+          "col-sm-5 col-lg-4 col-xl-3 py-2 order-" + orderClass(moveItemRight)
+        }
+      >
         <div className="card shadow rounded-10px">
           <div className="card-body">
             <h3 className="h5 header-timeline-icon d-sm-none">
@@ -47,17 +56,37 @@ export default function OnTheDay({ user }) {
   }
   return (
     <DefaultLayout title="On the Day">
-      <section id="day">
+      <section id="content">
         <div className="section-background day">
           <div className="container">
             <h1 className="textOverlay-container">The Day</h1>
           </div>
         </div>
-        <div className="pt-5 backgroundAlt">
+      </section>
+      <section id="plan-for-the-day">
+        <div className="backgroundPrimary">
+          <div className="container">
+            <div className="row text-center">
+              <div className="col-12 w-100 py-3">
+                <div className="mb-3 mx-auto">
+                  <h2 className="h3 mb-3">Plan for the Day</h2>
+                  {timelineItems.map((timelineItem, index) => (
+                    <TimelineCard
+                      key={index}
+                      timelineItem={timelineItem}
+                      index={index}
+                    />
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <section className="backgroundAlt py-5" id="useful-information">
           <div className="container text-center">
             <div className="row">
               <div className="col-12 w-100">
-                <div className="mx-auto card customCard shadow mb-5">
+                <div className="mx-auto card customCard shadow mb-0">
                   <h2 className="h3 mb-3">Useful Information</h2>
                   <ul className="text-start">
                     <li>
@@ -98,25 +127,7 @@ export default function OnTheDay({ user }) {
               </div>
             </div>
           </div>
-          <div className="backgroundPrimary">
-            <div className="container">
-              <div className="row text-center">
-                <div className="col-12 w-100 py-3">
-                  <div className="mb-3 mx-auto">
-                    <h2 className="h3 mb-3">Plan for the Day</h2>
-                    {timelineItems.map((timelineItem, index) => (
-                      <TimelineCard
-                        key={index}
-                        timelineItem={timelineItem}
-                        index={index}
-                      />
-                    ))}
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        </section>
       </section>
     </DefaultLayout>
   );
