@@ -14,7 +14,7 @@ export default function Accommodation({ user }) {
   }
   return (
     <DefaultLayout title="Accommodation" backgroundClass="backgroundAlt">
-      <section id="#accommodation">
+      <section id="accommodation">
         <div className="section-background accommodation">
           <div className="container">
             <h1 className="textOverlay-container">Accommodation</h1>

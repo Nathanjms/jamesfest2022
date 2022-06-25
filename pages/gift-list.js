@@ -15,7 +15,7 @@ export default function GiftList({ user }) {
   }
   return (
     <DefaultLayout title="Gift List" backgroundClass="backgroundAlt">
-      <section id="#gift-list">
+      <section id="gift-list">
         <div className="section-background gift-list">
           <div className="container">
             <h1 className="textOverlay-container">Gift List</h1>

@@ -47,7 +47,7 @@ export default function OnTheDay({ user }) {
   }
   return (
     <DefaultLayout title="On the Day">
-      <section id="#day">
+      <section id="day">
         <div className="section-background day">
           <div className="container">
             <h1 className="textOverlay-container">The Day</h1>
