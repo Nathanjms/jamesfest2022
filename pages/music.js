@@ -27,16 +27,19 @@ export default function Music({ user }) {
         <div className="container text-center">
           <div className="row">
             <div className="col-12">
-              <h2 className="h3">Singalong Songbook</h2>
+              <h2 className="h3 pb-2">Singalong Songbook</h2>
             </div>
           </div>
           <div className="row">
             <div className="col-12">
-              <p>Singalong Songbook</p>
+              <p>
+                Click the buttons below to see the songbook for our Community
+                Singalong.
+              </p>
             </div>
           </div>
           <div className="row">
-            <div className="col-md-6 d-flex flex-column justify-content-center">
+            <div className="col-6 d-flex flex-column justify-content-center">
               <a
                 href="/singalong/JamesFestSingalongWords.pdf"
                 target="_blank"
@@ -51,7 +54,7 @@ export default function Music({ user }) {
                 </div>
               </a>
             </div>
-            <div className="col-md-6 d-flex flex-column justify-content-center">
+            <div className="col-6 d-flex flex-column justify-content-center">
               <a
                 href="/singalong/JamesFestSingalongChords.pdf"
                 target="_blank"
@@ -73,12 +76,12 @@ export default function Music({ user }) {
         <div className="container text-center">
           <div className="row">
             <div className="col-12">
-              <h2 className="h3 pb-3">The Acts</h2>
+              <h2 className="h3 pb-2">Acts in the Tipi</h2>
             </div>
           </div>
           <div className="row customCard mx-auto shadow">
             <h3 className="h4 mb-5">Ellie Jones &amp; The Giants</h3>
-            <div className="col-lg-6  d-flex align-items-center justify-content-center animate__animated animate__fadeIn">
+            <div className="col-lg-6  d-flex align-items-center justify-content-center">
               <div className="w-100 mb-3" style={{ maxWidth: "400px" }}>
                 <Image
                   src="/EJandG.jpg"
@@ -89,7 +92,7 @@ export default function Music({ user }) {
                 />
               </div>
             </div>
-            <div className="col-lg-6 d-flex flex-column justify-content-center animate__animated animate__fadeIn">
+            <div className="col-lg-6 d-flex flex-column justify-content-center">
               <p>
                 Ellie Jones and The Giants are a combination of eclectic
                 musicians who come together to play the songs you love spanning
@@ -110,7 +113,7 @@ export default function Music({ user }) {
           </div>
           <div className="row customCard mx-auto shadow">
             <h3 className="h4 mb-5">Barry Lee Martin</h3>
-            <div className="order-lg-2 col-lg-6 mb-3 d-flex align-items-center justify-content-center animate__animated animate__fadeIn">
+            <div className="order-lg-2 col-lg-6 mb-3 d-flex align-items-center justify-content-center">
               <div className="w-100 mb-3" style={{ maxWidth: "475px" }}>
                 <Image
                   src="/BarryLeeMartin.jpg"
@@ -121,7 +124,7 @@ export default function Music({ user }) {
                 />
               </div>
             </div>
-            <div className="col-lg-6 order-lg-1 d-flex flex-column justify-content-center animate__animated animate__fadeIn">
+            <div className="col-lg-6 order-lg-1 d-flex flex-column justify-content-center">
               <p>
                 Barry has been singing most of his life, firstly in local
                 community choirs from the age of twelve, then with local amateur
@@ -153,7 +156,7 @@ export default function Music({ user }) {
                 width={245.25}
               />
             </h3>
-            <div className="col-lg-12 order-lg-1 d-flex flex-column justify-content-center animate__animated animate__fadeIn">
+            <div className="col-lg-12 order-lg-1 d-flex flex-column justify-content-center">
               <p>
                 Moselele is a ukulele group for people who live in (or can be
                 bothered!) to travel to Moseley in Birmingham.
@@ -185,7 +188,7 @@ export default function Music({ user }) {
                 width={245.25}
               />
             </h3>
-            <div className="col-lg-6 order-lg-1 d-flex flex-column animate__animated animate__fadeIn">
+            <div className="col-lg-6 order-lg-1 d-flex flex-column">
               <h3 className="h4 mb-4 fw-bold">Robot Radio: Top Ten Facts</h3>
               <div className="">
                 <ol className="text-start">
@@ -214,7 +217,7 @@ export default function Music({ user }) {
                 </ol>
               </div>
             </div>
-            <div className="col-lg-6 mb-3 d-flex align-items-center justify-content-center animate__animated animate__fadeIn">
+            <div className="col-lg-6 mb-3 d-flex align-items-center justify-content-center">
               <div className="w-100 mt-3" style={{ maxWidth: "475px" }}>
                 <Image
                   src="/robotRadio.webp"
@@ -228,7 +231,7 @@ export default function Music({ user }) {
           </div>
           <div className="row customCard mx-auto shadow">
             <h3 className="h4 mb-5">Joe Cook</h3>
-            <div className="col-lg-6  d-flex align-items-center justify-content-center animate__animated animate__fadeIn">
+            <div className="col-lg-6  d-flex align-items-center justify-content-center">
               <div className="w-100 mb-3" style={{ maxWidth: "400px" }}>
                 <Image
                   src="/joeCook.jpg"
@@ -239,7 +242,7 @@ export default function Music({ user }) {
                 />
               </div>
             </div>
-            <div className="col-lg-6 d-flex flex-column justify-content-center animate__animated animate__fadeIn">
+            <div className="col-lg-6 d-flex flex-column justify-content-center">
               <p>
                 Joe Cook a.k.a Cookie is a spoken word artist, musician and
                 activist from Birmingham UK. Originally a lyricist for
