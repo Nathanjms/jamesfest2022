@@ -133,7 +133,7 @@ main {
 
 .venue-container {
   background-color: rgba(0, 0, 0, 0.5); /* Black w/opacity/see-through */
-  width: 100%;
+  width: fit-content;
 }
 
 .logInCard {
@@ -241,4 +241,14 @@ main {
 .section-background.food {
   background-image: url("/marshfieldFarm.webp");
   background-position: 70% 40%;
+}
+
+.section-background.venue {
+  background-image: url("/venue.webp");
+  background-position: 70% 40%;
+
+}
+
+.venueCard {
+  min-width: fit-content;
 }

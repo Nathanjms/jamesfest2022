@@ -1,5 +1,4 @@
 import { AiOutlineAmazon } from "react-icons/ai";
-import { BsCardList } from "react-icons/bs";
 import DefaultLayout from "../components/layouts/DefaultLayout";
 import Unauthenticated from "../components/Unauthenticated";
 import { getUserFromServerSession } from "../lib/withSession";
