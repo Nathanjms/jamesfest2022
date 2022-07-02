@@ -123,4 +123,17 @@ export const newsItems = [
       </>
     ),
   },
+  {
+    title: "Venue Section - Venue Map",
+    date: "2nd July 2022",
+    content: (
+      <>
+        <p>
+          The Venue section now contains a map of the Venue for the day.{" "}
+          <Link href="/venue">Click here</Link> to see where we&apos;ll all be
+          singing, dancing and drinking!
+        </p>
+      </>
+    ),
+  },
 ];
