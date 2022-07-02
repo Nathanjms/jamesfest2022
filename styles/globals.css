@@ -246,9 +246,9 @@ main {
 .section-background.venue {
   background-image: url("/venue.webp");
   background-position: 70% 40%;
-
 }
 
 .venueCard {
-  min-width: fit-content;
+  width: fit-content;
+  min-width: 50%;
 }

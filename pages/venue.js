@@ -14,7 +14,7 @@ export default function Venue({ user }) {
     return <Unauthenticated />;
   }
   return (
-    <DefaultLayout title="Venue" backgroundClass="backgroundAlt">
+    <DefaultLayout title="Venue">
       <section id="venue">
         <div className="section-background venue">
           <div className="container">
@@ -24,7 +24,7 @@ export default function Venue({ user }) {
         <div className="section backgroundAlt">
           <div className="container">
             <div className="row">
-              <div className="col-md-6 mb-4">
+              <div className="col-md-12 mb-4">
                 <h2 className="h4">Location of the Venue</h2>
                 <div className="textOverlay-container venue-container my-3">
                   <h3 className="h5">Oakfield Gardens</h3>
@@ -43,7 +43,6 @@ export default function Venue({ user }) {
                   overnight if required. After arriving, simply follow the signs
                   to the ceremony. The venue will be locked at 12 midnight.
                 </p>
-                <p>For directions, click the map below to go to Google Maps:</p>
                 <a
                   href="https://goo.gl/maps/cihWvG7oFdzG82Pk9"
                   target="_blank"
@@ -58,8 +57,15 @@ export default function Venue({ user }) {
                   </div>
                 </a>
               </div>
-              <div className="col-md-6 mb-4">
+            </div>
+          </div>
+        </div>
+        <div className="section pb-1 backgroundPrimary">
+          <div className="container">
+            <div className="row">
+              <div className="col-md-12 mb-4">
                 <h2 className="h4">Venue Map</h2>
+                <p>Click the map below to see it in more detail!</p>
                 <a
                   href="/weddingMapFull.pdf"
                   target="_blank"
