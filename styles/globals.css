@@ -248,7 +248,9 @@ main {
   background-position: 70% 40%;
 }
 
-.venueCard {
-  width: fit-content;
-  min-width: 50%;
+.venueCard,
+.venueAddress,
+.venueInfo {
+  max-width: 500px;
+  width: 90%;
 }

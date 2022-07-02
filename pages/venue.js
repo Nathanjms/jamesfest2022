@@ -26,7 +26,7 @@ export default function Venue({ user }) {
             <div className="row">
               <div className="col-md-12 mb-4">
                 <h2 className="h4">Location of the Venue</h2>
-                <div className="textOverlay-container venue-container my-3">
+                <div className="textOverlay-container venue-container venueAddress px-5 my-3">
                   <h3 className="h5">Oakfield Gardens</h3>
                   <p className="mb-0">
                     The River School
@@ -38,11 +38,14 @@ export default function Venue({ user }) {
                     WR3 7ST
                   </p>
                 </div>
-                <p>
-                  There is a car park at the venue and you can leave your car
-                  overnight if required. After arriving, simply follow the signs
-                  to the ceremony. The venue will be locked at 12 midnight.
-                </p>
+                <div className="venueInfo mx-auto py-3">
+                  <p>
+                    There is a car park at the venue and you can leave your car
+                    overnight if required. After arriving, simply follow the
+                    signs to the ceremony. The venue will be locked at 12
+                    midnight.
+                  </p>
+                </div>
                 <a
                   href="https://goo.gl/maps/cihWvG7oFdzG82Pk9"
                   target="_blank"
