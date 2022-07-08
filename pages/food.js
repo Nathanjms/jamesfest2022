@@ -30,7 +30,7 @@ export default function Food({ user }) {
             <h1 className="textOverlay-container">Food</h1>
           </div>
         </div>
-        <div className="py-5 backgroundPrimary">
+        <div className="py-4 backgroundPrimary">
           <div className="container text-center">
             <div className="row">
               <div className="col-lg-12 mb-2">
@@ -55,7 +55,7 @@ export default function Food({ user }) {
             </div>
           </div>
         </div>
-        <div className="py-5 backgroundAlt">
+        <div className="py-4 backgroundAlt">
           <div className="container text-center">
             <div className="row">
               <div className="col-lg-6">
