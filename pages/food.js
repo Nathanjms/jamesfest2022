@@ -40,8 +40,8 @@ export default function Food({ user }) {
                   will be separate at all times but still subject to allergens.
                 </p>
                 <p>
-                  Please let us know in advance of any allergies, so we can plan 
-                  and prepare something separate. There will be a menu board on 
+                  Please let us know in advance of any allergies, so we can plan
+                  and prepare something separate. There will be a menu board on
                   display.
                 </p>
                 <AllergenModal
@@ -73,12 +73,8 @@ export default function Food({ user }) {
                   </p>
                   <p>Yes you did hear correctly... </p>
                   <p>
-                    We will also have a stash of <b>Crisps</b> and{" "}
-                    <b>Chocolate</b> hidden away for those of you that can find
-                    it.
-                  </p>
-                  <p>
-                    
+                    We will also have a stash of <b>Crisps and Chocolate</b>{" "}
+                    hidden away for those of you that can find it!
                   </p>
                   <p className="mb-md-0">
                     All food is being supplied by local caterers, ASJ Catering.{" "}
