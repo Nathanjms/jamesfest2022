@@ -18,11 +18,8 @@ export const AllergenModal = ({ showModal, handleShow, handleClose }) => {
           {allergenInfo.dinner}
         </Modal.Body>
         <Modal.Footer>
-          <Button variant="secondary" size="sm" onClick={handleClose}>
+          <Button variant="primary" size="sm" onClick={handleClose}>
             Close
-          </Button>
-          <Button variant="primary" size="sm" onClick={handleShow}>
-            Save Changes
           </Button>
         </Modal.Footer>
       </Modal>
