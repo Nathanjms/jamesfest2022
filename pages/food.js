@@ -1,8 +1,12 @@
 import Image from "next/image";
-import { Carousel } from "react-bootstrap";
+import { Button, Carousel } from "react-bootstrap";
 import DefaultLayout from "../components/layouts/DefaultLayout";
 import Unauthenticated from "../components/Unauthenticated";
+import Swal from "sweetalert2";
 import { getUserFromServerSession } from "../lib/withSession";
+import Link from "next/link";
+import { useState } from "react";
+import { AllergenModal } from "../components/AllergenModal";
 
 export const getServerSideProps = getUserFromServerSession({
   redirectToLogin: true,
@@ -10,9 +14,14 @@ export const getServerSideProps = getUserFromServerSession({
 });
 
 export default function Food({ user }) {
+  const [showModal, setShowModal] = useState(false);
   if (!user) {
     return <Unauthenticated />;
   }
+
+  const handleClose = () => setShowModal(false);
+  const handleShow = () => setShowModal(true);
+
   return (
     <DefaultLayout title="Food">
       <section id="accommodation">
@@ -21,10 +30,35 @@ export default function Food({ user }) {
             <h1 className="textOverlay-container">Food</h1>
           </div>
         </div>
-        <div className="py-5">
+        <div className="py-5 backgroundPrimary">
           <div className="container text-center">
             <div className="row">
-              <div className="col-lg-6 mb-2">
+              <div className="col-lg-12 mb-2">
+                <h2 className="h4 pb-2">Note from ASJ Catering</h2>
+                <p>
+                  For both the afternoon tea service and the evening food, all
+                  of the foods will be close proximity due to the way they are
+                  prepared, served and displayed. Save for veggie foods, which
+                  will be separate at all times but still subject to allergens.
+                </p>
+                <p>
+                  If they could let us know in advance, we can plan and prepare
+                  something separate. We will use a menu board and display this
+                  also.
+                </p>
+                <AllergenModal
+                  showModal={showModal}
+                  handleShow={handleShow}
+                  handleClose={handleClose}
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="py-5 backgroundAlt">
+          <div className="container text-center">
+            <div className="row">
+              <div className="col-lg-6">
                 <div className="h-100 d-flex flex-column justify-content-center">
                   <p>
                     Our <b>Wedding Breakfast</b> will be held in the tipi, in
@@ -97,8 +131,7 @@ const carouselImages = [
   {
     url: "/food5.webp",
     alt: "Afternoon Tea, laid out on tables, from ASJ Catering",
-    blurDataUrl:
-      "data:image/webp;base64,UklGRgAQAAB"
+    blurDataUrl: "data:image/webp;base64,UklGRgAQAAB",
   },
   {
     url: "/food2.webp",
