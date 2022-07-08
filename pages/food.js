@@ -40,9 +40,9 @@ export default function Food({ user }) {
                   will be separate at all times but still subject to allergens.
                 </p>
                 <p>
-                  If they could let us know in advance, we can plan and prepare
-                  something separate. We will use a menu board and display this
-                  also.
+                  Please let us know in advance of any allergies, so we can plan
+                  and prepare something separate. There will be a menu board on
+                  display.
                 </p>
                 <AllergenModal
                   showModal={showModal}
@@ -73,20 +73,13 @@ export default function Food({ user }) {
                   </p>
                   <p>Yes you did hear correctly... </p>
                   <p>
-                    We will also have a stash of <b>Crisps</b> and{" "}
-                    <b>Chocolate</b> hidden away for those of you that can find
-                    it.
-                  </p>
-                  <p>
-                    All food is being supplied by local caterers, ASJ Catering.
-                    Once we have finalised the menus, we will publish a list of
-                    the food ingredients for you to review for any potential
-                    allergies.
+                    We will also have a stash of <b>Crisps and Chocolate</b>{" "}
+                    hidden away for those of you that can find it!
                   </p>
                   <p className="mb-md-0">
-                    In the meantime,{" "}
+                    All food is being supplied by local caterers, ASJ Catering.{" "}
                     <b>
-                      if you have any specific dietary requirements please let
+                      If you have any specific dietary requirements please let
                       us know using the wedding email address{" "}
                       <a href="mailto:jamesfest@mail.com">Jamesfest@mail.com</a>
                     </b>
