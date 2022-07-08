@@ -1,10 +1,8 @@
 import Image from "next/image";
-import { Button, Carousel } from "react-bootstrap";
+import { Carousel } from "react-bootstrap";
 import DefaultLayout from "../components/layouts/DefaultLayout";
 import Unauthenticated from "../components/Unauthenticated";
-import Swal from "sweetalert2";
 import { getUserFromServerSession } from "../lib/withSession";
-import Link from "next/link";
 import { useState } from "react";
 import { AllergenModal } from "../components/AllergenModal";
 
