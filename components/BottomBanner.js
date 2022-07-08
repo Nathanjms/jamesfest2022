@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Container, Nav, Navbar, Button, Modal } from "react-bootstrap";
+import { Container, Nav, Navbar, Button } from "react-bootstrap";
 import { navItems } from "./data/navItems";
 import { BottomBannerModal } from "./BottomBannerModal";
 
