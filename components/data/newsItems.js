@@ -136,4 +136,17 @@ export const newsItems = [
       </>
     ),
   },
+  {
+    title: "Food Section - Important Allergens Update",
+    date: "8th July 2022",
+    content: (
+      <>
+        <p>
+          The Food section has been updated with an allergens update from our
+          caterers. <Link href="/food">Click here</Link> to find out more, and
+          please don&apos;t forget to contact us if you have any allergens!
+        </p>
+      </>
+    ),
+  },
 ];
