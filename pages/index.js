@@ -5,7 +5,7 @@ import DefaultLayout from "../components/layouts/DefaultLayout";
 import { TimerDisplay } from "../components/TimerDisplay";
 import WhatsOn from "../components/WhatsOn";
 
-const weddingDate = new Date(1657926000000);
+const weddingDate = new Date(1657969200000);
 export default function Home() {
   return (
     <DefaultLayout footerAlt={true}>
