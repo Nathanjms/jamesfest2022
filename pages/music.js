@@ -206,13 +206,13 @@ export default function Music({ user }) {
                   <li>
                     Their first single{" "}
                     <a
-                      href="https://robotradio.hearnow.com/"
+                      href="https://robotradio.hearnow.com/durtii-robot"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      DURTII Robot was released
+                      DURTII Robot
                     </a>{" "}
-                    on all digital platforms on 13 May &apos;22
+                    was released on all digital platforms on 13 May &apos;22
                   </li>
                 </ol>
               </div>
