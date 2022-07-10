@@ -84,7 +84,7 @@ export default function Music({ user }) {
             <div className="col-lg-6  d-flex align-items-center justify-content-center">
               <div className="w-100 mb-3" style={{ maxWidth: "400px" }}>
                 <Image
-                  src="/EJandG.jpg"
+                  src="/music/EJandG.jpg"
                   alt="Ellie Jones and The Giants performing on stage"
                   width={400}
                   height={400}
@@ -116,7 +116,7 @@ export default function Music({ user }) {
             <div className="order-lg-2 col-lg-6 mb-3 d-flex align-items-center justify-content-center">
               <div className="w-100 mb-3" style={{ maxWidth: "475px" }}>
                 <Image
-                  src="/BarryLeeMartin.jpg"
+                  src="/music/BarryLeeMartin.jpg"
                   alt="Barry Lee Martin Singing on Stage"
                   width={475}
                   height={255}
@@ -150,7 +150,7 @@ export default function Music({ user }) {
           <div className="row customCard mx-auto shadow">
             <h3 className="c4l-12 h3 mb-3">
               <Image
-                src="/moselele-logo.webp"
+                src="/music/moselele-logo.webp"
                 alt="Moselele Logo"
                 height={117}
                 width={245.25}
@@ -182,7 +182,7 @@ export default function Music({ user }) {
           <div className="row customCard mx-auto shadow">
             <h3 className="h4 mb-3">
               <Image
-                src="/robotRadio-logo.webp"
+                src="/music/robotRadio-logo.webp"
                 alt="Robot Radio Logo"
                 height={117}
                 width={245.25}
@@ -220,7 +220,7 @@ export default function Music({ user }) {
             <div className="col-lg-6 mb-3 d-flex align-items-center justify-content-center">
               <div className="w-100 mt-3" style={{ maxWidth: "475px" }}>
                 <Image
-                  src="/robotRadio.webp"
+                  src="/music/robotRadio.webp"
                   alt="Robot Radio performing on stage"
                   width={404}
                   height={276}
@@ -234,7 +234,7 @@ export default function Music({ user }) {
             <div className="col-lg-6  d-flex align-items-center justify-content-center">
               <div className="w-100 mb-3" style={{ maxWidth: "400px" }}>
                 <Image
-                  src="/joeCook.jpg"
+                  src="/music/joeCook.jpg"
                   alt="Joe Cook performing on stage"
                   width={400}
                   height={400}
