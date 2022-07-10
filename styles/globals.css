@@ -181,11 +181,6 @@ main {
   align-items: center;
 }
 
-.section-background.accommodation {
-  background-image: url("/hotel.webp");
-  background-position: 50% 75%;
-}
-
 .td-none {
   text-decoration: none;
 }
@@ -209,11 +204,6 @@ main {
   margin-bottom: 2rem;
 }
 
-.section-background.day {
-  background-image: url("/day.webp");
-  background-position: 50% 75%;
-}
-
 .timeline-icon svg {
   font-size: 2rem;
   position: relative;
@@ -228,23 +218,33 @@ main {
   border-radius: 10px;
 }
 
+.section-background.accommodation {
+  background-image: url("/backgroundBanners/hotel.webp");
+  background-position: 50% 75%;
+}
+
+.section-background.day {
+  background-image: url("/backgroundBanners/day.webp");
+  background-position: 50% 75%;
+}
+
 .section-background.gift-list {
-  background-image: url("/gift-list.webp");
+  background-image: url("/backgroundBanners/gift-list.webp");
   background-position: 70% 75%;
 }
 
 .section-background.music {
-  background-image: url("/musicPage.webp");
+  background-image: url("/backgroundBanners/musicPage.webp");
   background-position: 70% 60%;
 }
 
 .section-background.food {
-  background-image: url("/marshfieldFarm.webp");
+  background-image: url("/backgroundBanners/marshfieldFarm.webp");
   background-position: 70% 40%;
 }
 
 .section-background.venue {
-  background-image: url("/venue.webp");
+  background-image: url("/backgroundBanners/venue.webp");
   background-position: 70% 40%;
 }
 

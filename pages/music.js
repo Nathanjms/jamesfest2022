@@ -80,11 +80,11 @@ export default function Music({ user }) {
             </div>
           </div>
           <div className="row customCard mx-auto shadow">
-            <h3 className="h4 mb-5">Ellie Jones &amp; The Giants</h3>
+            <h3 className="h4 mb-lg-5 mb-md-3">Ellie Jones &amp; The Giants</h3>
             <div className="col-lg-6  d-flex align-items-center justify-content-center">
               <div className="w-100 mb-3" style={{ maxWidth: "400px" }}>
                 <Image
-                  src="/EJandG.jpg"
+                  src="/music/EJandG.jpg"
                   alt="Ellie Jones and The Giants performing on stage"
                   width={400}
                   height={400}
@@ -112,11 +112,11 @@ export default function Music({ user }) {
             </div>
           </div>
           <div className="row customCard mx-auto shadow">
-            <h3 className="h4 mb-5">Barry Lee Martin</h3>
+            <h3 className="h4 mb-lg-5 mb-md-3">Barry Lee Martin</h3>
             <div className="order-lg-2 col-lg-6 mb-3 d-flex align-items-center justify-content-center">
               <div className="w-100 mb-3" style={{ maxWidth: "475px" }}>
                 <Image
-                  src="/BarryLeeMartin.jpg"
+                  src="/music/BarryLeeMartin.jpg"
                   alt="Barry Lee Martin Singing on Stage"
                   width={475}
                   height={255}
@@ -150,7 +150,7 @@ export default function Music({ user }) {
           <div className="row customCard mx-auto shadow">
             <h3 className="c4l-12 h3 mb-3">
               <Image
-                src="/moselele-logo.webp"
+                src="/music/moselele-logo.webp"
                 alt="Moselele Logo"
                 height={117}
                 width={245.25}
@@ -182,7 +182,7 @@ export default function Music({ user }) {
           <div className="row customCard mx-auto shadow">
             <h3 className="h4 mb-3">
               <Image
-                src="/robotRadio-logo.webp"
+                src="/music/robotRadio-logo.webp"
                 alt="Robot Radio Logo"
                 height={117}
                 width={245.25}
@@ -212,7 +212,7 @@ export default function Music({ user }) {
                     >
                       DURTII Robot
                     </a>{" "}
-                    was released on all digital platforms on 13 May &apos;22
+                    was released on all digital platforms on 13 May &apos;22.
                   </li>
                 </ol>
               </div>
@@ -220,7 +220,7 @@ export default function Music({ user }) {
             <div className="col-lg-6 mb-3 d-flex align-items-center justify-content-center">
               <div className="w-100 mt-3" style={{ maxWidth: "475px" }}>
                 <Image
-                  src="/robotRadio.webp"
+                  src="/music/robotRadio.webp"
                   alt="Robot Radio performing on stage"
                   width={404}
                   height={276}
@@ -230,11 +230,11 @@ export default function Music({ user }) {
             </div>
           </div>
           <div className="row customCard mx-auto shadow">
-            <h3 className="h4 mb-5">Joe Cook</h3>
-            <div className="col-lg-6  d-flex align-items-center justify-content-center">
+            <h3 className="h4 mb-lg-5 mb-md-3">Joe Cook</h3>
+            <div className="col-lg-6  d-flex align-items-center justify-content-center order-lg-2">
               <div className="w-100 mb-3" style={{ maxWidth: "400px" }}>
                 <Image
-                  src="/joeCook.jpg"
+                  src="/music/joeCook.jpg"
                   alt="Joe Cook performing on stage"
                   width={400}
                   height={400}
@@ -242,7 +242,7 @@ export default function Music({ user }) {
                 />
               </div>
             </div>
-            <div className="col-lg-6 d-flex flex-column justify-content-center">
+            <div className="col-lg-6 d-flex flex-column justify-content-center order-lg-1">
               <p>
                 Joe Cook a.k.a Cookie is a spoken word artist, musician and
                 activist from Birmingham UK. Originally a lyricist for
@@ -265,6 +265,46 @@ export default function Music({ user }) {
                 Poetry Day 2016 &apos;Five Great Performances&apos; alongside
                 John Cooper Clarke, Kate Tempest, George The Poet and Rachel
                 McCrum.
+              </p>
+            </div>
+          </div>
+          <div className="row customCard mx-auto shadow">
+            <h3 className="h4 mb-lg-5 mb-md-3">Paul Edwards</h3>
+            <div className="col-lg-6  d-flex align-items-center justify-content-center">
+              <div className="w-100 mb-3" style={{ maxWidth: "400px" }}>
+                <Image
+                  src="/music/PaulEdwards.jpg"
+                  alt="Paul Edwards' album cover, 'I Sing of the Road'"
+                  width={400}
+                  height={400}
+                  layout="responsive"
+                />
+              </div>
+            </div>
+            <div className="col-lg-6 d-flex flex-column justify-content-center">
+              <p>
+                <a
+                  href="https://www.pauledwardsmusic.org"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Paul Edwards
+                </a>{" "}
+                is a singer/songwriter from Birmingham who has been recording
+                his songs since 1975. He regards his music as a way of keeping
+                account of the journey we all share through life. Although he
+                draws inspiration from personal experiences, they are written
+                and wrapped in a style that engages his listeners by weaving the
+                threads that bind us.
+              </p>
+              <p>
+                To date, Paul has released seven albums with the most recent,
+                &apos;I sing of the road&apos;, released this year.
+              </p>
+              <p>
+                Paul is passionate about letting people hear his music, offering
+                any of his albums for a voluntary contribution on his{" "}
+                <a href="https://pauledwards1.bandcamp.com">Bandcamp page</a>.
               </p>
             </div>
           </div>
