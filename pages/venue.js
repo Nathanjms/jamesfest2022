@@ -70,13 +70,13 @@ export default function Venue({ user }) {
                 <h2 className="h4">Venue Map</h2>
                 <p>Click the map below to see it in more detail!</p>
                 <a
-                  href="/weddingMapFull.pdf"
+                  href="/venue/weddingMapFull.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-100 py-2 td-none"
                 >
                   <Image
-                    src="/weddingMap.png"
+                    src="/venue/weddingMap.png"
                     alt="Map of the venue"
                     height="400"
                     width="450"
