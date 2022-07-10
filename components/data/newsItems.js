@@ -149,4 +149,16 @@ export const newsItems = [
       </>
     ),
   },
+  {
+    title: "Music Section - New Act!",
+    date: "10th July 2022",
+    content: (
+      <>
+        <p>
+          The Music section has been updated with our final act,{" "}
+          <Link href="/music">click here</Link> to see who it is!
+        </p>
+      </>
+    ),
+  },
 ];
