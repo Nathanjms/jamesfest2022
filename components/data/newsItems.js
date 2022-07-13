@@ -161,4 +161,16 @@ export const newsItems = [
       </>
     ),
   },
+  {
+    title: "Merch Section",
+    date: "13th July 2022",
+    content: (
+      <>
+        <p>
+          A merchandise section is now on the site,
+          <Link href="/meggies-merch">click here</Link> to tale a look!
+        </p>
+      </>
+    ),
+  },
 ];
