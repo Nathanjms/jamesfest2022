@@ -37,6 +37,6 @@ export const navItems = [
   {
     name: "Merch",
     link: "/meggies-merch",
-    lastUpdated: 1654207200000, // Thu Jun 02 2022 23:00:00 GMT+0100 (British Summer Time)
+    lastUpdated: 1657747800000, // Wed Jul 13 2022 22:30:00 GMT+0100 (British Summer Time)
   },
 ];
