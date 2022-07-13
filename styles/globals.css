@@ -248,6 +248,11 @@ main {
   background-position: 70% 40%;
 }
 
+.section-background.meggies-merch {
+  background-image: url("/meggies-merch/merch1.jpeg");
+  background-position: 70% 40%;
+}
+
 .venueCard,
 .venueAddress,
 .venueInfo {
