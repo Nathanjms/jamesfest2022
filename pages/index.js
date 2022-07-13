@@ -1,12 +1,26 @@
 import Image from "next/image";
 import Link from "next/link";
+import { useEffect, useState } from "react";
 import { BottomBanner } from "../components/BottomBanner";
 import DefaultLayout from "../components/layouts/DefaultLayout";
+import { SongbookSection } from "../components/SongbookSection";
 import { TimerDisplay } from "../components/TimerDisplay";
 import WhatsOn from "../components/WhatsOn";
 
 const weddingDate = new Date(1657969200000);
+const twentyFourHoursInMs = 36 * 60 * 60 * 1000;
+
 export default function Home() {
+  const [showSongbook, setShowSongbook] = useState(false);
+  useEffect(() => {
+    let currentDate = new Date();
+    let diff = weddingDate.getTime() - currentDate.getTime();
+    if (Math.abs(diff) < twentyFourHoursInMs) {
+      // If within 36 hours of the wedding start time, show the songbook on the homepage.
+      setShowSongbook(true);
+    }
+  }, []);
+
   return (
     <DefaultLayout footerAlt={true}>
       <section id="intro" className="section intro">
@@ -56,6 +70,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+      {showSongbook && <SongbookSection background="backgroundPrimary" />}
       <section id="about" className="section backgroundAlt">
         <div className="container text-center">
           <div className="row">

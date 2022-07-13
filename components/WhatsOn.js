@@ -4,9 +4,7 @@ export default function WhatsOn() {
   return (
     <section className="section pb-4">
       <div className="container text-center">
-        <h2 className="h3 mb-3">
-          Here&apos;s what we&apos;ve got planned (at the moment)
-        </h2>
+        <h2 className="h3 mb-3">Here&apos;s what we&apos;ve got planned</h2>
         <div className="row justify-content-center">
           {whatsOnContent.map((content, index) => (
             <WhatsOnCard content={content} key={index} />
