@@ -167,8 +167,8 @@ export const newsItems = [
     content: (
       <>
         <p>
-          A merchandise section is now on the site,
-          <Link href="/meggies-merch">click here</Link> to tale a look!
+          A merchandise section is now on the site,{" "}
+          <Link href="/meggies-merch">click here</Link> to take a look!
         </p>
       </>
     ),
