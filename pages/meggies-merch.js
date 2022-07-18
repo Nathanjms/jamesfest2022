@@ -1,19 +1,8 @@
 import Image from "next/image";
 import { Carousel } from "react-bootstrap";
-import { AiOutlineAmazon } from "react-icons/ai";
 import DefaultLayout from "../components/layouts/DefaultLayout";
-import Unauthenticated from "../components/Unauthenticated";
-import { getUserFromServerSession } from "../lib/withSession";
 
-export const getServerSideProps = getUserFromServerSession({
-  redirectToLogin: true,
-  redirectUrl: "meggies-merch",
-});
-
-export default function MeggiesMerch({ user }) {
-  if (!user) {
-    return <Unauthenticated />;
-  }
+export default function MeggiesMerch() {
   return (
     <DefaultLayout title="Meggie's Merch" backgroundClass="backgroundAlt">
       <section id="meggies-merch">
