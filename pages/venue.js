@@ -1,18 +1,8 @@
 import Image from "next/image";
 import DefaultLayout from "../components/layouts/DefaultLayout";
-import Unauthenticated from "../components/Unauthenticated";
-import { getUserFromServerSession } from "../lib/withSession";
 import { IoMapSharp } from "react-icons/io5";
 
-export const getServerSideProps = getUserFromServerSession({
-  redirectToLogin: true,
-  redirectUrl: "venue",
-});
-
-export default function Venue({ user }) {
-  if (!user) {
-    return <Unauthenticated />;
-  }
+export default function Venue() {
   return (
     <DefaultLayout title="Venue">
       <section id="venue">

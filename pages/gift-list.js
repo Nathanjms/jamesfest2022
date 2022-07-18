@@ -1,17 +1,7 @@
 import { AiOutlineAmazon } from "react-icons/ai";
 import DefaultLayout from "../components/layouts/DefaultLayout";
-import Unauthenticated from "../components/Unauthenticated";
-import { getUserFromServerSession } from "../lib/withSession";
 
-export const getServerSideProps = getUserFromServerSession({
-  redirectToLogin: true,
-  redirectUrl: "gift-list",
-});
-
-export default function GiftList({ user }) {
-  if (!user) {
-    return <Unauthenticated />;
-  }
+export default function GiftList() {
   return (
     <DefaultLayout title="Gift List" backgroundClass="backgroundAlt">
       <section id="gift-list">

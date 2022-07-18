@@ -1,18 +1,8 @@
 import Image from "next/image";
 import DefaultLayout from "../components/layouts/DefaultLayout";
 import { SongbookSection } from "../components/SongbookSection";
-import Unauthenticated from "../components/Unauthenticated";
-import { getUserFromServerSession } from "../lib/withSession";
 
-export const getServerSideProps = getUserFromServerSession({
-  redirectToLogin: true,
-  redirectUrl: "music",
-});
-
-export default function Music({ user }) {
-  if (!user) {
-    return <Unauthenticated />;
-  }
+export default function Music() {
   return (
     <DefaultLayout title="Music" footerAlt="true">
       <section id="content">
