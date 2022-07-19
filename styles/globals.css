@@ -248,6 +248,11 @@ main {
   background-position: 70% 40%;
 }
 
+.section-background.photos {
+  background-image: url("/backgroundBanners/ianAnna.jpg");
+  background-position: 70% 20%;
+}
+
 .venueCard,
 .venueAddress,
 .venueInfo {

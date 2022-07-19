@@ -8,7 +8,7 @@ export const getServerSideProps = withSessionSsr(async ({ req }) => {
     return {
       redirect: {
         permanent: false,
-        destination: "/login#upload",
+        destination: "/login#photos",
       },
     };
   }
@@ -20,32 +20,23 @@ export const getServerSideProps = withSessionSsr(async ({ req }) => {
   };
 });
 
-export default function Upload() {
+export default function Photos() {
   return (
-    <DefaultLayout title="Gift List" backgroundClass="backgroundAlt">
-      <section id="gift-list">
-        <div className="section-background gift-list">
+    <DefaultLayout title="Photos" backgroundClass="backgroundAlt">
+      <section id="photos">
+        <div className="section-background photos">
           <div className="container">
-            <h1 className="textOverlay-container">Gift List</h1>
+            <h1 className="textOverlay-container">Photos</h1>
           </div>
         </div>
         <div className="py-5">
           <div className="container text-center">
-            <div className="row">
+            <div className="row customCard mx-auto shadow">
               <div className="col-12 d-flex flex-column justify-content-center">
                 <p>
-                  Thank you so much for looking at our Gift List page. You can
-                  see we have produced 2 lists; one for John Lewis and one for
-                  Amazon. Please take your pick!
+                  If you have any photos of the day that you would like to
+                  share, please upload them below.
                 </p>
-                <p>
-                  Alternatively, if you prefer, we&apos;d also be delighted to
-                  receive a gift voucher for either Marks and Spencer or Amazon.
-                </p>
-                <p> With Love &amp; Thanks,</p>
-                <p className="mb-md-0"> Anna &amp; Ian XXX</p>
-              </div>
-              <div className="col-12">
                 <form name="dropzoneForm" id="dropzoneForm">
                   <StyledDropzone />
                 </form>
