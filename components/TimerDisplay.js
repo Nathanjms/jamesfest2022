@@ -14,7 +14,7 @@ export const TimerDisplay = ({ date }) => {
     return <span className="timerText">Loading...</span>;
   }
   if (timeLeft?.ended) {
-    return <span className="timerText">Happy Together</span>;
+    return <span className="animate__animated animate__flipInX timerText">Happy Together</span>;
   }
   return (
     <div className="animate__animated animate__flipInX timerText">
