@@ -52,14 +52,15 @@ export const handler = withSessionRoute(async (req, res, session) => {
       res.status(400).json({ message: "No Files found" });
       return;
     }
-
-    // TODO: limit to 10 files
-    console.log(files.length);
+    if (files.length > 10) {
+      res.status(400).json({ message: "Maximum number of photos is 10." });
+      return;
+    }
 
     if (!files?.length) {
       storeFile(files);
     } else {
-      files.forEach((file) => storeFile(file));
+      files.forEach((file) => setTimeout(() => storeFile(file)), 1000);
     }
     res.status(200).json({ success: true });
   } catch (err) {

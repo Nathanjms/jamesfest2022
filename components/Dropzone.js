@@ -2,6 +2,7 @@ import Image from "next/image";
 import React, { useCallback, useEffect, useMemo } from "react";
 import { useState } from "react";
 import { useDropzone } from "react-dropzone";
+import toast, { Toaster } from "react-hot-toast";
 
 const baseStyle = {
   flex: 1,
@@ -71,16 +72,31 @@ export default function StyledDropzone(props) {
     files.map((file) => {
       formData.append("assets", file);
     });
-    const response = await fetch(`/api/upload`, {
+    const loadingToast = toast.loading("Uploading Images...");
+    let status;
+    fetch(`/api/upload`, {
       method: "POST",
       body: formData,
-    });
-    if (response.ok) {
-      setTimeout(() => {
+    })
+      .then(async (res) => {
+        status = res.status;
+        return res.json();
+      })
+      .then((res) => {
+        if (status === 200) {
+          toast.success("Images uploaded successfully.");
+        } else {
+          let errMsg = res?.message ?? "Error uploading images";
+          toast.error(`Error ${status}: ${errMsg}`);
+        }
+      })
+      .catch((err) => {
+        toast.error(err?.message ?? `Error 500: Error uploading images.`);
+      })
+      .finally(() => {
         setFiles([]);
-      }, 1000);
-      console.log("success");
-    }
+        toast.dismiss(loadingToast);
+      });
   };
 
   const thumbs = files.map((file) => (
@@ -125,6 +141,7 @@ export default function StyledDropzone(props) {
 
   return (
     <div className="container">
+      <Toaster position="top-right" />
       <div {...getRootProps({ style })}>
         <input {...getInputProps()} />
         <p>Drag &apos;n&apos; drop some files here, or click to select files</p>
