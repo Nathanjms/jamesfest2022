@@ -1,17 +1,7 @@
 import DefaultLayout from "../components/layouts/DefaultLayout";
-import Unauthenticated from "../components/Unauthenticated";
-import { getUserFromServerSession } from "../lib/withSession";
 import { FaAirbnb, FaHotel } from "react-icons/fa";
 
-export const getServerSideProps = getUserFromServerSession({
-  redirectToLogin: true,
-  redirectUrl: "accommodation",
-});
-
-export default function Accommodation({ user }) {
-  if (!user) {
-    return <Unauthenticated />;
-  }
+export default function Accommodation() {
   return (
     <DefaultLayout title="Accommodation" backgroundClass="backgroundAlt">
       <section id="accommodation">

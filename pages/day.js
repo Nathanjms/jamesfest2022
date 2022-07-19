@@ -1,12 +1,5 @@
 import DefaultLayout from "../components/layouts/DefaultLayout";
-import Unauthenticated from "../components/Unauthenticated";
-import { getUserFromServerSession } from "../lib/withSession";
 import timelineItems from "../components/data/timelineItems";
-
-export const getServerSideProps = getUserFromServerSession({
-  redirectToLogin: true,
-  redirectUrl: "day",
-});
 
 const TimelineCard = ({ timelineItem, index }) => {
   const moveItemRight = index % 2; // Whether to move the item right
@@ -50,10 +43,7 @@ const TimelineCard = ({ timelineItem, index }) => {
   );
 };
 
-export default function OnTheDay({ user }) {
-  if (!user) {
-    return <Unauthenticated />;
-  }
+export default function OnTheDay() {
   return (
     <DefaultLayout title="On the Day">
       <section id="content">

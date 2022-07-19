@@ -1,17 +1,7 @@
 import DefaultLayout from "../components/layouts/DefaultLayout";
 import { newsItems } from "../components/data/newsItems";
-import Unauthenticated from "../components/Unauthenticated";
-import { getUserFromServerSession } from "../lib/withSession";
 
-export const getServerSideProps = getUserFromServerSession({
-  redirectToLogin: true,
-  redirectUrl: "news",
-});
-
-export default function Music({ user }) {
-  if (!user) {
-    return <Unauthenticated />;
-  }
+export default function News() {
   const NewsArticle = ({ title, date, content }) => {
     return (
       <div className="row customCard mx-auto shadow">

@@ -1,21 +1,11 @@
 import Image from "next/image";
 import { Carousel } from "react-bootstrap";
 import DefaultLayout from "../components/layouts/DefaultLayout";
-import Unauthenticated from "../components/Unauthenticated";
-import { getUserFromServerSession } from "../lib/withSession";
 import { useState } from "react";
 import { AllergenModal } from "../components/AllergenModal";
 
-export const getServerSideProps = getUserFromServerSession({
-  redirectToLogin: true,
-  redirectUrl: "food",
-});
-
-export default function Food({ user }) {
+export default function Food() {
   const [showModal, setShowModal] = useState(false);
-  if (!user) {
-    return <Unauthenticated />;
-  }
 
   const handleClose = () => setShowModal(false);
   const handleShow = () => setShowModal(true);
