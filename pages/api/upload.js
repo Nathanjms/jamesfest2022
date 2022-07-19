@@ -1,5 +1,6 @@
 import { Storage } from "@google-cloud/storage";
 import { IncomingForm } from "formidable";
+import { withSessionRoute } from "../../lib/withSession";
 
 export const config = {
   api: {
@@ -16,10 +17,14 @@ const asyncParse = (req) =>
     });
   });
 
-export default async function handler(req, res) {
+export const handler = withSessionRoute(async (req, res, session) => {
   if (req.method !== "POST") {
     // Process a POST request
     res.status(404).json({ message: "Not Found" });
+    return;
+  }
+  if (!req?.session?.user?.authenticated) {
+    res.status(401).json({ message: "Unauthorised" });
     return;
   }
   const storeFile = (file) => {
@@ -60,4 +65,6 @@ export default async function handler(req, res) {
   } catch (err) {
     res.status(500).json({ message: err?.message ?? "Error :c" });
   }
-}
+});
+
+export default handler;

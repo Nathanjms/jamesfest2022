@@ -38,7 +38,7 @@ export default function StyledDropzone(props) {
         formData.append("assets", file);
     });
     console.log(formData.getAll('assets'));
-    const res = await fetch(`/api/test-upload`, {
+    const res = await fetch(`/api/upload`, {
       method: "POST",
       body: formData
     });

@@ -1,5 +1,24 @@
 import DefaultLayout from "../components/layouts/DefaultLayout";
 import StyledDropzone from "../components/Dropzone";
+import { withSessionSsr } from "../lib/withSession";
+
+export const getServerSideProps = withSessionSsr(async ({ req }) => {
+  const user = req?.session?.user;
+  if (!user) {
+    return {
+      redirect: {
+        permanent: false,
+        destination: "/login#upload",
+      },
+    };
+  }
+  return {
+    props: {
+      user,
+      folderId: process.env.GOOGLE_DRIVE_FOLDER_ID,
+    },
+  };
+});
 
 export default function Upload() {
   return (
