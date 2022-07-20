@@ -86,7 +86,8 @@ export const handler = withSessionRoute(async (req, res, session) => {
     try {
       await storeFiles(filesArray);
     } catch (error) {
-      throw new Error("Error has occurred");
+      res.status(500).json({ debug: err?.message ?? "Error :c" });
+      return;
     }
     res.status(200).json({ success: true });
   } catch (err) {
