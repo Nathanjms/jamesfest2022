@@ -66,7 +66,7 @@ export default function Photos() {
               <div className="col-12 d-flex flex-column justify-content-center">
                 <p>
                   If you have any photos of the day that you would like to
-                  share, we would love to see them! Please upload them below!
+                  share, we would love to see them! Please upload them below.
                 </p>
                 <form name="dropzoneForm" id="dropzoneForm">
                   <StyledDropzone />

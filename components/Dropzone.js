@@ -1,6 +1,7 @@
 import Image from "next/image";
 import React, { useCallback, useEffect, useMemo } from "react";
 import { useState } from "react";
+import { Button } from "react-bootstrap";
 import { useDropzone } from "react-dropzone";
 import toast, { Toaster } from "react-hot-toast";
 
@@ -60,13 +61,17 @@ const thumbInner = {
 
 export default function StyledDropzone(props) {
   const [files, setFiles] = useState([]);
+  const [rejectedFiles, setRejectedFiles] = useState([]);
+  const [isUploading, setIsUploading] = useState(false);
 
   useEffect(() => {
     // Make sure to revoke the data uris to avoid memory leaks, will run on unmount
     return () => files.forEach((file) => URL.revokeObjectURL(file.preview));
   }, [files]);
 
-  const uploadPhoto = async (files) => {
+  const uploadPhotos = async (e) => {
+    e.stopPropagation(); // Stop the dropzone from being clicked too
+    setIsUploading(true);
     const formData = new FormData();
 
     files.map((file) => {
@@ -96,12 +101,14 @@ export default function StyledDropzone(props) {
       })
       .finally(() => {
         setFiles([]);
+        setRejectedFiles([]);
         toast.dismiss(loadingToast);
+        setIsUploading(false);
       });
   };
 
-  const thumbs = files.map((file) => (
-    <div style={thumb} key={file.name}>
+  const thumbs = files.map((file, index) => (
+    <div style={thumb} key={index}>
       <div style={thumbInner}>
         <Image
           src={file.preview}
@@ -117,18 +124,26 @@ export default function StyledDropzone(props) {
     </div>
   ));
 
-  const onDrop = useCallback((acceptedFiles) => {
-    setFiles(
-      acceptedFiles.map((file) =>
+  const onDrop = useCallback((acceptedFiles, fileRejections) => {
+    if (fileRejections.length > 0) {
+      setRejectedFiles(fileRejections);
+    }
+    setFiles((prevFiles) => [
+      ...prevFiles,
+      ...acceptedFiles.map((file) =>
         Object.assign(file, {
           preview: URL.createObjectURL(file),
         })
-      )
-    );
-    uploadPhoto(acceptedFiles);
+      ),
+    ]);
   }, []);
   const { getRootProps, getInputProps, isFocused, isDragAccept, isDragReject } =
-    useDropzone({ accept: { "image/*": [] }, onDrop });
+    useDropzone({
+      accept: { "image/*": [] },
+      onDrop,
+      disabled: isUploading,
+      maxFiles: 10,
+    });
 
   const style = useMemo(
     () => ({
@@ -140,14 +155,56 @@ export default function StyledDropzone(props) {
     [isFocused, isDragAccept, isDragReject]
   );
 
+  const RejectedFiles = () => {
+    return (
+      <div className="text-start">
+        <p>There were errors with some of your files:</p>
+        <ul>
+          {rejectedFiles.map(({ file, errors }) => {
+            return (
+              <li key={file.path}>
+                {file.path} - {file.size} bytes
+                <ul>
+                  {errors.map((e) => (
+                    <li key={e.code}>{e.message}</li>
+                  ))}
+                </ul>
+              </li>
+            );
+          })}
+        </ul>
+      </div>
+    );
+  };
+
   return (
     <div className="container">
       <Toaster position="top-right" />
       <div {...getRootProps({ style })}>
         <input {...getInputProps()} />
-        <p>Drag &apos;n&apos; drop some files here, or click to select files</p>
-        <aside style={thumbsContainer}>{thumbs}</aside>
+        <p>
+          Drag &apos;n&apos; drop some files here, or click to select files.
+        </p>
+        <em>(10 files are the maximum number of files you can drop here)</em>
+        {files.length > 0 && (
+          <>
+            <Button
+              variant="primary"
+              size="sm"
+              className="mt-3 mb-1"
+              disabled={isUploading}
+              onClick={uploadPhotos}
+              z-index="10000"
+            >
+              Click to finish Upload!
+            </Button>
+            <aside style={thumbsContainer} className="justify-content-center">
+              {thumbs}
+            </aside>
+          </>
+        )}
       </div>
+      {rejectedFiles.length > 0 && <RejectedFiles />}
     </div>
   );
 }
