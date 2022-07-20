@@ -110,7 +110,7 @@ export default function StyledDropzone(props) {
         }
       })
       .catch((err) => {
-        let errMsg = res?.message ?? "Uploading Images failed";
+        let errMsg = err?.message ?? "Uploading Images failed";
         console.error(err?.debug ?? "No debug found");
         toast.error(`Error 500: ${errMsg}.`);
       })
