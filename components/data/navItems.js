@@ -2,17 +2,12 @@ export const navItems = [
   {
     name: "News",
     link: "/news",
-    lastUpdated: 1657482000000, // Sun Jul 10 2022 20:40:00 GMT+0100 (British Summer Time)
+    lastUpdated: 1658314800000, // Wed Jul 20 2022 12:00:00 GMT+0100 (British Summer Time)
   },
   {
     name: "Venue",
     link: "/venue",
     lastUpdated: 1656766800000, // Sat Jul 02 2022 14:00:00 GMT+0100 (British Summer Time)
-  },
-  {
-    name: "Accommodation",
-    link: "/accommodation",
-    lastUpdated: 1650910962908, // Mon Apr 25 2022 19:23:10 GMT+0100 (British Summer Time)
   },
   {
     name: "Music",
@@ -38,5 +33,10 @@ export const navItems = [
     name: "Merch",
     link: "/meggies-merch",
     lastUpdated: 1657747800000, // Wed Jul 13 2022 22:30:00 GMT+0100 (British Summer Time)
+  },
+  {
+    name: "Photos",
+    link: "/photos",
+    lastUpdated: 1658314800000, // Wed Jul 20 2022 12:00:00 GMT+0100 (British Summer Time)
   },
 ];
