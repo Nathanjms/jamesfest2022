@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import { Button } from "react-bootstrap";
 import FsLightbox from "fslightbox-react";
-import { useRef } from "react";
 
 export default function PhotoGallery() {
   const [photos, setPhotos] = useState([]);
