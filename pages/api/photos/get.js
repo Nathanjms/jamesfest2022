@@ -1,7 +1,7 @@
 import { Storage } from "@google-cloud/storage";
 import { withSessionRoute } from "../../../lib/withSession";
 
-const imgPath = "https://storage.googleapis.com/jamesfest/";
+const imgPath = `https://storage.googleapis.com/${process.env.BUCKET_NAME}/`;
 
 export const handler = withSessionRoute(async (req, res, session) => {
   if (req.method !== "GET") {

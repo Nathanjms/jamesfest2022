@@ -95,6 +95,9 @@ export default function StyledDropzone(props) {
     fetch(`/api/upload`, {
       method: "POST",
       body: formData,
+      headers: {
+        accept: "application/json",
+      },
     })
       .then(async (res) => {
         status = res.status;
