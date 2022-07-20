@@ -248,9 +248,32 @@ main {
   background-position: 70% 40%;
 }
 
+.section-background.photos {
+  background-image: url("/backgroundBanners/ianAnna.jpg");
+  background-position: 70% 20%;
+}
+
 .venueCard,
 .venueAddress,
 .venueInfo {
   max-width: 500px;
   width: 90%;
+}
+
+.loading {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  border: 3px solid rgba(255,255,255,.3);
+  border-radius: 50%;
+  border-top-color: rgb(53, 53, 53);
+  animation: spin 1s ease-in-out infinite;
+  -webkit-animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+  to { -webkit-transform: rotate(360deg); }
+}
+@-webkit-keyframes spin {
+  to { -webkit-transform: rotate(360deg); }
 }

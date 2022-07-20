@@ -204,7 +204,7 @@ export default function Music() {
                 &apos;How To Be A Poet With Dyslexia&apos; which received great
                 feedback online and was also shared by the BBC on National
                 Poetry Day 2016 &apos;Five Great Performances&apos; alongside
-                John Cooper Clarke, Kate Tempest, George The Poet and Rachel
+                John Cooper Clarke, Kae Tempest, George The Poet and Rachel
                 McCrum.
               </p>
             </div>
