@@ -84,8 +84,8 @@ export default function StyledDropzone(props) {
       formData.append("assets", file);
     });
 
-    if (files.some((file) => file.size > 5000000)) {
-      toast.error(`File size must be under 5Mb per file.`);
+    if (files.some((file) => file.size > 4000000)) {
+      toast.error(`File size must be under 4Mb per file.`);
       resetForm();
       return;
     }
