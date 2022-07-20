@@ -63,7 +63,11 @@ export default function PhotoGallery() {
         );
       })}
       {Object.keys(nextQuery).length > 0 && (
-        <Button variant="primary" onClick={handleNextQuery}>
+        <Button
+          variant="primary"
+          style={{ width: "75%" }}
+          onClick={handleNextQuery}
+        >
           See More!
         </Button>
       )}
