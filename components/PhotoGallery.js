@@ -49,7 +49,7 @@ export default function PhotoGallery() {
       {photos.map((photo) => {
         return (
           <div key={photo.id} className="col-6 col-md-4">
-            <a href={photo.url} download={photo.id}>
+            <a href={photo.url} target="_blank" rel="noopener noreferrer">
               <Image
                 src={photo.url}
                 alt="An uploaded image from JamesFest"
