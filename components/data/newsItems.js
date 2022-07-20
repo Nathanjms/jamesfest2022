@@ -173,4 +173,17 @@ export const newsItems = [
       </>
     ),
   },
+  {
+    title: "Photos Section",
+    date: "20th July 2022",
+    content: (
+      <>
+        <p>
+          We&apos;ve added a photos section to the website, where you can upload
+          your favourite from JamesFest, as well as see everyone&apos;s of the
+          photos
+        </p>
+      </>
+    ),
+  },
 ];
