@@ -81,16 +81,30 @@ export default function StyledDropzone(props) {
     setIsUploading(true);
     const formData = new FormData();
 
-    files.map((file) => {
+    const options = {
+      maxSizeMB: 1,
+      maxWidthOrHeight: 1920,
+      useWebWorker: true,
+    };
+    let promises = [];
+    let compressedFiles = [];
+
+    for (const file of files) {
+      promises.push(compressFile(file));
+    }
+
+    async function compressFile(file) {
+      let compressedFile = await imageCompression(file, options);
+      console.log(file, compressedFile);
+      compressedFiles.push(compressedFile);
+    }
+    await Promise.all(promises);
+
+    compressedFiles.map((file) => {
       formData.append("assets", file);
     });
 
     loadingToast = toast.loading("Uploading Images...");
-    if (files.some((file) => file.size > 4000000)) {
-      toast.error(`File size must be under 4Mb per file.`);
-      resetForm();
-      return;
-    }
 
     let status;
     fetch(`/api/upload`, {
@@ -167,7 +181,6 @@ export default function StyledDropzone(props) {
       onDrop,
       disabled: isUploading,
       maxFiles: 10,
-      maxSize: 5000000,
     });
 
   const style = useMemo(
