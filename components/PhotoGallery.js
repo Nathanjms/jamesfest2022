@@ -49,6 +49,7 @@ export default function PhotoGallery() {
   return (
     <div className="row justify-content-center customCard mx-auto shadow">
       <h2 className="h3">Photo Gallery</h2>
+      <p>Click an image to view it in fullscreen</p>
       {initialLoading && <div className="col-12">Loading...</div>}
       {!initialLoading && photos.length === 0 && (
         <div className="col-12">
@@ -62,6 +63,7 @@ export default function PhotoGallery() {
         return (
           <div key={photo.id} className="col-6 col-md-4 col-lg-3 py-1">
             <Image
+              style={{ cursor: "pointer" }}
               onClick={() => openLightboxOnSlide(index)}
               src={photo.url}
               alt="An uploaded image from JamesFest"
