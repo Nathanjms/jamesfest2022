@@ -19,6 +19,7 @@ const baseStyle = {
   color: "#616161",
   outline: "none",
   transition: "border .24s ease-in-out",
+  cursor: "pointer",
 };
 
 const focusedStyle = {
@@ -31,6 +32,10 @@ const acceptStyle = {
 
 const rejectStyle = {
   borderColor: "#ff1744",
+};
+
+const uploadStyle = {
+  cursor: "not-allowed",
 };
 
 const thumbsContainer = {
@@ -152,8 +157,9 @@ export default function StyledDropzone(props) {
       ...(isFocused ? focusedStyle : {}),
       ...(isDragAccept ? acceptStyle : {}),
       ...(isDragReject ? rejectStyle : {}),
+      ...(isUploading ? uploadStyle : {}),
     }),
-    [isFocused, isDragAccept, isDragReject]
+    [isFocused, isDragAccept, isDragReject, isUploading]
   );
 
   const RejectedFiles = () => {
