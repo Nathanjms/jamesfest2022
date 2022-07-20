@@ -77,6 +77,13 @@ export const handler = withSessionRoute(async (req, res, session) => {
     } else {
       filesArray = files;
     }
+
+    if (filesArray.some(file => file.size > 5000000)) {
+      res.status(400).json({ message: "Maximum file size per file is 5Mb" });
+      return;
+    }
+
+    await storeFiles(filesArray);
     res.status(200).json({ success: true });
   } catch (err) {
     res.status(500).json({ debug: err?.message ?? "Error :c" });
