@@ -4,6 +4,7 @@ import { useState } from "react";
 import { Button } from "react-bootstrap";
 import { useDropzone } from "react-dropzone";
 import toast, { Toaster } from "react-hot-toast";
+import imageCompression from "browser-image-compression";
 
 const baseStyle = {
   flex: 1,
