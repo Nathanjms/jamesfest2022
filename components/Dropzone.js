@@ -95,7 +95,6 @@ export default function StyledDropzone(props) {
 
     async function compressFile(file) {
       let compressedFile = await imageCompression(file, options);
-      console.log(file, compressedFile);
       compressedFiles.push(compressedFile);
     }
     await Promise.all(promises);
