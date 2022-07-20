@@ -73,6 +73,8 @@ export default function StyledDropzone(props) {
     return () => files.forEach((file) => URL.revokeObjectURL(file.preview));
   }, [files]);
 
+  let loadingToast;
+
   const uploadPhotos = async (e) => {
     e.stopPropagation(); // Stop the dropzone from being clicked too
     setIsUploading(true);
@@ -81,7 +83,14 @@ export default function StyledDropzone(props) {
     files.map((file) => {
       formData.append("assets", file);
     });
-    const loadingToast = toast.loading("Uploading Images...");
+
+    if (files.some((file) => file.size > 5000000)) {
+      toast.error(`File size must be under 5Mb per file.`);
+      resetForm();
+      return;
+    }
+
+    loadingToast = toast.loading("Uploading Images...");
     let status;
     fetch(`/api/upload`, {
       method: "POST",
@@ -106,11 +115,15 @@ export default function StyledDropzone(props) {
         toast.error(`Error 500: ${errMsg}.`);
       })
       .finally(() => {
-        setFiles([]);
-        setRejectedFiles([]);
-        toast.dismiss(loadingToast);
-        setIsUploading(false);
+        resetForm();
       });
+  };
+
+  const resetForm = () => {
+    setFiles([]);
+    setRejectedFiles([]);
+    toast.dismiss(loadingToast);
+    setIsUploading(false);
   };
 
   const thumbs = files.map((file, index) => (
@@ -149,6 +162,7 @@ export default function StyledDropzone(props) {
       onDrop,
       disabled: isUploading,
       maxFiles: 10,
+      maxSize: 5000000,
     });
 
   const style = useMemo(
@@ -199,7 +213,7 @@ export default function StyledDropzone(props) {
             <p>Drag &amp; drop some files here, or click to select files.</p>
             <em>
               (10 files are the maximum number of files you can upload in one
-              go)
+              go. Files must be 5Mb or under)
             </em>
           </>
         )}
