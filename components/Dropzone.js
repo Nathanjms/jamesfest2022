@@ -84,13 +84,13 @@ export default function StyledDropzone(props) {
       formData.append("assets", file);
     });
 
+    loadingToast = toast.loading("Uploading Images...");
     if (files.some((file) => file.size > 4000000)) {
       toast.error(`File size must be under 4Mb per file.`);
       resetForm();
       return;
     }
 
-    loadingToast = toast.loading("Uploading Images...");
     let status;
     fetch(`/api/upload`, {
       method: "POST",
@@ -127,6 +127,7 @@ export default function StyledDropzone(props) {
     setRejectedFiles([]);
     toast.dismiss(loadingToast);
     setIsUploading(false);
+    return;
   };
 
   const thumbs = files.map((file, index) => (
