@@ -94,7 +94,7 @@ export default function Home() {
               <p>
                 Please note that you will require a passcode to access some
                 parts of the website. Your passcode was sent to you with your
-                invitation. We have full faith in the web designer who tells me
+                invitation. We have full faith in the web developer who tells me
                 that you should only need to enter it one time.
               </p>
             </div>
