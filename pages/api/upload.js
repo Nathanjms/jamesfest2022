@@ -40,7 +40,15 @@ const storeFiles = async (files) => {
   }
 
   async function doUpload(file) {
-    let response = await bucket.upload(file.filepath);
+    let fileName = file?.mimetype?.split("/")[1]
+      ? file.newFilename + "." + file.mimetype.split("/")[1]
+      : file.newFilename;
+
+    console.log(fileName);
+
+    let response = await bucket.upload(file.filepath, {
+      destination: fileName,
+    });
     if (response.err) {
       throw new Error(JSON.stringify(response.err) ?? "Error Uploading Files");
     }
