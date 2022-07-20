@@ -38,7 +38,7 @@ const storeFiles = async (files) => {
   return Promise.resolve();
 
   async function doUpload(file) {
-    let response = await bucket.upload(file.filepasth);
+    let response = await bucket.upload(file.filepath);
     if (!response.ok) {
       throw new Error("Error Uploading Files");
     }
