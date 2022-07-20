@@ -4,6 +4,7 @@ import { useState } from "react";
 import { Button } from "react-bootstrap";
 import { useDropzone } from "react-dropzone";
 import toast, { Toaster } from "react-hot-toast";
+import imageCompression from "browser-image-compression";
 
 const baseStyle = {
   flex: 1,
@@ -73,19 +74,44 @@ export default function StyledDropzone(props) {
     return () => files.forEach((file) => URL.revokeObjectURL(file.preview));
   }, [files]);
 
+  let loadingToast;
+
   const uploadPhotos = async (e) => {
     e.stopPropagation(); // Stop the dropzone from being clicked too
     setIsUploading(true);
     const formData = new FormData();
 
-    files.map((file) => {
+    const options = {
+      maxSizeMB: 1,
+      maxWidthOrHeight: 1920,
+      useWebWorker: true,
+    };
+    let promises = [];
+    let compressedFiles = [];
+
+    for (const file of files) {
+      promises.push(compressFile(file));
+    }
+
+    async function compressFile(file) {
+      let compressedFile = await imageCompression(file, options);
+      compressedFiles.push(compressedFile);
+    }
+    await Promise.all(promises);
+
+    compressedFiles.map((file) => {
       formData.append("assets", file);
     });
-    const loadingToast = toast.loading("Uploading Images...");
+
+    loadingToast = toast.loading("Uploading Images...");
+
     let status;
     fetch(`/api/upload`, {
       method: "POST",
       body: formData,
+      headers: {
+        accept: "application/json",
+      },
     })
       .then(async (res) => {
         status = res.status;
@@ -101,16 +127,21 @@ export default function StyledDropzone(props) {
         }
       })
       .catch((err) => {
-        let errMsg = res?.message ?? "Uploading Images failed";
+        let errMsg = err?.message ?? "Uploading Images failed";
         console.error(err?.debug ?? "No debug found");
         toast.error(`Error 500: ${errMsg}.`);
       })
       .finally(() => {
-        setFiles([]);
-        setRejectedFiles([]);
-        toast.dismiss(loadingToast);
-        setIsUploading(false);
+        resetForm();
       });
+  };
+
+  const resetForm = () => {
+    setFiles([]);
+    setRejectedFiles([]);
+    toast.dismiss(loadingToast);
+    setIsUploading(false);
+    return;
   };
 
   const thumbs = files.map((file, index) => (
@@ -199,7 +230,7 @@ export default function StyledDropzone(props) {
             <p>Drag &amp; drop some files here, or click to select files.</p>
             <em>
               (10 files are the maximum number of files you can upload in one
-              go)
+              go. Files must be 4Mb or under)
             </em>
           </>
         )}
