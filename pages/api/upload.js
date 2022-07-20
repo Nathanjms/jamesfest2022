@@ -73,7 +73,7 @@ export const handler = withSessionRoute(async (req, res, session) => {
     res.status(200).json({ success: true });
   } catch (err) {
     console.log(err);
-    res.status(500).json({ message: err?.message ?? "Error :c" });
+    res.status(500).json({ debug: err?.message ?? "Error :c" });
   }
 });
 

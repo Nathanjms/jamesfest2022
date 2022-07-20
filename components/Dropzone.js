@@ -19,7 +19,6 @@ const baseStyle = {
   color: "#616161",
   outline: "none",
   transition: "border .24s ease-in-out",
-  cursor: "pointer",
 };
 
 const focusedStyle = {
@@ -91,13 +90,15 @@ export default function StyledDropzone(props) {
         if (status === 200) {
           toast.success("Images uploaded successfully.");
         } else {
-          console.error(res?.message ?? "No message found");
-          toast.error(`Error ${status}: Error uploading images`);
+          let errMsg = res?.message ?? "Uploading Images failed";
+          console.error(res?.debug ?? "No debug found");
+          toast.error(`Error ${status}: ${errMsg}`);
         }
       })
       .catch((err) => {
-        console.error(err?.message ?? "No message found");
-        toast.error(`Error 500: Error uploading images.`);
+        let errMsg = res?.message ?? "Uploading Images failed";
+        console.error(err?.debug ?? "No debug found");
+        toast.error(`Error 500: ${errMsg}.`);
       })
       .finally(() => {
         setFiles([]);
@@ -182,10 +183,17 @@ export default function StyledDropzone(props) {
       <Toaster position="top-right" />
       <div {...getRootProps({ style })}>
         <input {...getInputProps()} />
-        <p>
-          Drag &apos;n&apos; drop some files here, or click to select files.
-        </p>
-        <em>(10 files are the maximum number of files you can drop here)</em>
+        {isUploading ? (
+          <p>Uploading your photos, please wait...</p>
+        ) : (
+          <>
+            <p>Drag &amp; drop some files here, or click to select files.</p>
+            <em>
+              (10 files are the maximum number of files you can upload in one
+              go)
+            </em>
+          </>
+        )}
         {files.length > 0 && (
           <>
             <Button
@@ -194,7 +202,6 @@ export default function StyledDropzone(props) {
               className="mt-3 mb-1"
               disabled={isUploading}
               onClick={uploadPhotos}
-              z-index="10000"
             >
               Click to finish Upload!
             </Button>

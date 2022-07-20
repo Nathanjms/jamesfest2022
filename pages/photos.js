@@ -1,4 +1,5 @@
 import DefaultLayout from "../components/layouts/DefaultLayout";
+import Unauthenticated from "../components/Unauthenticated";
 import StyledDropzone from "../components/Dropzone";
 import { withSessionSsr } from "../lib/withSession";
 import { useEffect, useState } from "react";
@@ -18,12 +19,11 @@ export const getServerSideProps = withSessionSsr(async ({ req }) => {
   return {
     props: {
       user,
-      folderId: process.env.GOOGLE_DRIVE_FOLDER_ID,
     },
   };
 });
 
-export default function Photos() {
+export default function Photos({ user }) {
   const [photos, setPhotos] = useState([]);
   const [nextQuery, setNextQuery] = useState({});
 
@@ -39,6 +39,10 @@ export default function Photos() {
     }
     fetchData();
   }, []);
+
+  if (!user) {
+    return <Unauthenticated />;
+  }
 
   const handleNextQuery = async () => {
     setNextQuery("");
