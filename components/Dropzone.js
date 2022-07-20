@@ -216,7 +216,7 @@ export default function StyledDropzone(props) {
             <p>Drag &amp; drop some files here, or click to select files.</p>
             <em>
               (10 files are the maximum number of files you can upload in one
-              go. Files must be 5Mb or under)
+              go. Files must be 4Mb or under)
             </em>
           </>
         )}
