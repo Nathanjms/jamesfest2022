@@ -27,15 +27,17 @@ const storage = new Storage({
 const bucket = storage.bucket(process.env.BUCKET_NAME);
 
 const storeFiles = async (files) => {
-  if (!files?.length) {
-    await doUpload(files);
-  } else {
-    for (const file of files) {
-      await doUpload(file);
-    }
-  }
+  let promises = [];
 
-  return Promise.resolve();
+  for (const file of files) {
+    promises.push(doUpload(file));
+  }
+  try {
+    await Promise.all(promises);
+    return Promise.resolve();
+  } catch (e) {
+    throw new Error(JSON.stringify(e) ?? "Error Uploading Files");
+  }
 
   async function doUpload(file) {
     let response = await bucket.upload(file.filepath);
@@ -69,10 +71,14 @@ export const handler = withSessionRoute(async (req, res, session) => {
       return;
     }
 
-    await storeFiles(files);
+    let filesArray = [];
+    if (!files?.length) {
+      filesArray = [files];
+    } else {
+      filesArray = files;
+    }
     res.status(200).json({ success: true });
   } catch (err) {
-    console.log(err);
     res.status(500).json({ debug: err?.message ?? "Error :c" });
   }
 });
