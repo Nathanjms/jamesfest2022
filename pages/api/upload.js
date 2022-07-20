@@ -17,6 +17,34 @@ const asyncParse = (req) =>
     });
   });
 
+const storage = new Storage({
+  projectId: process.env.PROJECT_ID,
+  credentials: {
+    client_email: process.env.CLIENT_EMAIL,
+    private_key: process.env.PRIVATE_KEY,
+  },
+});
+const bucket = storage.bucket(process.env.BUCKET_NAME);
+
+const storeFiles = async (files) => {
+  if (!files?.length) {
+    await doUpload(files);
+  } else {
+    for (const file of files) {
+      await doUpload(file);
+    }
+  }
+
+  return Promise.resolve();
+
+  async function doUpload(file) {
+    let response = await bucket.upload(file.filepasth);
+    if (!response.ok) {
+      throw new Error("Error Uploading Files");
+    }
+  }
+};
+
 export const handler = withSessionRoute(async (req, res, session) => {
   if (req.method !== "POST") {
     // Process a POST request
@@ -27,25 +55,9 @@ export const handler = withSessionRoute(async (req, res, session) => {
     res.status(401).json({ message: "Unauthorised" });
     return;
   }
-  const storeFile = (file) => {
-    bucket.upload(file.filepath, function (err, file, apiResponse) {
-      // Your bucket now contains:
-      // - "image.png" (with the contents of `/local/path/image.png')
-      // `file` is an instance of a File object that refers to your new file.
-      // console.log(err, file, apiResponse);
-    });
-  };
-  const storage = new Storage({
-    projectId: process.env.PROJECT_ID,
-    credentials: {
-      client_email: process.env.CLIENT_EMAIL,
-      private_key: process.env.PRIVATE_KEY,
-    },
-  });
-  const bucket = storage.bucket(process.env.BUCKET_NAME);
+
   try {
     const result = await asyncParse(req);
-
     const files = result.files?.assets;
     if (!files) {
       // Process a POST request
@@ -57,13 +69,10 @@ export const handler = withSessionRoute(async (req, res, session) => {
       return;
     }
 
-    if (!files?.length) {
-      storeFile(files);
-    } else {
-      files.forEach((file) => setTimeout(() => storeFile(file)), 1000);
-    }
+    await storeFiles(files);
     res.status(200).json({ success: true });
   } catch (err) {
+    console.log(err);
     res.status(500).json({ message: err?.message ?? "Error :c" });
   }
 });

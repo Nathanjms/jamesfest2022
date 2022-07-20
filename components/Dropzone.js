@@ -86,12 +86,13 @@ export default function StyledDropzone(props) {
         if (status === 200) {
           toast.success("Images uploaded successfully.");
         } else {
-          let errMsg = res?.message ?? "Error uploading images";
-          toast.error(`Error ${status}: ${errMsg}`);
+          console.error(res?.message ?? "No message found");
+          toast.error(`Error ${status}: Error uploading images`);
         }
       })
       .catch((err) => {
-        toast.error(err?.message ?? `Error 500: Error uploading images.`);
+        console.error(err?.message ?? "No message found");
+        toast.error(`Error 500: Error uploading images.`);
       })
       .finally(() => {
         setFiles([]);
