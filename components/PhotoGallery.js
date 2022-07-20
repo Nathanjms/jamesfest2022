@@ -16,9 +16,9 @@ export default function PhotoGallery() {
       if (data?.nextQuery) {
         setNextQuery(data.nextQuery);
       }
+      setInitialLoading(false);
     }
     fetchData();
-    setInitialLoading(false);
   }, []);
 
   const handleNextQuery = async () => {
@@ -48,7 +48,7 @@ export default function PhotoGallery() {
       )}
       {photos.map((photo) => {
         return (
-          <div key={photo.id} className="col-6 col-md-4">
+          <div key={photo.id} className="col-6 col-md-4 col-lg-3 py-1">
             <a href={photo.url} target="_blank" rel="noopener noreferrer">
               <Image
                 src={photo.url}
@@ -66,6 +66,7 @@ export default function PhotoGallery() {
       {Object.keys(nextQuery).length > 0 && (
         <Button
           variant="primary"
+          className="mt-2"
           style={{ width: "75%" }}
           onClick={handleNextQuery}
         >
