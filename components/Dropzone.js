@@ -184,7 +184,10 @@ export default function StyledDropzone(props) {
       <div {...getRootProps({ style })}>
         <input {...getInputProps()} />
         {isUploading ? (
-          <p>Uploading your photos, please wait...</p>
+          <>
+            <div className="loading"></div>
+            <span className="pt-2">Uploading your photos, please wait...</span>
+          </>
         ) : (
           <>
             <p>Drag &amp; drop some files here, or click to select files.</p>
