@@ -63,7 +63,7 @@ export default function PhotoGallery() {
         return (
           <div key={photo.id} className="col-6 col-md-4 col-lg-3 py-1">
             <Image
-              onClick={() => openLightboxOnSlide(1)}
+              onClick={() => openLightboxOnSlide(index)}
               src={photo.url}
               alt="An uploaded image from JamesFest"
               height="200"
@@ -90,6 +90,7 @@ export default function PhotoGallery() {
         sources={photos.map((photo) => photo.url)}
         type="image"
         sourceIndex={lightboxController.slide}
+        key={photos.length}
       />
     </div>
   );
