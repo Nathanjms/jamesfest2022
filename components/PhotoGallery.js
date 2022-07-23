@@ -101,10 +101,27 @@ const SkeletonLoader = () => {
   let loadersArray = [];
   for (let i = 0; i < 12; i++) {
     loadersArray.push(
-      <div key={i} className="col-6 col-md-4 col-lg-3 py-1">
-        <div className="loading-skeleton"></div>
+      <div
+        key={i}
+        aria-hidden="true"
+        className="placeholder-glow col-6 col-md-4 col-lg-3 py-1"
+      >
+        <div style={{ height: "194px" }} className="w-100 placeholder"></div>
       </div>
     );
   }
-  return loadersArray;
+  return (
+    <>
+      <p className="visually-hidden">Loading...</p>
+      {loadersArray}
+      <div className="placeholder-glow">
+        <Button
+          variant="primary"
+          className="mt-2 placeholder"
+          style={{ width: "75%" }}
+          disabled={true}
+        ></Button>
+      </div>
+    </>
+  );
 };
