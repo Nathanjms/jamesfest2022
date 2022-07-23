@@ -255,5 +255,3 @@ export default function StyledDropzone(props) {
     </div>
   );
 }
-
-<StyledDropzone />;
