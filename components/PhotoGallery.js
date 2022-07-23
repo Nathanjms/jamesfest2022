@@ -50,16 +50,7 @@ export default function PhotoGallery() {
     <div className="row justify-content-center customCard mx-auto shadow">
       <h2 className="h3">Photo Gallery</h2>
       <p>Click an image to view it in fullscreen</p>
-      {initialLoading && (
-        <>
-          <div className="col-12">
-            <div className="loading"></div>
-          </div>
-          <div className="col-12">
-            <p>Loading photos...</p>
-          </div>
-        </>
-      )}
+      {initialLoading && <SkeletonLoader />}
       {!initialLoading && photos.length === 0 && (
         <div className="col-12">
           <p>No photos found.</p>
@@ -105,3 +96,15 @@ export default function PhotoGallery() {
     </div>
   );
 }
+
+const SkeletonLoader = () => {
+  let loadersArray = [];
+  for (let i = 0; i < 12; i++) {
+    loadersArray.push(
+      <div key={i} className="col-6 col-md-4 col-lg-3 py-1">
+        <div className="loading-skeleton"></div>
+      </div>
+    );
+  }
+  return loadersArray;
+};

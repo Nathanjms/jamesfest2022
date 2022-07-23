@@ -277,3 +277,26 @@ main {
 @-webkit-keyframes spin {
   to { -webkit-transform: rotate(360deg); }
 }
+
+@keyframes loading-skeleton {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.loading-skeleton {
+  pointer-events: none;
+  animation: loading-skeleton 1s infinite alternate;
+}
+
+.loading-skeleton {
+  color: transparent;
+  appearance: none;
+  -webkit-appearance: none;
+  background-color: rgb(201, 197, 197);
+  border-color: #eee;
+  height: 194px;
+}
