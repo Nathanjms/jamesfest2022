@@ -1,11 +1,12 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
-import { Button } from "react-bootstrap";
+import { Button, Alert } from "react-bootstrap";
 import FsLightbox from "fslightbox-react";
 
 export default function PhotoGallery() {
   const [photos, setPhotos] = useState([]);
   const [nextQuery, setNextQuery] = useState({});
+  const [error, setError] = useState("");
   const [initialLoading, setInitialLoading] = useState(true);
   const [lightboxController, setLightboxController] = useState({
     toggler: false,
@@ -14,14 +15,20 @@ export default function PhotoGallery() {
 
   useEffect(() => {
     async function fetchData() {
-      let response = await fetch("/api/photos/get");
-      let data = await response.json();
-      setPhotos(data.files);
+      try {
+        let response = await fetch("/api/photos/get");
+        let data = await response.json();
+        setPhotos(data.files);
 
-      if (data?.nextQuery) {
-        setNextQuery(data.nextQuery);
+        if (data?.nextQuery) {
+          setNextQuery(data.nextQuery);
+        }
+      } catch (err) {
+        setError(
+          "Error fetching data, please try again later and if the problem persists, get in touch."
+        );
+        setInitialLoading(false);
       }
-      setInitialLoading(false);
     }
     fetchData();
   }, []);
@@ -50,6 +57,7 @@ export default function PhotoGallery() {
     <div className="row justify-content-center customCard mx-auto shadow">
       <h2 className="h3">Photo Gallery</h2>
       <p>Click an image to view it in fullscreen</p>
+      {error.length > 0 && <Alert variant="danger">{error}</Alert>}
       {initialLoading && <SkeletonLoader />}
       {!initialLoading && photos.length === 0 && (
         <div className="col-12">

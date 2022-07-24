@@ -44,6 +44,7 @@ export const handler = withSessionRoute(async (req, res, session) => {
       });
       res.json({ files: formattedFiles, nextQuery: nextQuery });
     }
+    res.status(500).send();
   });
 });
 
