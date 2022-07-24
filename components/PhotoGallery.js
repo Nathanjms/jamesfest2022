@@ -27,8 +27,8 @@ export default function PhotoGallery() {
         setError(
           "Error fetching data, please try again later and if the problem persists, get in touch."
         );
-        setInitialLoading(false);
       }
+      setInitialLoading(false);
     }
     fetchData();
   }, []);
