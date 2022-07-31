@@ -180,7 +180,7 @@ export const newsItems = [
       <>
         <p>
           We&apos;ve added a photos section to the website, where you can upload
-          your favourite from JamesFest, as well as see everyone&apos;s photos.{" "}
+          your favourite photos from JamesFest, as well as see everyone&apos;s photos.{" "}
           <Link href="/photos">Click here</Link> to visit it now!
         </p>
       </>
